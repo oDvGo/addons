@@ -163,13 +163,13 @@ local sets = {
 	},
 
     Charm = {
-		Main = 'Light Staff',
+		--Main = 'Light Staff',
 		--Sub = '',
 		--Range = '',
 		--Ammo = '',
 		Head = 'Beast Helm',
 		--Neck = 'Bird Whistle',
-		--Ear1 = 'Spike Earring',
+		Ear1 = 'Melody Earring',
 		--Ear2 = 'Spike Earring',
 		Body = 'Monster Jackcoat',
 		Hands = 'Monster Gloves',

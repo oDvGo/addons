@@ -5,7 +5,20 @@ local fastCastValue = 0.00 -- 0% from gear
 local ta_rogue_armlets = true
 
 local sets = {
-    Idle = {},
+    Idle = {
+		Head = 'Emperor Hairpin',
+		Neck = 'Peacock Amulet',
+		Ear1 = 'Optical Earring',
+		Ear2 = 'Beetle Earring +1',
+		Body = 'Custom Vest',
+		Hands = 'Battle Gloves',
+		Ring1 = 'Woodsman Ring',
+		Ring2 = 'Tamas Ring',
+		Back = 'Trimmer\'s Mantle',
+		Waist = 'Tilt Belt',
+		Legs = 'Custom Pants',
+		Feet = 'Bounding Boots',
+	},
     IdleALT = {},
     Resting = {},
     Town = {},
@@ -32,12 +45,38 @@ local sets = {
     LockSet2 = {},
     LockSet3 = {},
 
-    TP_LowAcc = {},
+    TP_LowAcc = {
+		Head = 'Emperor Hairpin',
+		Neck = 'Peacock Amulet',
+		Ear1 = 'Optical Earring',
+		Ear2 = 'Beetle Earring +1',
+		Body = 'Custom Vest',
+		Hands = 'Battle Gloves',
+		Ring1 = 'Woodsman Ring',
+		Ring2 = 'Tamas Ring',
+		Back = 'Trimmer\'s Mantle',
+		Waist = 'Tilt Belt',
+		Legs = 'Custom Pants',
+		Feet = 'Bounding Boots',
+	},
     TP_HighAcc = {},
     TP_NIN = {},
     TP_Mjollnir_Haste = {},
 
-    WS = {},
+    WS = {
+		Head = 'Emperor Hairpin',
+		Neck = 'Peacock Amulet',
+		Ear1 = 'Optical Earring',
+		Ear2 = 'Beetle Earring +1',
+		Body = 'Custom Vest',
+		Hands = 'Custom F Gloves',
+		Ring1 = 'Woodsman Ring',
+		Ring2 = 'Tamas Ring',
+		Back = 'Trimmer\'s Mantle',
+		Waist = 'Tilt Belt',
+		Legs = 'Custom Pants',
+		Feet = 'Bounding Boots',
+	},
     WS_HighAcc = {},
 
     WS_Evisceration = {},
@@ -54,8 +93,12 @@ local sets = {
 
     TH = {},
 
-    Ranged = {},
-    Ranged_INT = {},
+    Ranged = {
+		Feet = 'Custom F Boots',
+	},
+    Ranged_INT = {
+		Feet = 'Custom F Boots',
+	},
 }
 profile.Sets = sets
 
