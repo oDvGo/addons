@@ -46,7 +46,10 @@ local sets = {
     },
     Resting = {},
     Town = {},
-    Movement = {},
+    Movement = {
+		Hands = 'Seiryu\'s Kote',
+		Feet = 'Suzaku\'s Sune-Ate',
+	},
 
     DT = {},
     MDT = { -- Shell IV provides 23% MDT

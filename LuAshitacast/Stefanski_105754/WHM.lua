@@ -334,10 +334,10 @@ local sets = {
     LockSet3 = {},
 
     TP = {
-		Main = 'Prudence Rod',
-		Sub = 'Genbu\'s Shield',
+		Main = 'Morgenstern',
+		Sub = 'Strike Shield',
 		Range = '',
-		Ammo = 'Virtue Stone',
+		Ammo = 'Tiphia Sting',
 		Ear1 = 'Brutal earring',
 		Ear2 = 'Knight\'s Earring',
 		Neck = 'Peacock Amulet',

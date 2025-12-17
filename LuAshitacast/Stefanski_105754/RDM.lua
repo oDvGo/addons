@@ -709,7 +709,7 @@ local sets = {
     TP = {
         
         Main = 'Joyeuse',
-		Sub = 'Genbu\'s Shield',
+		Sub = 'Strike Shield',
         Range = '',
         Ammo = 'Tiphia Sting',
         Head = 'Dls. Chapeau +1',
@@ -727,7 +727,7 @@ local sets = {
     },
     TP_HighAcc = {
         Main = 'Joyeuse',
-		Sub = 'Genbu\'s Shield',
+		Sub = 'Strike Shield',
 		Range = '',
         Ammo = 'Tiphia Sting',
         Head = 'Optical Hat',

@@ -28,7 +28,9 @@ local sets = {
     IdleALT = {},
     Resting = {},
     Town = {},
-    Movement = {},
+    Movement = {
+		Legs = 'Crimson Cuisses',
+	},
 
     DT = {},
     MDT = { -- Shell IV provides 23% MDT
