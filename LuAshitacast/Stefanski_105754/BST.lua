@@ -135,6 +135,22 @@ local sets = {
     WS = {
 		--Range = '',
 		--Ammo = 'Mille. Sachet',
+		Head = 'Wyvern Helm',
+		Neck = 'Peacock Amulet',
+		Ear1 = 'Merman\'s Earring',
+		Ear2 = 'Brutal Earring',
+		Body = 'Hecatomb Harness',
+		Hands = 'Ogre Gloves +1',
+		Ring1 = 'Flame Ring',
+		Ring2 = 'Toreador\'s Ring',
+		Back = 'Forager\'s Mantle',
+		Waist = 'Warwolf Belt',
+		Legs = 'Byakko\'s Haidate',
+		Feet = 'Hct. Leggings',
+	},
+    WS_HighAcc = {
+		--Range = '',
+		--Ammo = 'Mille. Sachet',
 		Head = 'Optical Hat',
 		Neck = 'Peacock Amulet',
 		Ear1 = 'Merman\'s Earring',
@@ -148,18 +164,19 @@ local sets = {
 		Legs = 'Byakko\'s Haidate',
 		Feet = 'Hct. Leggings',
 	},
-    WS_HighAcc = {
+	
+	['Rampage'] = {
 		--Range = '',
 		--Ammo = 'Mille. Sachet',
 		Head = 'Optical Hat',
 		Neck = 'Peacock Amulet',
 		Ear1 = 'Merman\'s Earring',
-		Ear2 = 'Spike Earring',
+		Ear2 = 'Brutal Earring',
 		Body = 'Hecatomb Harness',
 		Hands = 'Ogre Gloves +1',
 		Ring1 = 'Toreador\'s Ring',
 		Ring2 = 'Toreador\'s Ring',
-		Back = 'Psilos Mantle',
+		Back = 'Forager\'s Mantle',
 		Waist = 'Life Belt',
 		Legs = 'Byakko\'s Haidate',
 		Feet = 'Hct. Leggings',
@@ -245,6 +262,10 @@ local PetTable2 = {
     ['mandy'] = 6,
     ['flytrap'] = 7,
 	['antican'] = 8
+}
+
+local WeaponSkills = T{
+    'Rampage',
 }
 
 local PetMagicAttack = T{'Gloom Spray','Fireball','Acid Spray','Molting Plumage','Cursed Sphere','Nectarous Deluge','Charged Whisker','Nepenthic Plunge'}
@@ -348,6 +369,11 @@ end
 
 profile.HandleWeaponskill = function()
     gcmelee.DoWS()
+	
+	local action = gData.GetAction()
+    if (WeaponSkills:contains(action.Name)) then
+      gFunc.EquipSet(sets[action.Name])
+    end
 end
 
 profile.OnLoad = function()
