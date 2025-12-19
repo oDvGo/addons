@@ -289,7 +289,11 @@ local WeaponSkills = T{
 
 profile.HandleAbility = function()
     local action = gData.GetAction()
-    if (action.Name == 'Steady Wing') then
+	local player = gData.GetPlayer()
+    if ((action.Name == 'Jump') or (action.Name == 'High Jump')) and (player.HPP <= 75 and player.TP < 1000) then
+		gFunc.Equip('Ring1', 'Drake Ring')
+	end
+	if (action.Name == 'Steady Wing') then
         gFunc.EquipSet(sets.BreathBonus)
     elseif (JobAbilities:contains(action.Name)) then
         gFunc.EquipSet(sets[action.Name])
