@@ -160,6 +160,7 @@ local sets = {
 		Waist = 'Wyrm Belt',
 	},
     ['High Jump'] = {
+		Ring1 = 'Vaulter\'s Ring',
 		Legs = 'Wyrm Brais',
 		Waist = 'Wyrm Belt',
 	},
@@ -238,7 +239,20 @@ local sets = {
 		Legs = 'Barone Cosciales',
 		Feet = 'Homam Gambieras',
 	},
-    ['Impulse Drive'] = {},
+    ['Impulse Drive'] = {
+		Head = 'Wyvern Helm',
+        Neck = 'Soil Gorget',
+		--Ear1 = 'Minuet Earring',
+		--Ear2 = 'Merman\'s Earring',
+		Body = 'Hecatomb Harness',
+		Hands = 'Custom F Gloves',
+		Ring1 = 'Flame Ring',
+		Ring2 = 'Toreador\'s Ring',
+		Back = 'Forager\'s Mantle',
+		Waist = 'Wyrm Belt',
+		Legs = 'Barone Cosciales',
+		Feet = 'Homam Gambieras',
+	},
     ['Skewer'] = {
 		Head = 'Homam Zucchetto',
         Neck = 'Peacock Amulet',
@@ -290,7 +304,7 @@ local WeaponSkills = T{
 profile.HandleAbility = function()
     local action = gData.GetAction()
 	local player = gData.GetPlayer()
-    if ((action.Name == 'Jump') or (action.Name == 'High Jump')) and (player.HPP <= 75 and player.TP < 1000) then
+    if ((action.Name == 'Jump') and (player.HPP <= 75 and player.TP < 1000)) then
 		gFunc.Equip('Ring1', 'Drake Ring')
 	end
 	if (action.Name == 'Steady Wing') then

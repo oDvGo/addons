@@ -366,6 +366,24 @@ return T{
                 ShowSkillchainAnimation = true,
                 ShowHotkey              = false,
             },
+            ["LTRT:2"] = {
+                ActionType              = 'Ability',
+                Id                      = 555,
+                Macro                   = T{
+                    "/ja \"Hide\" <me>",
+                },
+                Label                   = "Hide",
+                Image                   = "abilities/43.png",
+                ShowCost                = true,
+                ShowCross               = true,
+                ShowFade                = true,
+                ShowRecast              = true,
+                ShowName                = true,
+                ShowTrigger             = true,
+                ShowSkillchainIcon      = true,
+                ShowSkillchainAnimation = true,
+                ShowHotkey              = false,
+            },
             ["RT:7"] = {
                 ActionType              = 'Command',
                 Macro                   = T{
