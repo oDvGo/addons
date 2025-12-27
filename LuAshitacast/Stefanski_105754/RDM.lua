@@ -28,7 +28,7 @@ local sets = {
         Hands = 'Dls. Gloves +1',
         Ring1 = 'Ether Ring',
         Ring2 = 'Tamas Ring',
-        Back = 'Hexerei Cape',
+        Back = 'Gigant Mantle',
         Waist = 'Hierarch Belt',
         Legs = 'Crimson Cuisses',
         Feet = 'Dls. Boots +1',
@@ -930,6 +930,10 @@ profile.HandleDefault = function()
     end
     if (blue_cotehardie_plus_one and player.MP <= 50) then
         gFunc.Equip('Body', 'Blue Cotehard. +1')
+    end
+	if (player.MP <= 140 and player.Status == 'Engaged') then
+        gFunc.Equip('Head', 'Dls. Chapeau +1')
+		gFunc.Equip('Legs', 'Hydra Brais')
     end
 
     gFunc.EquipSet(gcinclude.BuildLockableSet(gData.GetEquipment()))
