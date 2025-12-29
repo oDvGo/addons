@@ -6,7 +6,7 @@ local water_staff = 'Water Staff'
 local wind_staff = 'Auster\'s Staff'
 local ice_staff = 'Aquilo\'s Staff'
 local thunder_staff = 'Jupiter\'s Staff'
-local light_staff = 'Light Staff'
+local light_staff = 'Apollo\'s Staff'
 local dark_staff = 'Pluto\'s Staff'
 
 -- Set to true if you have the obi

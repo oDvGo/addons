@@ -264,7 +264,7 @@ local sets = {
         Range = 'Angel\'s Flute +1',
     },
     Sing_Threnody = {
-        Range = 'Piccolo +1',
+        Range = 'Sorrowful Harp',
         Neck = 'String Torque',
         Legs = 'Mahatma Slops',
     },
