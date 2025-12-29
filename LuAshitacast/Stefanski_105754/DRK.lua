@@ -443,7 +443,7 @@ local sets = {
     Drain = {
         --Ammo = 'Phtm. Tathlum',
         Head = { Name = 'Chaos Burgeonet', Priority = 100 },
-        Neck = 'Checkered Scarf',
+        Neck = 'Dark Torque',
         Ear1 = 'Omn. Earring',
         Ear2 = 'Moldavite Earring',
         Body = 'Dst. Harness +1',
@@ -457,6 +457,7 @@ local sets = {
     },
     Absorb = {
         Ring2 = 'Tamas Ring',
+		Neck = 'Dark Torque',
     },
 }
 profile.Sets = sets
