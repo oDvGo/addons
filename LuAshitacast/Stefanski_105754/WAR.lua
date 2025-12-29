@@ -3,7 +3,20 @@ local profile = {}
 local fastCastValue = 0.00 -- 0% from gear
 
 local sets = {
-    Idle = {},
+    Idle = {
+		Head = 'Emperor Hairpin',
+		Neck = 'Peacock Amulet',
+		Ear1 = 'Optical Earring',
+		Ear2 = 'Beetle Earring +1',
+		Body = 'Custom Vest',
+		Hands = 'Luisant Moufles',
+		Ring1 = 'Woodsman Ring',
+		Ring2 = 'Puissance Ring',
+		--Back = '',
+		Waist = 'Life Belt',
+		Legs = 'Republic Subligar',
+		Feet = 'Luisant Sollerets',
+	},
     IdleALT = {},
     Resting = {},
     Town = {},
@@ -24,18 +37,34 @@ local sets = {
     SIRD = {
     },
     Haste = { -- Used for Utsusemi cooldown
-    },
+		Waist = 'Swift Belt',
+	},
 
     LockSet1 = {},
     LockSet2 = {},
     LockSet3 = {},
 
-    TP_LowAcc = {},
+    TP_LowAcc = {
+		Head = 'Luisant Salade',
+		Neck = 'Peacock Amulet',
+		Ear1 = 'Optical Earring',
+		Ear2 = 'Beetle Earring +1',
+		Body = 'Luisant Haubert',
+		Hands = 'Luisant Moufles',
+		Ring1 = 'Woodsman Ring',
+		Ring2 = 'Puissance Ring',
+		--Back = '',
+		Waist = 'Life Belt',
+		Legs = 'Luisant Brayette',
+		Feet = 'Luisant Sollerets',
+	},
     TP_HighAcc = {},
 
     TP_Aggressor = {},
 
-    WS = {},
+    WS = {
+		Hands = 'Custom F Gloves',
+	},
     WS_HighAcc = {},
 
     Warcry = {},

@@ -7,7 +7,20 @@ local myochin_kabuto = 'Myochin Kabuto'
 local saotome_kote = 'Saotome Kote'
 
 local sets = {
-    Idle = {},
+    Idle = {
+		Head = 'Emperor Hairpin',
+		Neck = 'Peacock Amulet',
+		Ear1 = 'Optical Earring',
+		Ear2 = 'Beetle Earring +1',
+		Body = 'Custom Vest',
+		Hands = 'Custom F Gloves',
+		Ring1 = 'Tamas Ring',
+		Ring2 = 'Puissance Ring',
+		--Back = '',
+		Waist = 'Tilt Belt',
+		Legs = 'Republic Subligar',
+		Feet = 'Bounding Boots',
+	},
     IdleALT = {},
     Resting = {},
     Town = {},
@@ -28,13 +41,27 @@ local sets = {
     SIRD = {
     },
     Haste = { -- Used for Utsusemi cooldown
-    },
+		Waist = 'Swift Belt',
+	},
 
     LockSet1 = {},
     LockSet2 = {},
     LockSet3 = {},
 
-    TP_LowAcc = {},
+    TP_LowAcc = {
+		Head = 'Emperor Hairpin',
+		Neck = 'Peacock Amulet',
+		Ear1 = 'Optical Earring',
+		Ear2 = 'Beetle Earring +1',
+		Body = 'Custom Vest',
+		Hands = 'Custom F Gloves',
+		Ring1 = 'Tamas Ring',
+		Ring2 = 'Puissance Ring',
+		--Back = '',
+		Waist = 'Tilt Belt',
+		Legs = 'Republic Subligar',
+		Feet = 'Bounding Boots',
+	},
     TP_HighAcc = {},
     TP_Mjollnir_Haste = {},
 
