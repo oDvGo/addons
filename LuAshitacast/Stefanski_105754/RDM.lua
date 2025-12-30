@@ -34,20 +34,20 @@ local sets = {
         Feet = 'Dls. Boots +1',
     },
     IdleALT = {
-        Main = 'Justice Sword',
-		Sub = 'Genbu\'s Shield',
-        Range = '',
-        Ammo = 'Hedgehog Bomb',
+        Main = 'Fire Staff',
+		Sub = '',
+        Range = 'Expunger',
+        Ammo = 'Scorpion Arrow',
         Head = 'Dls. Chapeau +1',
         Neck = 'Uggalepih Pendant',
         Ear1 = 'Loquac. Earring',
         Ear2 = 'Magnetic Earring',
-        Body = 'Duelist\'s Tabard',
+        Body = 'Hydra Doublet',
         Hands = 'Dls. Gloves +1',
         Ring1 = 'Ether Ring',
         Ring2 = 'Tamas Ring',
-        Back = 'Hexerei Cape',
-        Waist = 'Swift Belt',
+        Back = 'Gigant Mantle',
+        Waist = 'Hierarch Belt',
         Legs = 'Crimson Cuisses',
         Feet = 'Dls. Boots +1',
     },
@@ -834,6 +834,18 @@ local sets = {
         Legs = 'Mahatma Slops',
         Feet = 'Mahatma Pigaches',
     },
+	
+	Ranged = {
+		Head = 'Optical Hat',
+		Neck = 'Peacock Amulet',
+		Ear2 = 'Brutal Earring',
+		Body = 'Duelist\'s Tabard',
+		Ring1 = 'Woodsman Ring',
+		Ring2 = 'Snow Ring',
+		Back = 'Amemet Mantle +1',
+		Legs = 'Republic Subligar',
+		Feet = 'Custom F Boots',
+	},
 
     LockSet1 = {},
     LockSet2 = {},
@@ -871,6 +883,7 @@ profile.HandlePreshot = function()
 end
 
 profile.HandleMidshot = function()
+	gFunc.EquipSet(sets.Ranged)
 end
 
 profile.HandleWeaponskill = function()

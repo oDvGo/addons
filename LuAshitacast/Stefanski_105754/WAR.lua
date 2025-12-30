@@ -13,7 +13,7 @@ local sets = {
 		Ring1 = 'Woodsman Ring',
 		Ring2 = 'Puissance Ring',
 		--Back = '',
-		Waist = 'Life Belt',
+		Waist = 'Swift Belt',
 		Legs = 'Republic Subligar',
 		Feet = 'Luisant Sollerets',
 	},
@@ -54,8 +54,8 @@ local sets = {
 		Ring1 = 'Woodsman Ring',
 		Ring2 = 'Puissance Ring',
 		--Back = '',
-		Waist = 'Life Belt',
-		Legs = 'Luisant Brayette',
+		Waist = 'Swift Belt',
+		Legs = 'Luisant Brayettes',
 		Feet = 'Luisant Sollerets',
 	},
     TP_HighAcc = {},
@@ -64,11 +64,22 @@ local sets = {
 
     WS = {
 		Hands = 'Custom F Gloves',
+		Waist = 'Life Belt',
 	},
     WS_HighAcc = {},
 
     Warcry = {},
     Provoke = {},
+
+	Ranged = {
+		Head = 'Emperor Hairpin',
+		Neck = 'Peacock Amulet',
+		Hands = 'Custom F Gloves',
+		Ring1 = 'Woodsman Ring',
+		Ring2 = 'Tamas Ring',
+		Legs = 'Republic Subligar',
+		Feet = 'Custom F Boots',
+	},
 
     DW = {
         Ear1 = 'Stealth Earring',
@@ -103,6 +114,7 @@ profile.HandlePreshot = function()
 end
 
 profile.HandleMidshot = function()
+	gFunc.EquipSet(sets.Ranged)
 end
 
 profile.HandleWeaponskill = function()
