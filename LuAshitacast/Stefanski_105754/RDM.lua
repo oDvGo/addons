@@ -722,7 +722,7 @@ local sets = {
         Ring2 = 'Toreador\'s Ring',
         Back = 'Forager\'s Mantle',
         Waist = 'Swift Belt',
-        Legs = 'Hydra Brais',
+        Legs = 'Nashira Seraweels',
         Feet = 'Dusk Ledelsens',
     },
     TP_HighAcc = {

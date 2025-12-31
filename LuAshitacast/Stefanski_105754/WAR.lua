@@ -7,12 +7,12 @@ local sets = {
 		Head = 'Emperor Hairpin',
 		Neck = 'Peacock Amulet',
 		Ear1 = 'Optical Earring',
-		Ear2 = 'Beetle Earring +1',
+		Ear2 = 'Spike Earring',
 		Body = 'Custom Vest',
 		Hands = 'Luisant Moufles',
-		Ring1 = 'Woodsman Ring',
-		Ring2 = 'Puissance Ring',
-		--Back = '',
+		Ring1 = 'Toreador\'s Ring',
+		Ring2 = 'Toreador\'s Ring',
+		Back = 'Ryl. Army Mantle',
 		Waist = 'Swift Belt',
 		Legs = 'Republic Subligar',
 		Feet = 'Luisant Sollerets',
@@ -48,12 +48,12 @@ local sets = {
 		Head = 'Luisant Salade',
 		Neck = 'Peacock Amulet',
 		Ear1 = 'Optical Earring',
-		Ear2 = 'Beetle Earring +1',
-		Body = 'Luisant Haubert',
+		Ear2 = 'Spike Earring',
+		Body = 'Scp. Harness +1',
 		Hands = 'Luisant Moufles',
-		Ring1 = 'Woodsman Ring',
-		Ring2 = 'Puissance Ring',
-		--Back = '',
+		Ring1 = 'Toreador\'s Ring',
+		Ring2 = 'Toreador\'s Ring',
+		Back = 'Ryl. Army Mantle',
 		Waist = 'Swift Belt',
 		Legs = 'Luisant Brayettes',
 		Feet = 'Luisant Sollerets',
@@ -63,7 +63,8 @@ local sets = {
     TP_Aggressor = {},
 
     WS = {
-		Hands = 'Custom F Gloves',
+		Hands = 'Fighter\'s Mufflers',
+		Ring2 = 'Victory Ring',
 		Waist = 'Life Belt',
 	},
     WS_HighAcc = {},
@@ -87,6 +88,21 @@ local sets = {
     SAM = {
         Ear1 = 'Attila\'s Earring',
     },
+	
+	['Rampage'] = {
+		Head = 'Luisant Salade',
+		Neck = 'Peacock Amulet',
+		Ear1 = 'Optical Earring',
+		Ear2 = 'Spike Earring',
+		Body = 'Scp. Harness +1',
+		Hands = 'Luisant Moufles',
+		Ring1 = 'Toreador\'s Ring',
+		Ring2 = 'Toreador\'s Ring',
+		Back = 'Ryl. Army Mantle',
+		Waist = 'Life Belt',
+		Legs = 'Luisant Brayettes',
+		Feet = 'Luisant Sollerets',
+	},
 }
 profile.Sets = sets
 
@@ -94,6 +110,10 @@ profile.SetMacroBook = function()
     AshitaCore:GetChatManager():QueueCommand(1, '/macro book 1')
     AshitaCore:GetChatManager():QueueCommand(1, '/macro set 1')
 end
+
+local WeaponSkills = T{
+    'Rampage',
+}
 
 gcmelee = gFunc.LoadFile('common\\gcmelee.lua')
 
@@ -119,6 +139,11 @@ end
 
 profile.HandleWeaponskill = function()
     gcmelee.DoWS()
+	
+	local action = gData.GetAction()
+    if (WeaponSkills:contains(action.Name)) then
+      gFunc.EquipSet(sets[action.Name])
+    end
 end
 
 profile.OnLoad = function()
