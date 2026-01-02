@@ -4,7 +4,7 @@ local fastCastValue = 0.42 -- 20% from traits 22% from gear listed in Precast se
 
 local ninSJMaxMP = 736 -- The Max MP you have when /nin in your idle set
 local whmSJMaxMP = 758 -- The Max MP you have when /whm in your idle set
-local blmSJMaxMP = 632 -- The Max MP you have when /blm in your idle set
+local blmSJMaxMP = 788 -- The Max MP you have when /blm in your idle set
 local drkSJMaxMP = 556 -- The Max MP you have when /drk in your idle set
 
 local blue_cotehardie = false
@@ -54,8 +54,8 @@ local sets = {
     IdleMaxMP = {
         Main = 'Terra\'s Staff',
 		Sub = '',
-        Range = '',
-        Ammo = 'Hedgehog Bomb',
+        --Range = '',
+        --Ammo = 'Hedgehog Bomb',
         Head = 'Dls. Chapeau +1',
         Neck = 'Uggalepih Pendant',
         Ear1 = 'Loquac. Earring',

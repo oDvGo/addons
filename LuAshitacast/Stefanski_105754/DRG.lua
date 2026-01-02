@@ -172,7 +172,9 @@ local sets = {
 		Feet = 'Drachen Greaves',
 		Waist = 'Wyrm Belt',
 	},
-    ['Call Wyvern'] = {},
+    ['Call Wyvern'] = {
+		Body = 'Wyrm Mail',
+	},
     ['Spirit Link'] = {
 		Head = 'Wyrm Armet',
 		Body = 'Wyvern Mail',

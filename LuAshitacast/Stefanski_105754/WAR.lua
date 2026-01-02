@@ -9,7 +9,7 @@ local sets = {
 		Ear1 = 'Optical Earring',
 		Ear2 = 'Spike Earring',
 		Body = 'Custom Vest',
-		Hands = 'Luisant Moufles',
+		Hands = 'Custom F Gloves',
 		Ring1 = 'Toreador\'s Ring',
 		Ring2 = 'Toreador\'s Ring',
 		Back = 'Ryl. Army Mantle',
@@ -50,7 +50,7 @@ local sets = {
 		Ear1 = 'Optical Earring',
 		Ear2 = 'Spike Earring',
 		Body = 'Scp. Harness +1',
-		Hands = 'Luisant Moufles',
+		Hands = 'Custom F Gloves',
 		Ring1 = 'Toreador\'s Ring',
 		Ring2 = 'Toreador\'s Ring',
 		Back = 'Ryl. Army Mantle',
@@ -95,7 +95,7 @@ local sets = {
 		Ear1 = 'Optical Earring',
 		Ear2 = 'Spike Earring',
 		Body = 'Scp. Harness +1',
-		Hands = 'Luisant Moufles',
+		Hands = 'Custom F Gloves',
 		Ring1 = 'Toreador\'s Ring',
 		Ring2 = 'Toreador\'s Ring',
 		Back = 'Ryl. Army Mantle',
@@ -113,6 +113,7 @@ end
 
 local WeaponSkills = T{
     'Rampage',
+	'Steel Cyclone',
 }
 
 gcmelee = gFunc.LoadFile('common\\gcmelee.lua')
