@@ -4,7 +4,7 @@ local fastCastValue = 0.04 -- 0% from gear listed in Precast set. Note: Do NOT i
 
 local ninSJMaxMP = nil -- The Max MP you have when /nin in your idle set
 local rdmSJMaxMP = nil -- The Max MP you have when /rdm in your idle set
-local blmSJMaxMP = nil -- The Max MP you have when /blm in your idle set
+local blmSJMaxMP = 1016 -- The Max MP you have when /blm in your idle set
 
 local virology_ring = false
 local virology_ring_slot = 'Ring2'
@@ -42,7 +42,7 @@ local sets = {
         Hands = 'Cleric\'s Mitts',
         Ring1 = 'Ether Ring',
         Ring2 = 'Tamas Ring',
-        Back = 'Hexerei Cape',
+        Back = 'Gigant Mantle',
         Waist = 'Hierarch Belt',
         Legs = 'Healer\'s Pantaln.',
         Feet = 'Rostrum Pumps',
@@ -91,7 +91,7 @@ local sets = {
     Casting = { -- Default Casting Equipment when using Idle sets
 		Head = 'Nashira turban',
 		Feet = 'Healer\'s Duckbills',
-		Back = 'Hexerei Cape',
+		Back = 'Gigant Mantle',
     },
     SIRD = {
         -- Main = 'Light Staff',
@@ -379,8 +379,8 @@ local sets = {
 		Neck = 'Peacock Amulet',
 		Head = 'Optical Hat',
         Hands = 'Blessed Mitts',
-		Body = 'Hydra Doublet',
-		Legs = 'Hydra Brais',
+		Body = 'Nashira Manteel',
+		Legs = 'Blessed Trousers',
 		Feet = 'Blessed Pumps',
 		Waist = 'Swift Belt',
 		Back = 'Ryl. Army Mantle',

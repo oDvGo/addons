@@ -1,6 +1,6 @@
 -- Defines Staves to equip
 -- Set as '' if you do not have them
-local fire_staff = 'Fire Staff'
+local fire_staff = 'Vulcan\'s Staff'
 local earth_staff = 'Terra\'s Staff'
 local water_staff = 'Water Staff'
 local wind_staff = 'Auster\'s Staff'
@@ -29,7 +29,7 @@ local skulkers_cape = false
 local wizards_mantle = false
 local republic_gold_medal = true -- Note: Disabled for BRD
 
-local diabolos_earring = false
+local diabolos_earring = true
 local diabolos_earring_slot = 'Ear1'
 local diabolos_ring = false
 local diabolos_ring_slot = 'Ring2'

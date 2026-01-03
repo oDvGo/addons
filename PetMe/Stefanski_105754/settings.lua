@@ -41,6 +41,6 @@ settings["components"]["hideLog"][1] = true;
 settings["components"]["petName"][1] = true;
 settings["components"]["petTarget"][1] = true;
 settings["components"]["petDuration"][1] = true;
-settings["charmUntil"][1] = 1767235919;
+settings["charmUntil"][1] = 1767467103;
 
 return settings;

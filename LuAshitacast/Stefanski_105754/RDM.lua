@@ -2,7 +2,7 @@ local profile = {}
 
 local fastCastValue = 0.42 -- 20% from traits 22% from gear listed in Precast set
 
-local ninSJMaxMP = 736 -- The Max MP you have when /nin in your idle set
+local ninSJMaxMP = 859 -- The Max MP you have when /nin in your idle set
 local whmSJMaxMP = 758 -- The Max MP you have when /whm in your idle set
 local blmSJMaxMP = 788 -- The Max MP you have when /blm in your idle set
 local drkSJMaxMP = 556 -- The Max MP you have when /drk in your idle set
@@ -34,7 +34,7 @@ local sets = {
         Feet = 'Dls. Boots +1',
     },
     IdleALT = {
-        Main = 'Fire Staff',
+        Main = 'Vulcan\'s Staff',
 		Sub = '',
         Range = 'Expunger',
         Ammo = 'Scorpion Arrow',

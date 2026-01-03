@@ -64,6 +64,7 @@ local sets = {
 
     Precast = {
 		Ear1 = 'Loquac. Earring',
+		Back = 'Warlock\'s Mantle',
 	},
     SIRD = {
     },
