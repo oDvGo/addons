@@ -286,14 +286,14 @@ return T{
                 ShowSkillchainAnimation = true,
                 ShowHotkey              = false,
             },
-            ["RT:5"] = {
-                ActionType              = 'Spell',
-                Id                      = 230,
+            ["RT:2"] = {
+                ActionType              = 'Ability',
+                Id                      = 543,
                 Macro                   = T{
-                    "/ma \"Bio\" <t>",
+                    "/ja \"Berserk\" <me>",
                 },
-                Label                   = "Bio",
-                Image                   = "spells/230.png",
+                Label                   = "Berserk",
+                Image                   = "abilities/31.png",
                 ShowCost                = true,
                 ShowCross               = true,
                 ShowFade                = true,
@@ -393,14 +393,14 @@ return T{
                 ShowSkillchainAnimation = true,
                 ShowHotkey              = false,
             },
-            ["RTLT:3"] = {
-                ActionType              = 'Weaponskill',
-                Id                      = 85,
+            ["LTRT:1"] = {
+                ActionType              = 'Spell',
+                Id                      = 338,
                 Macro                   = T{
-                    "/ws \"Weapon Break\" <t>",
+                    "/ma \"Utsusemi: Ichi\" <me>",
                 },
-                Label                   = "Weapon Break",
-                Image                   = "ITEM:18206",
+                Label                   = "Utsusemi: Ichi",
+                Image                   = "spells/338.png",
                 ShowCost                = true,
                 ShowCross               = true,
                 ShowFade                = true,
@@ -429,14 +429,14 @@ return T{
                 ShowSkillchainAnimation = true,
                 ShowHotkey              = false,
             },
-            ["RT:2"] = {
-                ActionType              = 'Ability',
-                Id                      = 543,
+            ["RT:5"] = {
+                ActionType              = 'Spell',
+                Id                      = 230,
                 Macro                   = T{
-                    "/ja \"Berserk\" <me>",
+                    "/ma \"Bio\" <t>",
                 },
-                Label                   = "Berserk",
-                Image                   = "abilities/31.png",
+                Label                   = "Bio",
+                Image                   = "spells/230.png",
                 ShowCost                = true,
                 ShowCross               = true,
                 ShowFade                = true,
@@ -501,14 +501,14 @@ return T{
                 ShowSkillchainAnimation = true,
                 ShowHotkey              = false,
             },
-            ["LTRT:1"] = {
-                ActionType              = 'Spell',
-                Id                      = 338,
+            ["RTLT:3"] = {
+                ActionType              = 'Weaponskill',
+                Id                      = 85,
                 Macro                   = T{
-                    "/ma \"Utsusemi: Ichi\" <me>",
+                    "/ws \"Weapon Break\" <t>",
                 },
-                Label                   = "Utsusemi: Ichi",
-                Image                   = "spells/338.png",
+                Label                   = "Weapon Break",
+                Image                   = "ITEM:18206",
                 ShowCost                = true,
                 ShowCross               = true,
                 ShowFade                = true,
@@ -521,13 +521,31 @@ return T{
             },
         } },
         { Name="Axe", Bindings = T{
-            ["RTLT:6"] = {
+            ["RT:7"] = {
                 ActionType              = 'Weaponskill',
-                Id                      = 64,
+                Id                      = 69,
                 Macro                   = T{
-                    "/ws \"Raging Axe\" <t>",
+                    "/ws \"Rampage\" <t>",
                 },
-                Label                   = "Raging Axe",
+                Label                   = "Rampage",
+                Image                   = "ITEM:17928",
+                ShowCost                = true,
+                ShowCross               = true,
+                ShowFade                = true,
+                ShowRecast              = true,
+                ShowName                = true,
+                ShowTrigger             = true,
+                ShowSkillchainIcon      = true,
+                ShowSkillchainAnimation = true,
+                ShowHotkey              = false,
+            },
+            ["RTLT:2"] = {
+                ActionType              = 'Weaponskill',
+                Id                      = 68,
+                Macro                   = T{
+                    "/ws \"Spinning Axe\" <t>",
+                },
+                Label                   = "Spinning Axe",
                 Image                   = "ITEM:17928",
                 ShowCost                = true,
                 ShowCross               = true,
@@ -575,13 +593,13 @@ return T{
                 ShowSkillchainAnimation = true,
                 ShowHotkey              = false,
             },
-            ["RTLT:2"] = {
+            ["RTLT:7"] = {
                 ActionType              = 'Weaponskill',
-                Id                      = 68,
+                Id                      = 65,
                 Macro                   = T{
-                    "/ws \"Spinning Axe\" <t>",
+                    "/ws \"Smash Axe\" <t>",
                 },
-                Label                   = "Spinning Axe",
+                Label                   = "Smash Axe",
                 Image                   = "ITEM:17928",
                 ShowCost                = true,
                 ShowCross               = true,
@@ -611,13 +629,13 @@ return T{
                 ShowSkillchainAnimation = true,
                 ShowHotkey              = false,
             },
-            ["RTLT:7"] = {
+            ["RTLT:6"] = {
                 ActionType              = 'Weaponskill',
-                Id                      = 65,
+                Id                      = 64,
                 Macro                   = T{
-                    "/ws \"Smash Axe\" <t>",
+                    "/ws \"Raging Axe\" <t>",
                 },
-                Label                   = "Smash Axe",
+                Label                   = "Raging Axe",
                 Image                   = "ITEM:17928",
                 ShowCost                = true,
                 ShowCross               = true,

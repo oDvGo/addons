@@ -204,6 +204,7 @@ local sets = {
     Precast = {
 		Ear1 = 'Loquac. Earring',
         Feet = 'Rostrum Pumps',
+		Back = 'Warlock\'s Mantle',
     },
     Casting = {
         Main = 'Eremite\'s Wand', -- 25
