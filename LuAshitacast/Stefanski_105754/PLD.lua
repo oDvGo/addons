@@ -11,11 +11,11 @@ local hercules_ring_slot = 'Ring1'
 local gallant_leggings = 'Glt. Leggings +1'
 local valor_leggings = 'Vlr. Leggings +1'
 
-local arco_de_velocidad = true
+local arco_de_velocidad = false
 
 local warlocks_mantle = true -- Don't add 2% to fastCastValue to this as it is SJ dependant
 
-local shadow_mantle = true
+local shadow_mantle = false
 
 local sets = {
     Idle = { -- 1415

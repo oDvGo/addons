@@ -13,7 +13,7 @@ local koga_tekko = false
 local koga_tekko_plus_one = true
 
 local uggalepih_pendant = true
-local warlocks_mantle = false -- Don't add 2% to fastCastValue to this as it is SJ dependant
+local warlocks_mantle = true -- Don't add 2% to fastCastValue to this as it is SJ dependant
 
 local fenrirs_stone = true -- Used for Evasion at night
 

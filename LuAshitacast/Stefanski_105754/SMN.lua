@@ -13,7 +13,7 @@ local sets = {
         Ear1 = 'Loquac. Earring',
         Ear2 = 'Magnetic Earring',
         Ammo = 'Hedgehog Bomb',
-        Head = '',
+        Head = 'displaced',
         Neck = 'Uggalepih Pendant',
         Body = 'Vermillion Cloak',
         Hands = 'Summoner\'s Brcr.',
@@ -271,7 +271,7 @@ local sets = {
     },
 
     BP_Delay = {
-        Head = 'Austere Hat',
+        Head = 'Summoner\'s Horn',
         Legs = 'Summoner\'s Spats',
         Ring2 = 'Evoker\'s Ring',
         Ear1 = 'Loquac. Earring',

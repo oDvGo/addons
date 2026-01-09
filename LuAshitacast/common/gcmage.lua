@@ -60,7 +60,7 @@ local yinyang_robe = false
 local bahamuts_staff = false
 -- Leave as '' if you do not have them.
 local summoners_doublet = 'Summoner\'s Dblt.'
-local summoners_horn = ''
+local summoners_horn = 'Summoner\'s Horn'
 local conjurers_ring = true
 local conjurers_ring_slot = 'Ring1'
 
