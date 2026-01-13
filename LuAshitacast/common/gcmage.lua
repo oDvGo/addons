@@ -2,7 +2,7 @@
 -- Set as '' if you do not have them
 local fire_staff = 'Vulcan\'s Staff'
 local earth_staff = 'Terra\'s Staff'
-local water_staff = 'Water Staff'
+local water_staff = 'Neptune\'s Staff'
 local wind_staff = 'Auster\'s Staff'
 local ice_staff = 'Aquilo\'s Staff'
 local thunder_staff = 'Jupiter\'s Staff'

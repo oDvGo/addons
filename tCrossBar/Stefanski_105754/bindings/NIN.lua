@@ -90,14 +90,14 @@ return T{
             ShowSkillchainAnimation = true,
             ShowHotkey              = false,
         },
-        ["LT2:2"] = {
-            ActionType              = 'Item',
-            Id                      = 4165,
+        ["LT:1"] = {
+            ActionType              = 'Spell',
+            Id                      = 338,
             Macro                   = T{
-                "/item \"Silent Oil\" <me>",
+                "/ma \"Utsusemi: Ichi\" <me>",
             },
-            Label                   = "Silent Oil",
-            Image                   = "ITEM:4165",
+            Label                   = "Utsusemi: Ichi",
+            Image                   = "spells/338.png",
             ShowCost                = true,
             ShowCross               = true,
             ShowFade                = true,
@@ -144,14 +144,14 @@ return T{
             ShowSkillchainAnimation = true,
             ShowHotkey              = false,
         },
-        ["RT:5"] = {
-            ActionType              = 'Weaponskill',
-            Id                      = 131,
+        ["LT2:2"] = {
+            ActionType              = 'Item',
+            Id                      = 4165,
             Macro                   = T{
-                "/ws \"Blade: To\" <t>",
+                "/item \"Silent Oil\" <me>",
             },
-            Label                   = "Blade: To",
-            Image                   = "ITEM:17793",
+            Label                   = "Silent Oil",
+            Image                   = "ITEM:4165",
             ShowCost                = true,
             ShowCross               = true,
             ShowFade                = true,
@@ -180,14 +180,14 @@ return T{
             ShowSkillchainAnimation = true,
             ShowHotkey              = false,
         },
-        ["LT:1"] = {
-            ActionType              = 'Spell',
-            Id                      = 338,
+        ["RT:5"] = {
+            ActionType              = 'Weaponskill',
+            Id                      = 131,
             Macro                   = T{
-                "/ma \"Utsusemi: Ichi\" <me>",
+                "/ws \"Blade: To\" <t>",
             },
-            Label                   = "Utsusemi: Ichi",
-            Image                   = "spells/338.png",
+            Label                   = "Blade: To",
+            Image                   = "ITEM:17793",
             ShowCost                = true,
             ShowCross               = true,
             ShowFade                = true,
@@ -201,6 +201,24 @@ return T{
     },
     Palettes = T{
         { Name="Base", Bindings = T{
+            ["RT:1"] = {
+                ActionType              = 'Spell',
+                Id                      = 230,
+                Macro                   = T{
+                    "/ma \"Bio\" <t>",
+                },
+                Label                   = "Bio",
+                Image                   = "spells/230.png",
+                ShowCost                = true,
+                ShowCross               = true,
+                ShowFade                = true,
+                ShowRecast              = true,
+                ShowName                = true,
+                ShowTrigger             = true,
+                ShowSkillchainIcon      = true,
+                ShowSkillchainAnimation = true,
+                ShowHotkey              = false,
+            },
         } },
     },
 };

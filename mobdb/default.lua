@@ -1,7 +1,7 @@
 --Automatically generated settings file for: mobdb
 local settings = {
     Scale=1.190000,
-    DetailScale=1.700000,
+    DetailScale=1.000000,
     Alpha=0.100000,
     DetailView=false,
     MobFormat='$name$joblevel $aggro$LB$physmagic ID:$id',
