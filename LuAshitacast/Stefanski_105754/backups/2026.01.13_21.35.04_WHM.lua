@@ -433,23 +433,6 @@ local sets = {
 		Ring2 = 'Toreador\'s Ring',
 	},
     WS_Randgrith = {},
-    
-	Jump = {
-        --Main = 'Jupiter\'s Staff',
-        Ammo = 'Tiphia Sting',
-        Head = 'Optical Hat',
-        Neck = 'Peacock Amulet',
-        Ear1 = 'Optical Earring',
-        Ear2 = 'Merman\'s Earring',
-        Body = 'Hydra Doublet',
-        Hands = 'Battle Gloves',
-        Ring1 = 'Toreador\'s Ring',
-        Ring2 = 'Toreador\'s Ring',
-        Back = 'Wyvern Mantle',
-        Waist = 'Hierarch Belt',
-        Legs = 'Hydra Brais',
-        Feet = 'Marine F Boots',
-    },
 	
 	
 }
@@ -472,9 +455,6 @@ profile.HandleAbility = function()
     if (displayheadOnAbility) then
         AshitaCore:GetChatManager():QueueCommand(-1, '/displayhead')
     end
-	if ((gData.GetAction().Name == 'Jump') or (gData.GetAction().Name == 'High Jump')) then
-		gFunc.EquipSet('Jump')
-	end
 end
 
 profile.HandleItem = function()

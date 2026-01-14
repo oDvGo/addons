@@ -28,7 +28,7 @@ local sets = {
         Ear1 = 'Merman\'s Earring',
         Ear2 = 'Brutal Earring',
         Body = 'Homam Corazza',
-        Hands = 'Homam Manopolas',
+        Hands = 'Blood Fng. Gnt.',
         Ring1 = 'Toreador\'s Ring',
         Ring2 = 'Toreador\'s Ring',
         Back = 'Forager\'s Mantle',
@@ -458,6 +458,7 @@ local sets = {
     Absorb = {
         Ring2 = 'Tamas Ring',
 		Neck = 'Dark Torque',
+		Hands = 'Blood Fng. Gnt.',
     },
 }
 profile.Sets = sets
