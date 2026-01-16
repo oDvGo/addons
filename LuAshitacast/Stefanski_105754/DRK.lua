@@ -2,7 +2,7 @@ local profile = {}
 
 local fastCastValue = 0.07 -- 7% from gear
 
-local use_chaos_burgeonet_for_tp_during_souleater = true
+local use_chaos_burgeonet_for_tp_during_souleater = false
 
 local parade_gorget = true
 local fenrirs_stone = true
@@ -22,17 +22,17 @@ local sets = {
         --Main = 'Tredecim Scythe',
         --Sub = '',
 		--Range = 'Thug\'s Zamburak',
-		Ammo = 'Bomb Core',
-		Head = 'Homam Zucchetto',
-        Neck = 'Peacock Amulet',
+		Ammo = 'Fenrir\'s Stone',
+		Head = 'displaced',
+        Neck = 'Fortitude Torque',
         Ear1 = 'Merman\'s Earring',
         Ear2 = 'Brutal Earring',
-        Body = 'Homam Corazza',
+        Body = 'Vampire Cloak',
         Hands = 'Blood Fng. Gnt.',
         Ring1 = 'Toreador\'s Ring',
         Ring2 = 'Toreador\'s Ring',
         Back = 'Forager\'s Mantle',
-        Waist = 'Swift Belt',
+        Waist = 'Warwolf Belt',
         Legs = 'Crimson Cuisses',
         Feet = 'Homam Gambieras',
     },
@@ -94,8 +94,23 @@ local sets = {
         Neck = 'Checkered Scarf',
 		Ear1 = 'Relaxing Earring',
         Ear2 = 'Sanative Earring',
+		Waist = 'Hierarch Belt',
     },
-    Town = {},
+    Town = {
+		Ammo = 'Fenrir\'s Stone',
+		Head = 'Homam Zucchetto',
+        Neck = 'Fortitude Torque',
+        Ear1 = 'Merman\'s Earring',
+        Ear2 = 'Brutal Earring',
+        Body = 'Homam Corazza',
+        Hands = 'Blood Fng. Gnt.',
+        Ring1 = 'Flame Ring',
+        Ring2 = 'Toreador\'s Ring',
+        Back = 'Forager\'s Mantle',
+        Waist = 'Swift Belt',
+        Legs = 'Crimson Cuisses',
+        Feet = 'Homam Gambieras',
+	},
     Movement = {
         --Hands = 'Homam Manopolas',
         Legs = 'Crimson Cuisses',
@@ -269,9 +284,9 @@ local sets = {
     },
     Haste = { -- Used for Utsusemi and Stun cooldown
         Head = { Name = 'Homam Zucchetto', Priority = -1 },
-        Body = 'Dst. Harness +1',
+        --Body = 'Dst. Harness +1',
 		Ear1 = 'Loquac. Earring',
-        Hands = { Name = 'Dusk Gloves +1', Priority = 100 },
+        Hands = { Name = 'Homam Manopolas', Priority = 100 },
         Waist = 'Swift Belt',
         Legs = { Name = 'Homam Cosciales', Priority = 100 },
         Feet = { Name = 'Homam Gambieras', Priority = 100 },
@@ -334,10 +349,45 @@ local sets = {
         Legs = 'Homam Cosciales',
         Feet = 'Homam Gambieras',
     },
-    TP_Mjollnir_Haste = {},
+    TP_Mjollnir_Haste = {
+		--Main = 'Tredecim Scythe',
+        --Sub = '',
+		--Range = 'Thug\'s Zamburak',
+		Ammo = 'Bomb Core',
+		Head = 'Homam Zucchetto',
+        Neck = 'Peacock Amulet',
+        Ear1 = 'Merman\'s Earring',
+        Ear2 = 'Brutal Earring',
+        Body = 'Haubergeon',
+        Hands = 'Homam Manopolas',
+        Ring1 = 'Toreador\'s Ring',
+        Ring2 = 'Toreador\'s Ring',
+        Back = 'Forager\'s Mantle',
+        Waist = 'Swift Belt',
+        Legs = 'Homam Cosciales',
+        Feet = 'Homam Gambieras',
+	},
 
     WS = {
         --Main = 'Tredecim Scythe',
+        --Sub = '',
+		--Range = 'Thug\'s Zamburak',
+		--Ammo = 'Acid Bolt',
+		Head = 'Wyvern Helm',
+        Neck = 'Peacock Amulet',
+        Ear1 = 'Merman\'s Earring',
+        Ear2 = 'Brutal Earring',
+        Body = 'Hecatomb Harness',
+        Hands = 'Custom F Gloves',
+        Ring1 = 'Toreador\'s Ring',
+        Ring2 = 'Flame Ring',
+        Back = 'Forager\'s Mantle',
+        Waist = 'Warwolf Belt',
+        Legs = 'Black Cuisses',
+        Feet = 'Hct. Leggings',
+    },
+    WS_HighAcc = {
+	    --Main = 'Tredecim Scythe',
         --Sub = '',
 		--Range = 'Thug\'s Zamburak',
 		--Ammo = 'Acid Bolt',
@@ -348,31 +398,12 @@ local sets = {
         Body = 'Hecatomb Harness',
         Hands = 'Custom F Gloves',
         Ring1 = 'Toreador\'s Ring',
-        Ring2 = 'Flame Ring',
-        Back = 'Forager\'s Mantle',
-        Waist = 'Life Belt',
-        Legs = 'Luisant Brayettes',
-        Feet = 'Hct. Leggings',
-    },
-    WS_HighAcc = {
-	        --Main = 'Tredecim Scythe',
-        --Sub = '',
-		--Range = 'Thug\'s Zamburak',
-		--Ammo = 'Acid Bolt',
-		Head = 'Chaos Burgeonet',
-        Neck = 'Spike Necklace',
-        Ear1 = 'Merman\'s Earring',
-        Ear2 = 'Brutal Earring',
-        Body = 'Hecatomb Harness',
-        Hands = 'Custom F Gloves',
-        Ring1 = 'Toreador\'s Ring',
         Ring2 = 'Toreador\'s Ring',
         Back = 'Abyss Cape',
         Waist = 'Life Belt',
-        Legs = 'Luisant Brayettes',
+        Legs = 'Black Cuisses',
         Feet = 'Hct. Leggings',
 	},
-
     WS_Guillotine = {
 	        --Main = 'Tredecim Scythe',
         --Sub = '',
@@ -387,8 +418,8 @@ local sets = {
         Ring1 = 'Toreador\'s Ring',
         Ring2 = 'Toreador\'s Ring',
         Back = 'Abyss Cape',
-        Waist = 'Life Belt',
-        Legs = 'Luisant Brayettes',
+        Waist = 'Warwolf Belt',
+        Legs = 'Black Cuisses',
         Feet = 'Chaos Sollerets',
 	},
     WS_SpinningSlash = {
@@ -405,8 +436,8 @@ local sets = {
         Ring1 = 'Toreador\'s Ring',
         Ring2 = 'Flame Ring',
         Back = 'Forager\'s Mantle',
-        Waist = 'Life Belt',
-        Legs = 'Luisant Brayettes',
+        Waist = 'Warwolf Belt',
+        Legs = 'Black Cuisses',
         Feet = 'Hct. Leggings',
 	},
     WS_CrossReaper = {
@@ -423,8 +454,8 @@ local sets = {
         Ring1 = 'Toreador\'s Ring',
         Ring2 = 'Flame Ring',
         Back = 'Forager\'s Mantle',
-        Waist = 'Life Belt',
-        Legs = 'Luisant Brayettes',
+        Waist = 'Warwolf Belt',
+        Legs = 'Black Cuisses',
         Feet = 'Hct. Leggings',
 	},
 
@@ -435,30 +466,51 @@ local sets = {
         Feet = 'Chaos Sollerets',
     },
     SoulEater = {
-        --Head = 'Chaos Burgeonet',
 		Body = 'Gloom Breastplate',
     },
-    Nuke = {},
-    Enfeebling = {},
+    Nuke = {
+		Ammo = 'Phtm. Tathlum',
+		Head = 'Homam Zucchetto',
+		Neck = 'Elemental Torque',
+		Ear1 = 'Loquac. Earring',
+		Ear2 = 'Omn. Earring',
+		Body = 'Abyss Cuirass',
+		Hands = 'Abyss Gauntlets',
+		Ring1 = 'Snow Ring',
+		Ring2 = 'Tamas Ring',
+		Back = 'Merciful Cape',
+		Waist = 'Swift Belt',
+		Legs = 'Chaos Flanchard',
+		Feet = 'Custom F Boots',
+	},
+    Enfeebling = {
+		Body = 'Chaos Cuirass',
+		Feet = 'Abyss Sollerets',
+		Back = 'Altruistic Cape',
+	},
     Drain = {
-        --Ammo = 'Phtm. Tathlum',
+        Ammo = 'Phtm. Tathlum',
         Head = { Name = 'Chaos Burgeonet', Priority = 100 },
         Neck = 'Dark Torque',
         Ear1 = 'Omn. Earring',
         Ear2 = 'Moldavite Earring',
-        Body = 'Dst. Harness +1',
+        Body = 'Abyss Cuirass',
         Hands = { Name = 'Blood Fng. Gnt.', Priority = 100 },
         Ring1 = 'Omniscient Ring',
         Ring2 = 'Tamas Ring',
         Back = 'Merciful Cape',
-        Waist = 'Sonic Belt',
-        Legs = 'Abs. Flanchard +1',
-        Feet = 'Custom F Boots',
+        Waist = 'Swift Belt',
+        Legs = 'Abyss Flanchard',
+        Feet = 'Homam Gambieras',
     },
     Absorb = {
-        Ring2 = 'Tamas Ring',
+        Head = { Name = 'Chaos Burgeonet', Priority = 100 },
+		Ring2 = 'Tamas Ring',
 		Neck = 'Dark Torque',
 		Hands = 'Blood Fng. Gnt.',
+		Legs = 'Black Cuisses',
+		Waist = 'Swift Belt',
+		Back = 'Abyss Cape',
     },
 }
 profile.Sets = sets
@@ -578,15 +630,10 @@ profile.HandleDefault = function()
     end
 
     if (player.Status == 'Idle') then
-        if (parade_gorget and player.HPP >= 85) then
+        if (parade_gorget and player.HPP >= 85 and player.MPP < 100) then
             gFunc.Equip('Neck', 'Parade Gorget')
         end
     end
-	if (player.Status == 'Engaged') then
-		if (parade_gorget and player.MP <= 50 and player.HPP >= 85) then
-            gFunc.Equip('Neck', 'Parade Gorget')
-		end
-	end
     local environment = gData.GetEnvironment()
 
     gcmelee.DoDefaultOverride()

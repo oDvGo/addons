@@ -274,7 +274,7 @@ function gcinclude.DoDefaultOverride(isMelee)
 
     if (environment.Area ~= nil) and (Towns:contains(environment.Area)) then
         gFunc.EquipSet('Town')
-        if (ducal_aketon == true) then
+        if (ducal_aketon == true and player.IsMoving == true) then
             gFunc.Equip('Body', 'Ducal Aketon')
         end
     end

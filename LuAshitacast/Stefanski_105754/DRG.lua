@@ -22,7 +22,7 @@ local sets = {
 		Ring2 = 'Toreador\'s Ring',
 		Back = 'Forager\'s Mantle',
 		Waist = 'Wyrm Belt',
-		Legs = 'Barone Cosciales',
+		Legs = 'Homam Cosciales',
 		Feet = 'Homam Gambieras',
     },
     IdleALT = {},
@@ -41,7 +41,7 @@ local sets = {
 		Ring2 = 'Toreador\'s Ring',
 		Back = 'Forager\'s Mantle',
 		Waist = 'Wyrm Belt',
-		Legs = 'Barone Cosciales',
+		Legs = 'Homam Cosciales',
 		Feet = 'Homam Gambieras',
 	},
     Movement = {
@@ -90,7 +90,7 @@ local sets = {
 		Ring2 = 'Toreador\'s Ring',
 		Back = 'Forager\'s Mantle',
 		Waist = 'Swift Belt',
-		Legs = 'Barone Cosciales',
+		Legs = 'Homam Cosciales',
 		Feet = 'Homam Gambieras',
     },
     TP_HighAcc = {
@@ -118,7 +118,7 @@ local sets = {
 		Ring2 = 'Toreador\'s Ring',
 		Back = 'Forager\'s Mantle',
 		Waist = 'Swift Belt',
-		Legs = 'Barone Cosciales',
+		Legs = 'Homam Cosciales',
 		Feet = 'Homam Gambieras',
 	},
 
