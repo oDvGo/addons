@@ -319,18 +319,18 @@ local sets = {
 
     TP = {
         --Main = 'Light Staff',
-        Ammo = 'Mille. Sachet',
+        Ammo = 'Tiphia Sting',
         Head = 'Optical Hat',
         Neck = 'Peacock Amulet',
         Ear1 = 'Diabolos\'s Earring',
         Ear2 = 'Brutal Earring',
-        Body = 'Austere Robe',
-        --Hands = 'Battle Gloves',
+        Body = 'Nashira Manteel',
+        Hands = 'Custom F Gloves',
         Ring1 = 'Toreador\'s Ring',
-        --Ring2 = 'Toreador\'s Ring',
+        Ring2 = 'Evoker\'s Ring',
         Back = 'Astute Cape',
-        Waist = 'Life Belt',
-        Legs = 'Nashira Seraweels',
+        Waist = 'Swift Belt',
+        Legs = 'Hydra Brais',
         Feet = 'Marine F Boots',
     },
     TP_HighAcc = {
@@ -338,7 +338,22 @@ local sets = {
     },
     TP_NIN = {},
     TP_Mjollnir_Haste = {},
-    WS = {},
+    WS = {
+		--Main = 'Light Staff',
+        Ammo = 'Tiphia Sting',
+        Head = 'Optical Hat',
+        Neck = 'Temp. Torque',
+        Ear1 = 'Diabolos\'s Earring',
+        Ear2 = 'Brutal Earring',
+        Body = 'Hydra Doublet',
+        Hands = 'Battle Gloves',
+        Ring1 = 'Aqua Ring',
+        Ring2 = 'Toreador\'s Ring',
+        Back = 'Ryl. Army Mantle',
+        Waist = 'Penitent\'s Rope',
+        Legs = 'Hydra Brais',
+        Feet = 'Rostrum Pumps',
+	},
     WS_HighAcc = {},
 }
 profile.Sets = sets
@@ -386,6 +401,9 @@ profile.HandleWeaponskill = function()
         gFunc.EquipSet('WS_HighAcc')
     end
     gcmage.DoFenrirsEarring()
+	if (gData.GetAction().Name == 'Retribution') then
+		gFunc.Equip('Neck', 'Soil Gorget')
+	end
 end
 
 profile.OnLoad = function()
