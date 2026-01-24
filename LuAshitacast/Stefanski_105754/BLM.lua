@@ -233,7 +233,7 @@ local sets = {
     },
     Yellow = { -- This will override Precast if /lag is turned on or the spell casting time is too short. e.g. Tier 1: "Stone"
         Head = 'Zenith Crown',
-        --Ammo = 'Tiphia Sting',
+        Ammo = 'Tiphia Sting',
         --Ear1 = 'Loquac. Earring',
         --Ear2 = 'Magnetic Earring',
         Neck = 'Checkered Scarf',
@@ -318,7 +318,7 @@ local sets = {
         Ear1 = { Name = 'Loquac. Earring', Priority = 100 },
         Ear2 = 'Cmn. Earring',
         Body = 'Mahatma Hpl.',
-        Hands = 'Dvt. Mitts +1',
+        Hands = 'Devotee\'s Mitts',
         Ring1 = 'Aqua Ring',
         Ring2 = 'Communion Ring',
         Waist = 'Penitent\'s Rope',
@@ -371,7 +371,6 @@ local sets = {
 		Back = 'Altruistic Cape',
 		Ring1 = 'Snow Ring',
 		Ring2 = 'Tamas Ring',
-		Back = 'Altruistic Cape',
 		Waist = 'Penitent\'s Rope',
     },
     EnfeeblingMND = {
@@ -386,7 +385,6 @@ local sets = {
 		Back = 'Altruistic Cape',
 		Ring1 = 'Snow Ring',
 		Ring2 = 'Tamas Ring',
-		Back = 'Altruistic Cape',
 		Waist = 'Penitent\'s Rope',
     },
     EnfeeblingINT = {
@@ -401,7 +399,6 @@ local sets = {
 		Back = 'Altruistic Cape',
 		Ring1 = 'Snow Ring',
 		Ring2 = 'Tamas Ring',
-		Back = 'Altruistic Cape',
 		Waist = 'Sorcerer\'s Belt',
     },
     EnfeeblingACC = {
@@ -416,7 +413,6 @@ local sets = {
 		Back = 'Altruistic Cape',
 		Ring1 = 'Snow Ring',
 		Ring2 = 'Tamas Ring',
-		Back = 'Altruistic Cape',
 		Waist = 'Penitent\'s Rope',
     },
 
@@ -428,14 +424,13 @@ local sets = {
 		Ear1 = 'Omn. Earring',
 		Ear2 = 'Magnetic Earring',
         Body = 'Nashira Manteel',
-        Legs = 'Nashira Seraweels',
+        Legs = 'Wizard\'s Tonban',
 		Hands = 'Src. Gloves +1',
 		Feet = 'Rostrum Pumps',
-		Back = 'Altruistic Cape',
+		Back = 'Merciful Cape',
 		Ring1 = 'Snow Ring',
 		Ring2 = 'Tamas Ring',
-		Back = 'Altruistic Cape',
-		Waist = 'Penitent\'s Rope',
+		Waist = 'Swift Belt',
     },
     Stun = {
         Ammo = 'Phtm. Tathlum',
@@ -447,11 +442,10 @@ local sets = {
         Legs = 'Nashira Seraweels',
 		Hands = 'Src. Gloves +1',
 		Feet = 'Rostrum Pumps',
-		Back = 'Altruistic Cape',
+		Back = 'Merciful Cape',
 		Ring1 = 'Snow Ring',
 		Ring2 = 'Tamas Ring',
-		Back = 'Altruistic Cape',
-		Waist = 'Penitent\'s Rope',
+		Waist = 'Swift Belt',
     },
 
     Nuke = {

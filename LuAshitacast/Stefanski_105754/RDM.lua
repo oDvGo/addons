@@ -371,7 +371,7 @@ local sets = {
         Ring2 = 'Tamas Ring',
         Back = 'Altruistic Cape',
         Waist = 'Penitent\'s Rope',
-        Legs = 'Druid\'s Slops',
+        Legs = 'Wlk. Tights +1',
         Feet = 'Dls. Boots +1',
     },
     Cheat_C4HPDown = {
@@ -389,7 +389,7 @@ local sets = {
         Ring2 = 'Tamas Ring',
         Back = 'Altruistic Cape',
         Waist = 'Penitent\'s Rope',
-        Legs = 'Druid\'s Slops',
+        Legs = 'Wlk. Tights +1',
         Feet = 'Dls. Boots +1',
     },
     Cheat_HPUp = {
@@ -407,7 +407,7 @@ local sets = {
         Ring2 = 'Tamas Ring',
         Back = 'Altruistic Cape',
         Waist = 'Penitent\'s Rope',
-        Legs = 'Druid\'s Slops',
+        Legs = 'Wlk. Tights +1',
         Feet = 'Dls. Boots +1',
     },
 
@@ -426,7 +426,7 @@ local sets = {
         Ring2 = 'Tamas Ring',
         Back = 'Altruistic Cape',
         Waist = 'Penitent\'s Rope',
-        Legs = 'Druid\'s Slops',
+        Legs = 'Wlk. Tights +1',
         Feet = 'Dls. Boots +1',
     },
     Cursna = {
@@ -443,7 +443,7 @@ local sets = {
         Ring2 = 'Tamas Ring',
         Back = 'Rainbow Cape',
         Waist = 'Hierarch Belt',
-        Legs = 'Warlock\'s Tights',
+        Legs = 'Wlk. Tights +1',
         Feet = 'Dls. Boots +1',
     },
 
@@ -461,7 +461,7 @@ local sets = {
         Ring2 = 'Tamas Ring',
         Back = 'Merciful Cape',
         Waist = 'Swift Belt',
-        Legs = 'Warlock\'s Tights',
+        Legs = 'Wlk. Tights +1',
         Feet = 'Dls. Boots +1',
     },
     Stoneskin = {
@@ -477,7 +477,7 @@ local sets = {
         Ring2 = 'Tamas Ring',
         Back = 'Merciful Cape',
         Waist = 'Penitent\'s Rope',
-        Legs = 'Mahatma Slops',
+        Legs = 'Wlk. Tights +1',
         Feet = 'Dls. Boots +1',
     },
     Spikes = {

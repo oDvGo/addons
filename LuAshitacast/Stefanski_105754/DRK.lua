@@ -1,6 +1,6 @@
 local profile = {}
 
-local fastCastValue = 0.07 -- 7% from gear
+local fastCastValue = 0.05 -- 7% from gear
 
 local use_chaos_burgeonet_for_tp_during_souleater = false
 
@@ -9,7 +9,7 @@ local fenrirs_stone = true
 
 -- Set to true if you have the obi
 local karin_obi = true
-local dorin_obi = false
+local dorin_obi = true
 local suirin_obi = true
 local furin_obi = true
 local hyorin_obi = true
@@ -46,7 +46,7 @@ local sets = {
         Ear1 = 'Merman\'s Earring',
         Ear2 = 'Brutal Earring',
         Body = 'Scp. Harness +1',
-        Hands = 'Custom F Gloves',
+        Hands = 'Pallas\'s Bracelets',
         Ring1 = 'Toreador\'s Ring',
         Ring2 = 'Toreador\'s Ring',
         Back = 'Forager\'s Mantle',
@@ -64,7 +64,7 @@ local sets = {
         Ear1 = 'Merman\'s Earring',
         Ear2 = 'Brutal Earring',
         Body = 'Scp. Harness +1',
-        Hands = 'Custom F Gloves',
+        Hands = 'Pallas\'s Bracelets',
         Ring1 = 'Toreador\'s Ring',
         Ring2 = 'Toreador\'s Ring',
         Back = 'Forager\'s Mantle',
@@ -82,7 +82,7 @@ local sets = {
         Ear1 = 'Merman\'s Earring',
         Ear2 = 'Brutal Earring',
         Body = 'Scp. Harness +1',
-        Hands = 'Custom F Gloves',
+        Hands = 'Pallas\'s Bracelets',
         Ring1 = 'Toreador\'s Ring',
         Ring2 = 'Toreador\'s Ring',
         Back = 'Forager\'s Mantle',
@@ -375,10 +375,10 @@ local sets = {
 		--Ammo = 'Acid Bolt',
 		Head = 'Wyvern Helm',
         Neck = 'Peacock Amulet',
-        Ear1 = 'Merman\'s Earring',
+        --Ear1 = 'Merman\'s Earring',
         Ear2 = 'Brutal Earring',
         Body = 'Hecatomb Harness',
-        Hands = 'Custom F Gloves',
+        Hands = 'Pallas\'s Bracelets',
         Ring1 = 'Toreador\'s Ring',
         Ring2 = 'Flame Ring',
         Back = 'Forager\'s Mantle',
@@ -393,10 +393,10 @@ local sets = {
 		--Ammo = 'Acid Bolt',
 		Head = 'Optical Hat',
         Neck = 'Peacock Amulet',
-        Ear1 = 'Merman\'s Earring',
+        --Ear1 = 'Merman\'s Earring',
         Ear2 = 'Brutal Earring',
         Body = 'Hecatomb Harness',
-        Hands = 'Custom F Gloves',
+        Hands = 'Pallas\'s Bracelets',
         Ring1 = 'Toreador\'s Ring',
         Ring2 = 'Toreador\'s Ring',
         Back = 'Abyss Cape',
@@ -409,9 +409,9 @@ local sets = {
         --Sub = '',
 		--Range = 'Thug\'s Zamburak',
 		--Ammo = 'Acid Bolt',
-		Head = 'Chaos Burgeonet',
+		Head = 'Wyvern Helm',
         Neck = 'Peacock Amulet',
-        Ear1 = 'Merman\'s Earring',
+        --Ear1 = 'Merman\'s Earring',
         Ear2 = 'Brutal Earring',
         Body = 'Hecatomb Harness',
         Hands = 'Homam Manopolas',
@@ -427,12 +427,12 @@ local sets = {
         --Sub = '',
 		--Range = 'Thug\'s Zamburak',
 		--Ammo = 'Acid Bolt',
-		Head = 'Chaos Burgeonet',
+		Head = 'Wyvern Helm',
         Neck = 'Peacock Amulet',
-        Ear1 = 'Merman\'s Earring',
+        --Ear1 = 'Merman\'s Earring',
         Ear2 = 'Brutal Earring',
         Body = 'Hecatomb Harness',
-        Hands = 'Custom F Gloves',
+        Hands = 'Pallas\'s Bracelets',
         Ring1 = 'Toreador\'s Ring',
         Ring2 = 'Flame Ring',
         Back = 'Forager\'s Mantle',
@@ -445,12 +445,12 @@ local sets = {
         --Sub = '',
 		--Range = 'Thug\'s Zamburak',
 		--Ammo = 'Acid Bolt',
-		Head = 'Chaos Burgeonet',
+		Head = 'Wyvern Helm',
         Neck = 'Peacock Amulet',
-        Ear1 = 'Merman\'s Earring',
+        --Ear1 = 'Merman\'s Earring',
         Ear2 = 'Brutal Earring',
         Body = 'Hecatomb Harness',
-        Hands = 'Custom F Gloves',
+        Hands = 'Pallas\'s Bracelets',
         Ring1 = 'Toreador\'s Ring',
         Ring2 = 'Flame Ring',
         Back = 'Forager\'s Mantle',
@@ -458,8 +458,25 @@ local sets = {
         Legs = 'Black Cuisses',
         Feet = 'Hct. Leggings',
 	},
-
-    WeaponBash = {
+	WS_SteelCyclone = {
+		    --Main = 'Tredecim Scythe',
+        --Sub = '',
+		--Range = 'Thug\'s Zamburak',
+		--Ammo = 'Acid Bolt',
+		Head = 'Wyvern Helm',
+        Neck = 'Fortitude Torque',
+        --Ear1 = 'Merman\'s Earring',
+        Ear2 = 'Brutal Earring',
+        Body = 'Hecatomb Harness',
+        Hands = 'Pallas\'s Bracelets',
+        Ring1 = 'Toreador\'s Ring',
+        Ring2 = 'Flame Ring',
+        Back = 'Forager\'s Mantle',
+        Waist = 'Warwolf Belt',
+        Legs = 'Black Cuisses',
+        Feet = 'Hct. Leggings',
+	},
+	WeaponBash = {
         Hands = 'Chaos Gauntlets',
     },
     ArcaneCircle = {
@@ -587,7 +604,9 @@ profile.HandleWeaponskill = function()
         gFunc.EquipSet(sets.WS_SpinningSlash)
     elseif (action.Name == 'Cross Reaper') then
         gFunc.EquipSet(sets.WS_CrossReaper)
-    end
+    elseif (action.Name == 'Steel Cyclone') then
+		gFunc.EquipSet(sets.WS_SteelCyclone)
+	end
 
     local souleater = gData.GetBuffCount('Souleater')
     if (souleater > 0) then
@@ -596,7 +615,8 @@ profile.HandleWeaponskill = function()
 end
 
 profile.OnLoad = function()
-    gcinclude.SetAlias(T{'hate'})
+	gSettings.CastDelayTimeout = 10.0;
+	gcinclude.SetAlias(T{'hate'})
     gcdisplay.CreateToggle('Hate', false)
     gcmelee.Load()
     profile.SetMacroBook()
@@ -661,14 +681,11 @@ profile.HandleMidcast = function()
         if (string.contains(action.Name, 'Absorb')) then
             gFunc.EquipSet(sets.Absorb)
         end
+    end
 
-        if (ObiCheck(action)) then
-            local obi = NukeObiTable[action.Element]
-            local obiOwned = NukeObiOwnedTable[action.Element]
-            if (obiOwned) then
-                gFunc.Equip('Waist', obi)
-            end
-        end
+    if (ObiCheck(action)) then
+        local obiOwned = NukeObiOwnedTable[action.Element]
+        gFunc.EquipSet(obiOwned)
     end
 
     if (action.Skill ~= 'Ninjutsu' and gcdisplay.GetToggle('Hate')) then

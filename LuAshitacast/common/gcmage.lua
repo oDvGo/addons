@@ -11,7 +11,7 @@ local dark_staff = 'Pluto\'s Staff'
 
 -- Set to true if you have the obi
 local karin_obi = true
-local dorin_obi = false
+local dorin_obi = true
 local suirin_obi = true
 local furin_obi = true
 local hyorin_obi = true

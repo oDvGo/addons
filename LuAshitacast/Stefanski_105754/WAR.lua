@@ -9,7 +9,7 @@ local sets = {
 		Ear1 = 'Minuet Earring',
 		Ear2 = 'Merman\'s Earring',
 		Body = 'Custom Vest',
-		Hands = 'Custom F Gloves',
+		Hands = 'Pallas\'s Bracelets',
 		Ring1 = 'Toreador\'s Ring',
 		Ring2 = 'Toreador\'s Ring',
 		Back = 'Amemet Mantle +1',
@@ -18,7 +18,9 @@ local sets = {
 		Feet = 'Marine F Boots',
 	},
     IdleALT = {},
-    Resting = {},
+    Resting = {
+		Ear2 = 'Sanative Earring',
+	},
     Town = {},
     Movement = {},
 
@@ -45,7 +47,7 @@ local sets = {
     LockSet3 = {},
 
     TP_LowAcc = {
-		Head = 'Luisant Salade',
+		Head = 'Optical Hat',
 		Neck = 'Peacock Amulet',
 		Ear1 = 'Minuet Earring',
 		Ear2 = 'Merman\'s Earring',
@@ -59,7 +61,7 @@ local sets = {
 		Feet = 'Luisant Sollerets',
 	},
     TP_HighAcc = {
-		Head = 'Luisant Salade',
+		Head = 'Optical Hat',
 		Neck = 'Peacock Amulet',
 		Ear1 = 'Minuet Earring',
 		Ear2 = 'Diabolos\'s Earring',
@@ -79,7 +81,7 @@ local sets = {
 		Ear1 = 'Minuet Earring',
 		Ear2 = 'Merman\'s Earring',
 		Body = 'Haubergeon',
-		Hands = 'Custom F Gloves',
+		Hands = 'Pallas\'s Bracelets',
 		Ring1 = 'Toreador\'s Ring',
 		Ring2 = 'Victory Ring',
 		Back = 'Amemet Mantle +1',
@@ -89,14 +91,15 @@ local sets = {
 	},
 
     WS = {
-		Hands = 'Custom F Gloves',
+		Hands = 'Pallas\'s Bracelets',
 		Ring2 = 'Victory Ring',
-		Waist = 'Life Belt',
+		Legs = 'Barone Cosciales',
+		Waist = 'Warrior\'s Stone',
 	},
     WS_HighAcc = {
-		Hands = 'Custom F Gloves',
+		Hands = 'Pallas\'s Bracelets',
 		Ring2 = 'Victory Ring',
-		Waist = 'Life Belt',
+		Waist = 'Warrior\'s Stone',
 	},
 
     Warcry = {},
@@ -109,7 +112,7 @@ local sets = {
 		Hands = 'Custom F Gloves',
 		Ring1 = 'Woodsman Ring',
 		Ring2 = 'Sniper\'s Ring',
-		Legs = 'Republic Subligar',
+		Legs = 'Barone Cosciales',
 		Feet = 'Custom F Boots',
 	},
 
@@ -121,16 +124,16 @@ local sets = {
     },
 	
 	['Rampage'] = {
-		Head = 'Luisant Salade',
+		Head = 'Optical Hat',
 		Neck = 'Peacock Amulet',
 		Ear1 = 'Minuet Earring',
 		Ear2 = 'Diablos\'s Earring',
 		Body = 'Haubergeon',
-		Hands = 'Custom F Gloves',
+		Hands = 'Pallas\'s Bracelets',
 		Ring1 = 'Toreador\'s Ring',
 		Ring2 = 'Toreador\'s Ring',
 		Back = 'Amemet Mantle +1',
-		Waist = 'Life Belt',
+		Waist = 'Warrior\'s Stone',
 		Legs = 'Luisant Brayettes',
 		Feet = 'Marine F Boots',
 	},
