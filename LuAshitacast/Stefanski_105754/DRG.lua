@@ -374,7 +374,11 @@ profile.HandleDefault = function()
     local isRDM = player.SubJob == 'RDM'
     local isMage = isWHM or isRDM
     local weakened = gData.GetBuffCount('Weakness')
-
+	
+	if (player.Status == 'Idle' and player.HPP < 95 and conquest:GetOutsideControl()) then
+        gFunc.Equip('Head', 'President. Hairpin')
+    end
+	
     if (isWHM and player.HP <= heal_hp_threshold_whm and weakened < 1) then
         gFunc.EquipSet(sets.DT)
     end

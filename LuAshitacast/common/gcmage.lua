@@ -41,7 +41,7 @@ local overlords_ring = false
 local overlords_ring_slot = 'Ring1'
 local wizards_earring = true
 local wizards_earring_slot = 'Ear1'
-local healers_earring = true
+local healers_earring = false
 local healers_earring_slot = 'Ear1'
 
 -- RDM Specific

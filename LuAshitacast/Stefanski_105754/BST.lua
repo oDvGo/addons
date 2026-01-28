@@ -45,6 +45,7 @@ local sets = {
 		Feet = 'Marine F Boots',
     },
     Resting = {
+		Head = 'President. Hairpin',
 		Ear1 = 'Relaxing Earring',
 		Ear2 = 'Sanative Earring',
 		Legs = 'Monster Trousers',
@@ -85,7 +86,7 @@ local sets = {
 		--Main = 'Warrior\'s Axe',
 		--Sub = '',
 		--Range = '',
-		Ammo = 'Tiphia Sting',
+		Ammo = 'Virtue Stone',
 		Head = 'Panther Mask',
 		Neck = 'Peacock Amulet',
 		Ear1 = 'Merman\'s Earring',
@@ -139,7 +140,7 @@ local sets = {
 
     WS = {
 		--Range = '',
-		--Ammo = 'Mille. Sachet',
+		Ammo = 'Tiphia Sting',
 		Head = 'Wyvern Helm',
 		Neck = 'Peacock Amulet',
 		Ear1 = 'Merman\'s Earring',
@@ -155,7 +156,7 @@ local sets = {
 	},
     WS_HighAcc = {
 		--Range = '',
-		--Ammo = 'Mille. Sachet',
+		Ammo = 'Tiphia Sting',
 		Head = 'Optical Hat',
 		Neck = 'Peacock Amulet',
 		Ear1 = 'Merman\'s Earring',
@@ -172,7 +173,7 @@ local sets = {
 	
 	['Rampage'] = {
 		--Range = '',
-		--Ammo = 'Mille. Sachet',
+		Ammo = 'Tiphia Sting',
 		Head = 'Optical Hat',
 		Neck = 'Temp. Torque',
 		Ear1 = 'Merman\'s Earring',
@@ -183,6 +184,23 @@ local sets = {
 		Ring2 = 'Toreador\'s Ring',
 		Back = 'Forager\'s Mantle',
 		Waist = 'Life Belt',
+		Legs = 'Byakko\'s Haidate',
+		Feet = 'Hct. Leggings',
+	},
+	
+	['Decimation'] = {
+		--Range = '',
+		Ammo = 'Tiphia Sting',
+		Head = 'Wyvern Helm',
+		Neck = 'Light Gorget',
+		Ear1 = 'Merman\'s Earring',
+		Ear2 = 'Brutal Earring',
+		Body = 'Hecatomb Harness',
+		Hands = 'Pallas\'s Bracelets',
+		Ring1 = 'Flame Ring',
+		Ring2 = 'Toreador\'s Ring',
+		Back = 'Forager\'s Mantle',
+		Waist = 'Warwolf Belt',
 		Legs = 'Byakko\'s Haidate',
 		Feet = 'Hct. Leggings',
 	},
@@ -271,6 +289,7 @@ local PetTable2 = {
 
 local WeaponSkills = T{
     'Rampage',
+	'Decimation',
 }
 
 local PetMagicAttack = T{'Gloom Spray','Fireball','Acid Spray','Molting Plumage','Cursed Sphere','Nectarous Deluge','Charged Whisker','Nepenthic Plunge'}
@@ -413,6 +432,9 @@ profile.HandleDefault = function()
     if (player.Status == 'Idle' and player.HPP < 50 and muscle_belt ~= '') then
         gFunc.Equip('Waist', muscle_belt)
     end
+	if (player.Status == 'Idle' and player.HPP < 95 and conquest:GetOutsideControl()) then
+        gFunc.Equip('Head', 'President. Hairpin')
+    end
     if (player.SubJob == 'NIN' and player.Status == 'Engaged') then
         gFunc.EquipSet('TP_NIN')
     end
@@ -424,6 +446,9 @@ profile.HandleDefault = function()
             gFunc.Equip('Body', 'Gaudy Harness')
         end
     end
+	--if (gData.GetEquipment().Main == 'Temperance Axe' and player.Status == 'Engaged') then
+	--	gFunc.Equip('Ammo', 'Virtue Stone')
+	--end
 
     local petAction = gData.GetPetAction()
     if (petAction ~= nil) then

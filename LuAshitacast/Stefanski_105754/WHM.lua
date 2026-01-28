@@ -145,7 +145,7 @@ local sets = {
         Ammo = 'Hedgehog Bomb',
         Head = 'Healer\'s Cap',
         Neck = 'Healing Torque',
-        Ear1 = 'Loquac. Earring',
+        Ear1 = 'Novia Earring',
         Ear2 = 'Magnetic Earring',
         Body = 'Noble\'s Tunic',
         Hands = 'Hlr. Mitts +1',
@@ -162,7 +162,7 @@ local sets = {
         Ammo = 'Hedgehog Bomb',
         Head = 'Healer\'s Cap',
         Neck = 'Healing Torque',
-        Ear1 = 'Loquac. Earring',
+        Ear1 = 'Novia Earring',
         Ear2 = 'Magnetic Earring',
         Body = 'Noble\'s Tunic',
         Hands = 'Hlr. Mitts +1',
@@ -519,9 +519,14 @@ profile.HandleCommand = function(args)
 end
 
 profile.HandleDefault = function()
-    gcmage.DoDefault(ninSJMaxMP, nil, blmSJMaxMP, rdmSJMaxMP, nil)
+    local player = gData.GetPlayer()
+	gcmage.DoDefault(ninSJMaxMP, nil, blmSJMaxMP, rdmSJMaxMP, nil)
 
     gFunc.EquipSet(gcinclude.BuildLockableSet(gData.GetEquipment()))
+	
+	if (player.Status == 'Idle' and player.HPP < 95 and conquest:GetOutsideControl()) then
+        gFunc.Equip('Head', 'President. Hairpin')
+    end
 end
 
 profile.HandlePrecast = function()

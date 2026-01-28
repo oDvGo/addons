@@ -5,6 +5,9 @@ local fastCastValue = 0.04 -- 4% from gear not including carbuncles cuffs or evo
 local carbuncles_cuffs = false
 local evokers_boots = false
 
+local whmSJMaxMP = 1160
+local blmSJMaxMP = 1170
+
 local cureMP = 895 -- Cure set max MP
 
 local sets = {
@@ -16,16 +19,31 @@ local sets = {
         Head = 'displaced',
         Neck = 'Uggalepih Pendant',
         Body = 'Vermillion Cloak',
-        Hands = 'Summoner\'s Brcr.',
+        Hands = 'Evoker\'s Bracers',
         Ring1 = 'Tamas Ring',
         Ring2 = 'Evoker\'s Ring',
-        Back = 'Gigant Mantle',
+        Back = 'Summoner\'s Cape',
         Waist = 'Hierarch belt',
         Legs = 'Summoner\'s Spats',
         Feet = 'Summoner\'s Pgch.',
     },
     IdleALT = {},
-    IdleMaxMP = {},
+    IdleMaxMP = {
+		Main = 'Terra\'s Staff',
+        Ear1 = 'Loquac. Earring',
+        Ear2 = 'Magnetic Earring',
+        Ammo = 'Hedgehog Bomb',
+        Head = 'Summoner\'s Horn',
+        Neck = 'Uggalepih Pendant',
+        Body = 'Hydra Doublet',
+        Hands = 'Evoker\'s Bracers',
+        Ring1 = 'Tamas Ring',
+        Ring2 = 'Evoker\'s Ring',
+        Back = 'Summoner\'s Cape',
+        Waist = 'Hierarch belt',
+        Legs = 'Summoner\'s Spats',
+        Feet = 'Summoner\'s Pgch.',
+	},
     Resting = {
         Main = 'Pluto\'s Staff',
         Head = 'Hydra Beret',
@@ -303,17 +321,26 @@ local sets = {
     },
     BP_Magical = {
 		Head = 'Evoker\'s Horn',
+		Body = 'Sommoner\'s Dblt.',
 		Hands = 'Summoner\'s Brcr.',
+		Legs = 'Evoker\'s Spats',
+		Feet = 'Summoner\'s Pgch.',
 		Back = 'Astute Cape',
     },
     BP_Physical = {
 		Back = 'Astute Cape',
 		Head = 'Evoker\'s Horn',
+		Body = 'Sommoner\'s Dblt.',
+		Legs = 'Evoker\'s Spats',
+		Feet = 'Summoner\'s Pgch.',
 		Hands = 'Summoner\'s Brcr.',
     },
     BP_Hybrid = {
 		Back = 'Astute Cape',
 		Head = 'Evoker\'s Horn',
+		Body = 'Sommoner\'s Dblt.',
+		Legs = 'Evoker\'s Spats',
+		Feet = 'Summoner\'s Pgch.',
 		Hands = 'Summoner\'s Brcr.',
     },
 
@@ -424,7 +451,7 @@ profile.HandleCommand = function(args)
 end
 
 profile.HandleDefault = function()
-    local petAction = gData.GetPetAction()
+	local petAction = gData.GetPetAction()
     if (petAction ~= nil) then
         gFunc.EquipSet('BP')
 
@@ -443,7 +470,7 @@ profile.HandleDefault = function()
             gFunc.EquipSet(sets.BP_Physical)
         end
     else
-        gcmage.DoDefault(nil, nil, nil, nil)
+        gcmage.DoDefault(nil, whmSJMaxMP, blmSJMaxMP, nil)
     end
     gFunc.EquipSet(gcinclude.BuildLockableSet(gData.GetEquipment()))
 end

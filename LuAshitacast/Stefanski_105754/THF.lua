@@ -15,7 +15,7 @@ local sets = {
 		Ring1 = 'Woodsman Ring',
 		Ring2 = 'Sniper\'s Ring',
 		Back = 'Trimmer\'s Mantle',
-		Waist = 'Tilt Belt',
+		Waist = 'Swift Belt',
 		Legs = 'Republic Subligar',
 		Feet = 'Bounding Boots',
 	},
@@ -55,8 +55,8 @@ local sets = {
 		Ring1 = 'Woodsman Ring',
 		Ring2 = 'Sniper\'s Ring',
 		Back = 'Trimmer\'s Mantle',
-		Waist = 'Tilt Belt',
-		Legs = 'Republic Subligar',
+		Waist = 'Swift Belt',
+		Legs = 'Bravo\'s Subligar',
 		Feet = 'Bounding Boots',
 	},
     TP_HighAcc = {},
@@ -73,7 +73,7 @@ local sets = {
 		Ring1 = 'Woodsman Ring',
 		Ring2 = 'Sniper\'s Ring',
 		Back = 'Trimmer\'s Mantle',
-		Waist = 'Tilt Belt',
+		Waist = 'Life Belt',
 		Legs = 'Republic Subligar',
 		Feet = 'Bounding Boots',
 	},
@@ -81,9 +81,26 @@ local sets = {
 
     WS_Evisceration = {},
     WS_SharkBite = {},
-
+	WS_GustSlash = {
+		Head = 'Emperor Hairpin',
+		Neck = 'Peacock Amulet',
+		Ear1 = 'Moldavite Earring',
+		Ear2 = 'Beetle Earring +1',
+		Body = 'Rapparee Harness',
+		Hands = 'Custom F Gloves',
+		Ring1 = 'Deft Ring',
+		Ring2 = 'Deft Ring',
+		Back = 'Trimmer\'s Mantle',
+		Waist = 'Life Belt',
+		Legs = 'Republic Subligar',
+		Feet = 'Bounding Boots',
+	},
+	
     SA = {},
-    TA = {},
+    TA = {
+		Ring1 = 'Deft Ring',
+		Ring2 = 'Deft Ring',
+	},
     SATA = {},
 
     Flee = {},
@@ -97,12 +114,14 @@ local sets = {
 		Body = 'Rapparee Harness',
 		Ring1 = 'Woodsman Ring',
 		Ring2 = 'Sniper\'s Ring',
+		Legs = 'Bravo\'s Subligar',
 		Feet = 'Custom F Boots',
 	},
     Ranged_INT = {
 		Body = 'Rapparee Harness',
 		Ring1 = 'Woodsman Ring',
 		Ring2 = 'Sniper\'s Ring',
+		Legs = 'Bravo\'s Subligar',
 		Feet = 'Custom F Boots',
 	},
 }
@@ -175,6 +194,8 @@ profile.HandleWeaponskill = function()
         gFunc.EquipSet(sets.WS_Evisceration)
     elseif (action.Name == 'Shark Bite') then
         gFunc.EquipSet(sets.WS_SharkBite)
+	elseif (action.Name == 'Gust Slash') then
+		gFunc.EquipSet(sets.WS_GustSlash)
     end
 
     local ta = gData.GetBuffCount('Trick Attack')
