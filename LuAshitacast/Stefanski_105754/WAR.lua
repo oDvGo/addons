@@ -6,13 +6,13 @@ local sets = {
     Idle = {
 		Head = 'Emperor Hairpin',
 		Neck = 'Peacock Amulet',
-		Ear1 = 'Minuet Earring',
-		Ear2 = 'Merman\'s Earring',
+		Ear2 = 'Minuet Earring',
+		Ear1 = 'Merman\'s Earring',
 		Body = 'Custom Vest',
 		Hands = 'Pallas\'s Bracelets',
 		Ring1 = 'Toreador\'s Ring',
 		Ring2 = 'Toreador\'s Ring',
-		Back = 'Amemet Mantle +1',
+		Back = 'Forager\'s Mantle',
 		Waist = 'Swift Belt',
 		Legs = 'Republic Subligar',
 		Feet = 'Marine F Boots',
@@ -49,27 +49,27 @@ local sets = {
     TP_LowAcc = {
 		Head = 'Optical Hat',
 		Neck = 'Peacock Amulet',
-		Ear1 = 'Minuet Earring',
-		Ear2 = 'Merman\'s Earring',
+		Ear2 = 'Minuet Earring',
+		Ear1 = 'Merman\'s Earring',
 		Body = 'Haubergeon',
-		Hands = 'Luisant Moufles',
+		Hands = 'Dusk Gloves',
 		Ring1 = 'Toreador\'s Ring',
 		Ring2 = 'Toreador\'s Ring',
-		Back = 'Amemet Mantle +1',
+		Back = 'Forager\'s Mantle',
 		Waist = 'Swift Belt',
 		Legs = 'Luisant Brayettes',
-		Feet = 'Luisant Sollerets',
+		Feet = 'Dusk Ledelsens',
 	},
     TP_HighAcc = {
 		Head = 'Optical Hat',
 		Neck = 'Peacock Amulet',
-		Ear1 = 'Minuet Earring',
-		Ear2 = 'Diabolos\'s Earring',
+		Ear2 = 'Minuet Earring',
+		Ear1 = 'Diabolos\'s Earring',
 		Body = 'Haubergeon',
 		Hands = 'Luisant Moufles',
 		Ring1 = 'Toreador\'s Ring',
 		Ring2 = 'Toreador\'s Ring',
-		Back = 'Amemet Mantle +1',
+		Back = 'Forager\'s Mantle',
 		Waist = 'Swift Belt',
 		Legs = 'Luisant Brayettes',
 		Feet = 'Luisant Sollerets',
@@ -78,28 +78,30 @@ local sets = {
     TP_Aggressor = {
 		Head = 'Luisant Salade',
 		Neck = 'Peacock Amulet',
-		Ear1 = 'Minuet Earring',
-		Ear2 = 'Merman\'s Earring',
+		Ear2 = 'Minuet Earring',
+		Ear1 = 'Merman\'s Earring',
 		Body = 'Haubergeon',
 		Hands = 'Pallas\'s Bracelets',
 		Ring1 = 'Toreador\'s Ring',
 		Ring2 = 'Victory Ring',
-		Back = 'Amemet Mantle +1',
+		Back = 'Forager\'s Mantle',
 		Waist = 'Swift Belt',
 		Legs = 'Luisant Brayettes',
 		Feet = 'Marine F Boots',
 	},
 
     WS = {
+		--Ammo = 'Bomb Core',
 		Hands = 'Pallas\'s Bracelets',
 		Ring2 = 'Victory Ring',
 		Legs = 'Barone Cosciales',
-		Waist = 'Warrior\'s Stone',
+		Waist = 'Warwolf Belt',
+		Feet = 'Marine F Boots',
 	},
     WS_HighAcc = {
 		Hands = 'Pallas\'s Bracelets',
 		Ring2 = 'Victory Ring',
-		Waist = 'Warrior\'s Stone',
+		Waist = 'Warwolf Belt',
 	},
 
     Warcry = {},
@@ -112,6 +114,7 @@ local sets = {
 		Hands = 'Custom F Gloves',
 		Ring1 = 'Woodsman Ring',
 		Ring2 = 'Sniper\'s Ring',
+		Back = 'Amemet Mantle +1',
 		Legs = 'Barone Cosciales',
 		Feet = 'Custom F Boots',
 	},
@@ -126,15 +129,60 @@ local sets = {
 	['Rampage'] = {
 		Head = 'Optical Hat',
 		Neck = 'Peacock Amulet',
-		Ear1 = 'Minuet Earring',
-		Ear2 = 'Diablos\'s Earring',
+		--Ear1 = 'Minuet Earring',
+		--Ear2 = 'Diablos\'s Earring',
 		Body = 'Haubergeon',
 		Hands = 'Pallas\'s Bracelets',
 		Ring1 = 'Toreador\'s Ring',
 		Ring2 = 'Toreador\'s Ring',
-		Back = 'Amemet Mantle +1',
-		Waist = 'Warrior\'s Stone',
-		Legs = 'Luisant Brayettes',
+		Back = 'Forager\'s Mantle',
+		Waist = 'Warwolf Belt',
+		Legs = 'Barone Cosciales',
+		Feet = 'Marine F Boots',
+	},
+	
+	['Raging Rush'] = {
+		Head = 'Optical Hat',
+		Neck = 'Peacock Amulet',
+		--Ear1 = 'Minuet Earring',
+		--Ear2 = 'Diablos\'s Earring',
+		Body = 'Haubergeon',
+		Hands = 'Pallas\'s Bracelets',
+		Ring1 = 'Toreador\'s Ring',
+		Ring2 = 'Toreador\'s Ring',
+		Back = 'Forager\'s Mantle',
+		Waist = 'Warwolf Belt',
+		Legs = 'Barone Cosciales',
+		Feet = 'Marine F Boots',
+	},
+	
+	['Decimation'] = {
+		Head = 'Optical Hat',
+		Neck = 'Light Gorget',
+		--Ear1 = 'Minuet Earring',
+		--Ear2 = 'Diablos\'s Earring',
+		Body = 'Haubergeon',
+		Hands = 'Pallas\'s Bracelets',
+		Ring1 = 'Toreador\'s Ring',
+		Ring2 = 'Victory Ring',
+		Back = 'Forager\'s Mantle',
+		Waist = 'Warwolf Belt',
+		Legs = 'Barone Cosciales',
+		Feet = 'Marine F Boots',
+	},
+	
+	['Steel Cyclone'] = {
+		Head = 'Optical Hat',
+		Neck = 'Peacock Amulet',
+		--Ear1 = 'Minuet Earring',
+		--Ear2 = 'Diablos\'s Earring',
+		Body = 'Haubergeon',
+		Hands = 'Pallas\'s Bracelets',
+		Ring1 = 'Toreador\'s Ring',
+		Ring2 = 'Victory Ring',
+		Back = 'Forager\'s Mantle',
+		Waist = 'Warwolf Belt',
+		Legs = 'Barone Cosciales',
 		Feet = 'Marine F Boots',
 	},
 }
@@ -147,7 +195,9 @@ end
 
 local WeaponSkills = T{
     'Rampage',
+	'Decimation',
 	'Steel Cyclone',
+	'Raging Rush',
 }
 
 gcmelee = gFunc.LoadFile('common\\gcmelee.lua')
@@ -218,9 +268,9 @@ profile.HandleDefault = function()
     end
 
     local aggressor = gData.GetBuffCount('Aggressor')
-    if (aggressor == 1 and gcdisplay.IdleSet == 'LowAcc') then
-        gFunc.EquipSet(sets.TP_Aggressor)
-    end
+    --if (aggressor == 1 and gcdisplay.IdleSet == 'LowAcc') then
+    --    gFunc.EquipSet(sets.TP_Aggressor)
+    --end
 
     gcmelee.DoDefaultOverride()
     gFunc.EquipSet(gcinclude.BuildLockableSet(gData.GetEquipment()))
