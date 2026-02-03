@@ -34,8 +34,8 @@ settings["ammo_font"]["visible"] = true;
 settings["ammo_font"]["background"]["visible"] = false;
 settings["ammo_font"]["draw_flags"] = 48;
 settings["ammo_font"]["color_outline"] = 4278190080;
-settings["x"][1] = 3;
-settings["y"][1] = 4;
+settings["x"][1] = 100;
+settings["y"][1] = 100;
 settings["opacity"][1] = 1;
 
 return settings;

@@ -14,13 +14,13 @@ local sets = {
 		--Range = 'Freesword\'s Bow',
 		Ammo = 'Fenrir\'s Stone',
 		Head = 'Genbu\'s Kabuto',
-		Neck = 'Peacock Amulet',
+		Neck = 'Fortitude Torque',
 		Ear1 = 'Merman\'s Earring',
 		Ear2 = 'Brutal Earring',
 		Body = 'Bst. Jackcoat +1',
 		Hands = 'Seiryu\'s Kote',
-		Ring1 = 'Toreador\'s Ring',
-		Ring2 = 'Toreador\'s Ring',
+		Ring1 = 'Jelly Ring',
+		Ring2 = 'Rajas Ring',
 		Back = 'Forager\'s Mantle',
 		Waist = 'Warwolf Belt',
 		Legs = 'Byakko\'s Haidate',
@@ -38,7 +38,7 @@ local sets = {
 		Body = 'Scp. Harness +1',
 		Hands = 'Ogre Gloves +1',
 		Ring1 = 'Ether Ring',
-		Ring2 = 'Tamas Ring',
+		Ring2 = 'Astral Ring',
 		Back = 'Forager\'s Mantle',
 		Waist = 'Swift Belt',
 		Legs = 'Byakko\'s Haidate',
@@ -94,7 +94,7 @@ local sets = {
 		Body = 'Haubergeon',
 		Hands = 'Dusk Gloves',
 		Ring1 = 'Toreador\'s Ring',
-		Ring2 = 'Toreador\'s Ring',
+		Ring2 = 'Rajas Ring',
 		Back = 'Forager\'s Mantle',
 		Waist = 'Swift Belt',
 		Legs = 'Byakko\'s Haidate',
@@ -105,18 +105,18 @@ local sets = {
 		--Sub = 'Bastokan Axe',
 		--Range = '',
 		Ammo = 'Tiphia Sting',
-		Head = 'Optical Hat',
-		Neck = 'Peacock Amulet',
-		Ear1 = 'Optical Earring',
+		Head = 'Panther Mask',
+		Neck = 'Temp. Torque',
+		Ear1 = 'Merman\'s Earring',
 		Ear2 = 'Brutal Earring',
 		Body = 'Haubergeon',
-		Hands = 'Battle Gloves',
+		Hands = 'Dusk Gloves',
 		Ring1 = 'Toreador\'s Ring',
 		Ring2 = 'Toreador\'s Ring',
 		Back = 'Forager\'s Mantle',
 		Waist = 'Swift Belt',
 		Legs = 'Byakko\'s Haidate',
-		Feet = 'Marine F Boots',
+		Feet = 'Dusk Ledelsens',
 	},
     TP_NIN = {
 		--Main = 'Warrior\'s Axe',
@@ -130,7 +130,7 @@ local sets = {
 		Body = 'Haubergeon',
 		Hands = 'Dusk Gloves',
 		Ring1 = 'Toreador\'s Ring',
-		Ring2 = 'Toreador\'s Ring',
+		Ring2 = 'Rajas Ring',
 		Back = 'Forager\'s Mantle',
 		Waist = 'Swift Belt',
 		Legs = 'Byakko\'s Haidate',
@@ -142,16 +142,16 @@ local sets = {
 		--Range = '',
 		Ammo = 'Tiphia Sting',
 		Head = 'Wyvern Helm',
-		Neck = 'Peacock Amulet',
+		Neck = 'Temp. Torque',
 		Ear1 = 'Merman\'s Earring',
 		Ear2 = 'Brutal Earring',
 		Body = 'Hecatomb Harness',
 		Hands = 'Pallas\'s Bracelets',
 		Ring1 = 'Flame Ring',
-		Ring2 = 'Toreador\'s Ring',
+		Ring2 = 'Rajas Ring',
 		Back = 'Forager\'s Mantle',
 		Waist = 'Warwolf Belt',
-		Legs = 'Byakko\'s Haidate',
+		Legs = 'Bst. Trousers +1',
 		Feet = 'Hct. Leggings',
 	},
     WS_HighAcc = {
@@ -164,10 +164,10 @@ local sets = {
 		Body = 'Hecatomb Harness',
 		Hands = 'Pallas\'s Bracelets',
 		Ring1 = 'Toreador\'s Ring',
-		Ring2 = 'Toreador\'s Ring',
+		Ring2 = 'Rajas Ring',
 		Back = 'Forager\'s Mantle',
 		Waist = 'Life Belt',
-		Legs = 'Byakko\'s Haidate',
+		Legs = 'Bst. Trousers +1',
 		Feet = 'Hct. Leggings',
 	},
 	
@@ -178,13 +178,13 @@ local sets = {
 		Neck = 'Temp. Torque',
 		Ear1 = 'Merman\'s Earring',
 		Ear2 = 'Brutal Earring',
-		Body = 'Hecatomb Harness',
+		Body = 'Haubergeon',
 		Hands = 'Pallas\'s Bracelets',
 		Ring1 = 'Toreador\'s Ring',
-		Ring2 = 'Toreador\'s Ring',
+		Ring2 = 'Rajas Ring',
 		Back = 'Forager\'s Mantle',
 		Waist = 'Life Belt',
-		Legs = 'Byakko\'s Haidate',
+		Legs = 'Bst. Trousers +1',
 		Feet = 'Hct. Leggings',
 	},
 	
@@ -201,7 +201,7 @@ local sets = {
 		Ring2 = 'Toreador\'s Ring',
 		Back = 'Forager\'s Mantle',
 		Waist = 'Warwolf Belt',
-		Legs = 'Byakko\'s Haidate',
+		Legs = 'Bst. Trousers +1',
 		Feet = 'Hct. Leggings',
 	},
 
@@ -220,7 +220,7 @@ local sets = {
 		Ring2 = 'Opal Ring',
 		--Back = 'Traveler\'s Mantle',
 		Waist = 'Monster Belt',
-		Legs = 'Monster Trousers',
+		Legs = 'Bst. Trousers +1',
 		Feet = 'Monster Gaiters',
 	},
     Reward = {
@@ -235,7 +235,7 @@ local sets = {
 		Body = 'Bst. Jackcoat +1',
 		Hands = 'Ogre Gloves +1',
 		Ring1 = 'Aqua Ring',
-		Ring2 = 'Tamas Ring',
+		Ring2 = 'Aqua Ring',
 		Back = 'Ryl. Army Mantle',
 		Waist = 'Ryl.Kgt. Belt',
 		Legs = 'Custom Pants',
@@ -429,10 +429,14 @@ profile.HandleDefault = function()
     gcmelee.DoDefault()
 
     local player = gData.GetPlayer()
+	
+	if (player.SubJob == 'NIN' and player.Status == 'Engaged') then
+        gFunc.Equip('Ear1', 'Stealth Earring')
+    end
     if (player.Status == 'Idle' and player.HPP < 50 and muscle_belt ~= '') then
         gFunc.Equip('Waist', muscle_belt)
     end
-	if (player.Status == 'Idle' and player.HPP < 95 and conquest:GetOutsideControl()) then
+	if (player.Status == 'Idle' and player.HPP < 90 and conquest:GetOutsideControl()) then
         gFunc.Equip('Head', 'President. Hairpin')
     end
     if (player.SubJob == 'NIN' and player.Status == 'Engaged') then

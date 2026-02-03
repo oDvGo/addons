@@ -98,7 +98,7 @@ function gcmelee.DoDefault()
                 end
 
                 if (player.MainJob ~= 'RNG') then
-                    if (fenrirs_earring and (environment.Time >= 6 and environment.Time < 18) and player.SubJob ~= 'NIN') then
+                    if (fenrirs_earring and (environment.Time >= 6 and environment.Time < 18)) then
                         gFunc.Equip(fenrirs_earring_slot, 'Fenrir\'s Earring')
                     end
                 end

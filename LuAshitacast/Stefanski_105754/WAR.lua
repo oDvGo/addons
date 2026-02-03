@@ -1,25 +1,25 @@
 local profile = {}
 
-local fastCastValue = 0.00 -- 0% from gear
+local fastCastValue = 0.02 -- 0% from gear
 
 local sets = {
     Idle = {
-		Head = 'Emperor Hairpin',
-		Neck = 'Peacock Amulet',
-		Ear2 = 'Minuet Earring',
+		Head = 'Genbu\'s Kabuto',
+		Neck = 'Fortitude Torque',
 		Ear1 = 'Merman\'s Earring',
+		Ear2 = 'Brutal Earring',
 		Body = 'Custom Vest',
-		Hands = 'Pallas\'s Bracelets',
-		Ring1 = 'Toreador\'s Ring',
-		Ring2 = 'Toreador\'s Ring',
+		Hands = 'Seiryu\'s Kote',
+		Ring1 = 'Jelly Ring',
+		Ring2 = 'Rajas Ring',
 		Back = 'Forager\'s Mantle',
-		Waist = 'Swift Belt',
-		Legs = 'Republic Subligar',
-		Feet = 'Marine F Boots',
+		Waist = 'Warwolf Belt',
+		Legs = 'Byakko\'s Haidate',
+		Feet = 'Suzaku\'s Sune-Ate',
 	},
     IdleALT = {},
     Resting = {
-		Ear2 = 'Sanative Earring',
+		Ear1 = 'Sanative Earring',
 	},
     Town = {},
     Movement = {},
@@ -35,7 +35,9 @@ local sets = {
     WaterRes = {},
     Evasion = {},
 
-    Precast = {},
+    Precast = {
+		Ear2 = 'Loquac. Earring',
+	},
     SIRD = {
     },
     Haste = { -- Used for Utsusemi cooldown
@@ -47,47 +49,47 @@ local sets = {
     LockSet3 = {},
 
     TP_LowAcc = {
-		Head = 'Optical Hat',
-		Neck = 'Peacock Amulet',
-		Ear2 = 'Minuet Earring',
+		Head = 'Panther Mask',
+		Neck = 'Fortitude Torque',
 		Ear1 = 'Merman\'s Earring',
+		Ear2 = 'Brutal Earring',
 		Body = 'Haubergeon',
 		Hands = 'Dusk Gloves',
 		Ring1 = 'Toreador\'s Ring',
-		Ring2 = 'Toreador\'s Ring',
+		Ring2 = 'Rajas Ring',
 		Back = 'Forager\'s Mantle',
 		Waist = 'Swift Belt',
-		Legs = 'Luisant Brayettes',
+		Legs = 'Byakko\'s Haidate',
 		Feet = 'Dusk Ledelsens',
 	},
     TP_HighAcc = {
 		Head = 'Optical Hat',
 		Neck = 'Peacock Amulet',
-		Ear2 = 'Minuet Earring',
-		Ear1 = 'Diabolos\'s Earring',
+		Ear1 = 'Merman\'s Earring',
+		Ear2 = 'Brutal Earring',
 		Body = 'Haubergeon',
 		Hands = 'Luisant Moufles',
 		Ring1 = 'Toreador\'s Ring',
 		Ring2 = 'Toreador\'s Ring',
 		Back = 'Forager\'s Mantle',
 		Waist = 'Swift Belt',
-		Legs = 'Luisant Brayettes',
+		Legs = 'Byakko\'s Haidate',
 		Feet = 'Luisant Sollerets',
 	},
 
     TP_Aggressor = {
-		Head = 'Luisant Salade',
-		Neck = 'Peacock Amulet',
-		Ear2 = 'Minuet Earring',
+		Head = 'Panther Mask',
+		Neck = 'Fortitude Torque',
 		Ear1 = 'Merman\'s Earring',
+		Ear2 = 'Brutal Earring',
 		Body = 'Haubergeon',
-		Hands = 'Pallas\'s Bracelets',
-		Ring1 = 'Toreador\'s Ring',
-		Ring2 = 'Victory Ring',
+		Hands = 'Dusk Gloves',
+		Ring1 = 'Flame Ring',
+		Ring2 = 'Rajas Ring',
 		Back = 'Forager\'s Mantle',
 		Waist = 'Swift Belt',
-		Legs = 'Luisant Brayettes',
-		Feet = 'Marine F Boots',
+		Legs = 'Byakko\'s Haidate',
+		Feet = 'Dusk Ledelsens',
 	},
 
     WS = {
@@ -105,10 +107,12 @@ local sets = {
 	},
 
     Warcry = {},
-    Provoke = {},
+    Provoke = {
+		Waist = 'Warwolf Belt',
+	},
 
 	Ranged = {
-		Head = 'Emperor Hairpin',
+		Head = 'Optical Hat',
 		Neck = 'Peacock Amulet',
 		Body = 'Scp. Harness +1',
 		Hands = 'Custom F Gloves',
@@ -129,61 +133,61 @@ local sets = {
 	['Rampage'] = {
 		Head = 'Optical Hat',
 		Neck = 'Peacock Amulet',
-		--Ear1 = 'Minuet Earring',
-		--Ear2 = 'Diablos\'s Earring',
+		--Ear2 = 'Merman\'s Earring',
+		--Ear1 = 'Diablos\'s Earring',
 		Body = 'Haubergeon',
 		Hands = 'Pallas\'s Bracelets',
-		Ring1 = 'Toreador\'s Ring',
-		Ring2 = 'Toreador\'s Ring',
+		Ring1 = 'Flame Ring',
+		Ring2 = 'Rajas Ring',
 		Back = 'Forager\'s Mantle',
-		Waist = 'Warwolf Belt',
-		Legs = 'Barone Cosciales',
-		Feet = 'Marine F Boots',
+		Waist = 'Warrior\'s Stone',
+		Legs = 'Warrior\'s Cuisses',
+		Feet = 'Hct. Leggings',
 	},
 	
 	['Raging Rush'] = {
 		Head = 'Optical Hat',
-		Neck = 'Peacock Amulet',
-		--Ear1 = 'Minuet Earring',
-		--Ear2 = 'Diablos\'s Earring',
-		Body = 'Haubergeon',
+		Neck = 'Aqua Gorget',
+		--Ear2 = 'Merman\'s Earring',
+		--Ear1 = 'Diablos\'s Earring',
+		Body = 'Hecatomb Harness',
 		Hands = 'Pallas\'s Bracelets',
-		Ring1 = 'Toreador\'s Ring',
-		Ring2 = 'Toreador\'s Ring',
+		Ring1 = 'Flame Ring',
+		Ring2 = 'Rajas Ring',
 		Back = 'Forager\'s Mantle',
-		Waist = 'Warwolf Belt',
-		Legs = 'Barone Cosciales',
-		Feet = 'Marine F Boots',
+		Waist = 'Warrior\'s Stone',
+		Legs = 'Warrior\'s Cuisses',
+		Feet = 'Hct. Leggings',
 	},
 	
 	['Decimation'] = {
 		Head = 'Optical Hat',
 		Neck = 'Light Gorget',
-		--Ear1 = 'Minuet Earring',
-		--Ear2 = 'Diablos\'s Earring',
-		Body = 'Haubergeon',
+		--Ear2 = 'Merman\'s Earring',
+		--Ear1 = 'Diablos\'s Earring',
+		Body = 'Hecatomb Harness',
 		Hands = 'Pallas\'s Bracelets',
-		Ring1 = 'Toreador\'s Ring',
-		Ring2 = 'Victory Ring',
+		Ring1 = 'Flame Ring',
+		Ring2 = 'Rajas Ring',
 		Back = 'Forager\'s Mantle',
-		Waist = 'Warwolf Belt',
-		Legs = 'Barone Cosciales',
-		Feet = 'Marine F Boots',
+		Waist = 'Warrior\'s Stone',
+		Legs = 'Warrior\'s Cuisses',
+		Feet = 'Hct. Leggings',
 	},
 	
 	['Steel Cyclone'] = {
-		Head = 'Optical Hat',
-		Neck = 'Peacock Amulet',
-		--Ear1 = 'Minuet Earring',
-		--Ear2 = 'Diablos\'s Earring',
-		Body = 'Haubergeon',
+		Head = 'Genbu\'s Kabuto',
+		Neck = 'Aqua Gorget',
+		--Ear2 = 'Merman\'s Earring',
+		--Ear1 = 'Diablos\'s Earring',
+		Body = 'Hecatomb Harness',
 		Hands = 'Pallas\'s Bracelets',
-		Ring1 = 'Toreador\'s Ring',
-		Ring2 = 'Victory Ring',
+		Ring1 = 'Flame Ring',
+		Ring2 = 'Rajas Ring',
 		Back = 'Forager\'s Mantle',
 		Waist = 'Warwolf Belt',
-		Legs = 'Barone Cosciales',
-		Feet = 'Marine F Boots',
+		Legs = 'Warrior\'s Cuisses',
+		Feet = 'Hct. Leggings',
 	},
 }
 profile.Sets = sets
@@ -260,17 +264,17 @@ profile.HandleDefault = function()
     gcmelee.DoDefault()
 
     local player = gData.GetPlayer()
-    if (player.SubJob == 'SAM') then
-        gFunc.EquipSet(sets.SAM)
-    end
+    --if (player.SubJob == 'SAM') then
+    --    gFunc.EquipSet(sets.SAM)
+    --end
     if (gcdisplay.GetToggle('DW') and player.Status == 'Engaged') then
         gFunc.EquipSet(sets.DW)
     end
 
     local aggressor = gData.GetBuffCount('Aggressor')
-    --if (aggressor == 1 and gcdisplay.IdleSet == 'LowAcc') then
-    --    gFunc.EquipSet(sets.TP_Aggressor)
-    --end
+    if (aggressor == 1 and gcdisplay.IdleSet == 'LowAcc') then
+        gFunc.EquipSet(sets.TP_Aggressor)
+    end
 
     gcmelee.DoDefaultOverride()
     gFunc.EquipSet(gcinclude.BuildLockableSet(gData.GetEquipment()))

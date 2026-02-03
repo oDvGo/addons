@@ -1,0 +1,13 @@
+local settings = {};
+settings["names"] = {};
+settings["names"][1] = "Default";
+settings["names"][2] = "Legacy Galkabouncer";
+settings["names"][3] = "Legacy Lewinsky";
+settings["names"][4] = "Legacy Stefanski";
+settings["order"] = {};
+settings["order"][1] = "Default";
+settings["order"][2] = "Legacy Galkabouncer";
+settings["order"][3] = "Legacy Lewinsky";
+settings["order"][4] = "Legacy Stefanski";
+settings["version"] = "1.7.4";
+return settings;
