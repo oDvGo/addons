@@ -113,7 +113,7 @@ local sets = {
 	},
     Movement = {
         --Hands = 'Homam Manopolas',
-        Legs = 'Crimson Cuisses',
+        --Legs = 'Crimson Cuisses',
     },
 
     DT = {
@@ -463,7 +463,7 @@ local sets = {
         --Sub = '',
 		--Range = 'Thug\'s Zamburak',
 		--Ammo = 'Acid Bolt',
-		Head = 'Wyvern Helm',
+		Head = 'Abyss Burgeonet',
         Neck = 'Aqua Gorget',
         --Ear1 = 'Merman\'s Earring',
         Ear2 = 'Brutal Earring',

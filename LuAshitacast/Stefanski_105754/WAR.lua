@@ -132,7 +132,7 @@ local sets = {
 	
 	['Rampage'] = {
 		Head = 'Optical Hat',
-		Neck = 'Peacock Amulet',
+		Neck = 'Soil Gorget',
 		--Ear2 = 'Merman\'s Earring',
 		--Ear1 = 'Diablos\'s Earring',
 		Body = 'Haubergeon',
