@@ -26,11 +26,11 @@ local sets = {
         Ear2 = 'Magnetic Earring',
         Body = 'Sorcerer\'s Coat',
         Hands = 'Src. Gloves +1',
-        Ring1 = 'Astral Ring',
-        Ring2 = 'Ether Ring',
-        Back = 'Gigant Mantle',
+        Ring1 = 'Ether Ring',
+        Ring2 = 'Serket Ring',
+        Back = 'Cheviot Cape',
         Waist = 'Hierarch Belt',
-        Legs = 'Mahatma Slops',
+        Legs = 'Sorcerer\'s Tonban',
         Feet = 'Rostrum Pumps',
     },
     IdleALT = {},
@@ -43,11 +43,11 @@ local sets = {
         Ear2 = 'Magnetic Earring',
         Body = 'Wizard\'s Coat',
         Hands = 'Src. Gloves +1',
-        Ring1 = 'Astral Ring',
-        Ring2 = 'Ether Ring',
-        Back = 'Gigant Mantle',
+        Ring1 = 'Ether Ring',
+        Ring2 = 'Serket Ring',
+        Back = 'Cheviot Cape',
         Waist = 'Hierarch Belt',
-        Legs = 'Mahatma Slops',
+        Legs = 'Sorcerer\'s Tonban',
         Feet = 'Rostrum Pumps',
     },
     Resting = {
@@ -78,48 +78,51 @@ local sets = {
 
     DT = {
         Main = 'Terra\'s Staff',
-        Head = 'Genie Tiara',
-        Neck = 'Jeweled Collar +1',
-        Ear1 = 'Merman\'s Earring',
-        Ear2 = 'Merman\'s Earring',
-        Body = { Name = 'Src. Coat +1', Priority = 100 },
-        Hands = 'Merman\'s Bangles',
-        Ring1 = 'Jelly Ring',
-        Ring2 = 'Sattva Ring',
-        Back = 'Umbra Cape',
-        Waist = 'Sorcerer\'s Belt',
-        Legs = 'Igqira Lappas',
-        Feet = 'Mountain Gaiters',
+		Ammo = 'Fortune Egg',
+        Head = 'Sorcerer\'s Petas.',
+        Neck = 'Fortitude Torque',
+        Ear1 = 'Knight\'s Earring', -- 2
+        Ear2 = 'Merman\'s Earring', -- 2
+        Body = { Name = 'Sorcerer\'s Coat', Priority = 100 },
+        Hands = 'Garden Bangles', -- 3
+        Ring1 = 'Jelly Ring', -- 4 -- Using this over Shadow Ring for consistency
+        Ring2 = { Name = 'Merman\'s Ring', Priority = 100 }, -- 5
+        Back = { Name = 'Cheviot Cape', Priority = 100 }, -- 3
+        Waist = { Name = 'Sorcerer\'s Belt', Priority = 100 },
+        Legs = 'Nashira Seraweels',
+        Feet = 'Marine F Boots',
     },
     DTNight = {
         Main = 'Terra\'s Staff',
-        Head = 'Genie Tiara',
-        Neck = 'Jeweled Collar +1',
-        Ear1 = 'Merman\'s Earring',
-        Ear2 = 'Merman\'s Earring',
-        Body = { Name = 'Src. Coat +1', Priority = 100 },
-        Hands = 'Merman\'s Bangles',
-        Ring1 = 'Jelly Ring',
-        Ring2 = 'Sattva Ring',
-        Back = 'Umbra Cape',
-        Waist = 'Sorcerer\'s Belt',
-        Legs = 'Igqira Lappas',
-        Feet = 'Mountain Gaiters',
+		Ammo = 'Fortune Egg',
+        Head = 'Sorcerer\'s Petas.',
+        Neck = 'Fortitude Torque',
+        Ear1 = 'Knight\'s Earring', -- 2
+        Ear2 = 'Merman\'s Earring', -- 2
+        Body = { Name = 'Sorcerer\'s Coat', Priority = 100 },
+        Hands = 'Garden Bangles', -- 3
+        Ring1 = 'Jelly Ring', -- 4 -- Using this over Shadow Ring for consistency
+        Ring2 = { Name = 'Merman\'s Ring', Priority = 100 }, -- 5
+        Back = { Name = 'Cheviot Cape', Priority = 100 }, -- 3
+        Waist = { Name = 'Sorcerer\'s Belt', Priority = 100 },
+        Legs = 'Nashira Seraweels',
+        Feet = 'Marine F Boots',
     },
     MDT = { -- Shell IV provides 23% MDT
-        Main = 'Terra\'s Staff',
-        Head = 'Black Ribbon',
-        Neck = 'Jeweled Collar +1',
+        Main = 'Kirin\'s Pole',
+		Ammo = 'Phtm. Tathlum',
+        Head = 'Wizard\'s Petasos',
+        Neck = 'Checkered Scarf',
         Ear1 = 'Merman\'s Earring', -- 2
         Ear2 = 'Merman\'s Earring', -- 2
-        Body = { Name = 'Src. Coat +1', Priority = 100 },
+        Body = { Name = 'Sorcerer\'s Coat', Priority = 100 },
         Hands = 'Merman\'s Bangles', -- 3
         Ring1 = 'Merman\'s Ring', -- 4 -- Using this over Shadow Ring for consistency
-        Ring2 = { Name = 'Sattva Ring', Priority = 100 }, -- 5
-        Back = { Name = 'Hexerei Cape', Priority = 100 }, -- 3
+        Ring2 = { Name = 'Merman\'s Ring', Priority = 100 }, -- 5
+        Back = { Name = 'Gigant Mantle', Priority = 100 }, -- 3
         Waist = { Name = 'Sorcerer\'s Belt', Priority = 100 },
-        Legs = 'Igqira Lappas',
-        Feet = 'Mountain Gaiters',
+        Legs = 'Mahatma Slops',
+        Feet = 'Rostrum Pumps',
     },
     FireRes = {
         Main = 'Neptune\'s Staff', -- 20
@@ -214,13 +217,13 @@ local sets = {
     },
     Casting = {
         Main = 'Eremite\'s Wand', -- 25
-        Sub = 'Eremite\'s Wand', -- 25
+        --Sub = 'Eremite\'s Wand', -- 25
         Head = 'Nashira Turban', -- 10
         Neck = 'Willpower Torque', -- 5
         Ear1 = 'Merman\'s Earring',
         Ear2 = 'Magnetic Earring', -- 8
 		Ring1 = 'Jelly Ring',
-		Back = 'Hexerei Cape',
+		Back = 'Cheviot Cape',
         Waist = 'Druid\'s Rope', -- 10
         Feet = 'Wizard\'s Sabots', -- 20s
     },
@@ -247,10 +250,11 @@ local sets = {
 		--Body = 'Black Cotehardie',
         Hands = 'Zenith Mitts',
 		Legs = 'Zenith Slacks',
-        Ring1 = 'Astral Ring',
-        Ring2 = 'Ether Ring',
+        Ring1 = 'Ether Ring',
+        Ring2 = 'Serket Ring',
         Waist = 'Penitent\'s Rope',
         Feet = 'Rostrum Pumps',
+		Back = 'Merciful Cape',
     },
     YellowHNM = {
         Head = 'Zenith Crown',
@@ -259,11 +263,11 @@ local sets = {
         --Ear2 = 'Magnetic Earring',
         --Body = { Name = 'Src. Coat +1', Priority = 100 },
         --Hands = 'Zenith Mitts',
-		--Legs = 'Zenith Slacks',
-        Ring1 = 'Astral Ring',
-        --Ring2 = 'Serket Ring',
-        --Waist = 'Penitent\'s Rope',
-        --Feet = 'Rostrum Pumps',
+		Legs = 'Zenith Slacks',
+        Ring1 = 'Ether Ring',
+        Ring2 = 'Serket Ring',
+        Waist = 'Penitent\'s Rope',
+        Feet = 'Rostrum Pumps',
     },
     Haste = { -- Used only on Haste, Refresh, Blink and Utsusemi casts
         --Head = 'Nashira Turban', -- 2
@@ -327,27 +331,27 @@ local sets = {
         Body = 'Mahatma Hpl.',
         Hands = 'Devotee\'s Mitts',
         Ring1 = 'Aqua Ring',
-        Ring2 = 'Communion Ring',
+        Ring2 = 'Aqua Ring',
         Waist = 'Penitent\'s Rope',
         Back = 'Merciful Cape',
-        Legs = 'Mahatma Slops',
+        Legs = 'Rostrum Pumps',
         --Feet = { Name = 'Mahatma Pigaches', Priority = 100 },
     },
     StoneskinExtra = {
         Main = 'Kirin\'s Pole',
         Ammo = 'Hedgehog Bomb',
-        Head = 'Zenith Crown +1',
-        Neck = 'Stone Gorget',
+        Head = 'Zenith Crown',
+        Neck = 'Uggalepih Pendant',
         Ear1 = 'Loquac. Earring',
-        Ear2 = 'Cmn. Earring',
-        Body = 'Mahatma Hpl.',
-        Hands = 'Dvt. Mitts +1',
+        Ear2 = 'Magnetic Earring',
+        Body = 'Errant Hpl.',
+        Hands = 'Devotee\'s Mitts',
         Ring1 = 'Aqua Ring',
-        Ring2 = 'Communion Ring',
-        Back = 'Rainbow Cape',
+        Ring2 = 'Aqua Ring',
+        Back = 'Merciful Cape',
         Waist = 'Hierarch Belt',
-        Legs = 'Mahatma Slops',
-        Feet = 'Mahatma Pigaches',
+        Legs = 'Zenith Slacks',
+        Feet = 'Rostrum Pumps',
     },
     Spikes = {
         Main = 'Kirin\'s Pole',
@@ -461,7 +465,6 @@ local sets = {
         Neck = 'Elemental Torque',
         Ear1 = 'Omn. Earring',
         Ear2 = 'Moldavite Earring',
-		Head = 'Nashira turban',
         Body = 'Igqira Weskit',
         Hands = 'Zenith Mitts',
         Ring1 = 'Snow Ring',
@@ -477,7 +480,6 @@ local sets = {
         Neck = 'Elemental Torque',
         Ear1 = 'Omn. Earring',
         Ear2 = 'Moldavite Earring',
-		Head = 'Nashira turban',
         Body = 'Errant Hpl.',
         Hands = 'Wizard\'s Gloves',
         Ring1 = 'Snow Ring',
@@ -493,7 +495,6 @@ local sets = {
         Neck = 'Elemental Torque',
         Ear1 = 'Omn. Earring',
         Ear2 = 'Moldavite Earring',
-		Head = 'Nashira turban',
         Body = 'Igqira Weskit',
         Hands = 'Wizard\'s Gloves',
         Ring1 = 'Snow Ring',
@@ -504,12 +505,12 @@ local sets = {
         Feet = 'Sorcerer\'s Sabots',
     },
     NukeDOT = {
-        Ammo = 'Phtm. Tathlum',
+        Main = 'Kirin\'s Pole',
+		Ammo = 'Phtm. Tathlum',
         Head = 'Wizard\'s Petasos',
         Neck = 'Elemental Torque',
         Ear1 = 'Omn. Earring',
         Ear2 = 'Moldavite Earring',
-		Head = 'Nashira turban',
         Body = 'Igqira Weskit',
         Hands = 'Wizard\'s Gloves',
         Ring1 = 'Snow Ring',
@@ -521,11 +522,10 @@ local sets = {
     },
     NukeExtra = {
         Ammo = 'Phtm. Tathlum',
-        Head = 'Sorcerer\'s Petas.',
         Neck = 'Elemental Torque',
-        Ear1 = 'Omn. Earring',
+        Ear1 = 'Loquac. Earring',
         Ear2 = 'Moldavite Earring',
-		Head = 'Nashira turban',
+		Head = 'Wizard\'s Petasos',
         Body = 'Igqira Weskit',
         Hands = 'Wizard\'s Gloves',
         Ring1 = 'Snow Ring',
@@ -533,23 +533,10 @@ local sets = {
         Back = 'Merciful Cape',
         Waist = 'Sorcerer\'s Belt',
         Legs = 'Mahatma Slops',
-        Feet = 'Sorcerer\'s Sabots',
+        Feet = 'Rostrum Pumpss',
     },
     MB = {
-        Ammo = 'Phtm. Tathlum',
-        Head = 'Sorcerer\'s Petas.',
-        Neck = 'Elemental Torque',
-        Ear1 = 'Omn. Earring',
-        Ear2 = 'Moldavite Earring',
-		Head = 'Nashira turban',
-        Body = 'Igqira Weskit',
         Hands = 'Src. Gloves +1',
-        Ring1 = 'Snow Ring',
-        Ring2 = 'Snow Ring',
-        Back = 'Merciful Cape',
-        Waist = 'Sorcerer\'s Belt',
-        Legs = 'Mahatma Slops',
-        Feet = 'Sorcerer\'s Sabots',
     },
 
     LockSet1 = { -- 40 Cap
@@ -634,7 +621,17 @@ profile.HandleCommand = function(args)
 end
 
 profile.HandleDefault = function()
-    gcmage.DoDefault(ninSJMaxMP, whmSJMaxMP, nil, rdmSJMaxMP, nil)
+    
+	local player = gData.GetPlayer()
+	local environment = gData.GetEnvironment()
+	
+	gcmage.DoDefault(ninSJMaxMP, whmSJMaxMP, nil, rdmSJMaxMP, nil)
+
+	if ((player.Status == 'Idle' or player.Status == 'Resting') and gcdisplay.IdleSet ~= 'MDT') then
+		if (environment.Time >= 6 and environment.Time < 18) then
+			gFunc.Equip('Hands', 'Garden Bangles')
+		end
+    end
 
     local spikes = gData.GetBuffCount('Blaze Spikes') + gData.GetBuffCount('Shock Spikes') + gData.GetBuffCount('Ice Spikes')
     local isPhysical = gcdisplay.IdleSet == 'Normal' or gcdisplay.IdleSet == 'Alternate' or gcdisplay.IdleSet == 'DT'

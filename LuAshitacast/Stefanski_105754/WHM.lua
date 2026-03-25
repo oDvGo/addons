@@ -2,7 +2,7 @@ local profile = {}
 
 local fastCastValue = 0.04 -- 0% from gear listed in Precast set. Note: Do NOT include cure clogs / ruckes rung here.
 
-local ninSJMaxMP = nil -- The Max MP you have when /nin in your idle set
+local ninSJMaxMP = 919 -- The Max MP you have when /nin in your idle set
 local rdmSJMaxMP = 978 -- The Max MP you have when /rdm in your idle set
 local blmSJMaxMP = 1016 -- The Max MP you have when /blm in your idle set
 
@@ -22,9 +22,9 @@ local sets = {
         Ear2 = 'Magnetic Earring',
         Body = 'Cleric\'s Bliaut',
         Hands = 'Cleric\'s Mitts',
-        Ring1 = 'Ether Ring',
-        Ring2 = 'Astral Ring',
-        Back = 'Gigant Mantle',
+        Ring1 = 'Serket Ring',
+        Ring2 = 'Ether Ring',
+        Back = 'Cheviot Cape',
         Waist = 'Hierarch Belt',
         Legs = 'Cleric\'s Pantaln.',
         Feet = 'Rostrum Pumps',
@@ -40,9 +40,9 @@ local sets = {
         Ear2 = 'Magnetic Earring',
         Body = 'Hydra Doublet',
         Hands = 'Cleric\'s Mitts',
-        Ring1 = 'Ether Ring',
-        Ring2 = 'Astral Ring',
-        Back = 'Gigant Mantle',
+        Ring1 = 'Serket Ring',
+        Ring2 = 'Ether Ring',
+        Back = 'Cheviot Cape',
         Waist = 'Hierarch Belt',
         Legs = 'Healer\'s Pantaln.',
         Feet = 'Rostrum Pumps',
@@ -57,8 +57,8 @@ local sets = {
         Ear2 = 'Magnetic Earring',
         Body = 'Errant Hpl.',
         Hands = 'Cleric\'s Mitts',
-        Ring1 = 'Ether Ring',
-        Ring2 = 'Astral Ring',
+        Ring1 = 'Serket Ring',
+        Ring2 = 'Ether Ring',
         Back = 'Merciful Cape',
         Waist = 'Cleric\'s Belt',
         Legs = 'Hydra Brais',
@@ -69,12 +69,58 @@ local sets = {
 
     DT = {
 		Main = 'Terra\'s Staff',
+		Sub = '',
+		Range = '',
+		Ammo = 'Fortune Egg',
+		Head = 'Cleric\'s Cap',
+		Neck = 'Fortitude Torque',
+		Ear1 = 'Knight\'s Earring',
+		Ear2 = 'Merman\'s Earring',
+		Body = 'Cleric\'s Bliaut',
+		Hands = 'Garden Bangles',
+		Ring1 = 'Jelly Ring',
+		Ring2 = 'Merman\'s Ring',
+		Back = 'Cheviot Cape',
+		Waist = 'Hierarch Belt',
+		Legs = 'Blessed Trousers',
+		Feet = 'Rostrum Pumps',
 	},
     DTNight = {
 		Main = 'Terra\'s Staff',
+		Sub = '',
+		Range = '',
+		Ammo = 'Fortune Egg',
+		Head = 'Cleric\'s Cap',
+		Neck = 'Fortitude Torque',
+		Ear1 = 'Knight\'s Earring',
+		Ear2 = 'Merman\'s Earring',
+		Body = 'Cleric\'s Bliaut',
+		Hands = 'Garden Bangles',
+		Ring1 = 'Jelly Ring',
+		Ring2 = 'Merman\'s Ring',
+		Back = 'Cheviot Cape',
+		Waist = 'Hierarch Belt',
+		Legs = 'Blessed Trousers',
+		Feet = 'Rostrum Pumps',
 	},
     MDT = { -- Shell IV provides 23% MDT
-    },
+		Main = 'Kirin\'s Pole',
+		Sub = '',
+		Range = '',
+		Ammo = 'Phtm. Tathlum',
+		Head = 'Cleric\'s Cap',
+		Neck = 'Checkered Scarf',
+		Ear1 = 'Merman\'s Earring',
+		Ear2 = 'Merman\'s Earring',
+		Body = 'Cleric\'s Bliaut',
+		Hands = 'Merman\'s Bangles',
+		Ring1 = 'Merman\'s Ring',
+		Ring2 = 'Merman\'s Ring',
+		Back = 'Cheviot Cape',
+		Waist = 'Penitent\'s Rope',
+		Legs = 'Mahatma Slops',
+		Feet = 'Rostrum Pumps',
+	},
     FireRes = {},
     IceRes = {},
     LightningRes = {},
@@ -89,9 +135,11 @@ local sets = {
 		Back = 'Warlock\'s Mantle',
 	},
     Casting = { -- Default Casting Equipment when using Idle sets
+		Main = 'Eremite\'s Wand',
+		Sub = 'Strike Shield',
 		Head = 'Nashira turban',
 		Feet = 'Healer\'s Duckbills',
-		Back = 'Gigant Mantle',
+		Back = 'Cheviot Cape',
     },
     SIRD = {
         -- Main = 'Light Staff',
@@ -103,8 +151,8 @@ local sets = {
         Ear2 = 'Magnetic Earring',
         Body = 'Cleric\'s Bliaut',
         Hands = 'Blessed Mitts',
-        Ring1 = 'Ether Ring',
-        Ring2 = 'Astral Ring',
+        Ring1 = 'Serket Ring',
+        Ring2 = 'Ether Ring',
         Back = 'Merciful Cape',
         Waist = 'Cleric\'s Belt',
         Legs = 'Blessed Trousers',
@@ -120,8 +168,8 @@ local sets = {
         Ear2 = 'Magnetic Earring',
         Body = 'Nashira Manteel',
         Hands = 'Blessed Mitts',
-        Ring1 = 'Ether Ring',
-        Ring2 = 'Astral Ring',
+        Ring1 = 'Serket Ring',
+        Ring2 = 'Ether Ring',
         Back = 'Rainbow Cape',
         Waist = 'Swift Belt',
         Legs = 'Blessed Trousers',
@@ -133,7 +181,7 @@ local sets = {
 		Ammo = 'Tiphia Sting',
 		Head = 'Zenith Crown',
 		Hands = 'Zenith Mitts',
-		Ring1 = 'Aether Ring',
+		Ring1 = 'ASerket Ring',
 		Waist = 'Penitent\'s Rope',
 		Legs = 'Zenith Slacks',
 		Feet = 'Rostrum Pumps',
@@ -142,36 +190,36 @@ local sets = {
     Cure = {
         --Main = 'Rucke\'s Rung',
         Range = '',
-        Ammo = 'Hedgehog Bomb',
-        Head = 'Healer\'s Cap',
+        Ammo = 'Hedgehog Bomb', --1
+        Head = 'Hydra Beret', --8
         Neck = 'Healing Torque',
-        Ear1 = 'Novia Earring',
+        Ear1 = 'Novia Earring', --7
         Ear2 = 'Magnetic Earring',
-        Body = 'Noble\'s Tunic',
-        Hands = 'Hlr. Mitts +1',
+        Body = 'Hydra Doublet',--9
+        Hands = 'Nashira Gages',--4
         Ring1 = 'Aqua Ring',
         Ring2 = 'Aqua Ring',
         Back = 'Altruistic Cape',
-        Waist = 'Cleric\'s Belt',
-        Legs = 'Cleric\'s Pantaln.',
-        Feet = 'Cleric\'s Duckbills',
+        Waist = 'Penitent\'s Rope',--3
+        Legs = 'Hydra Brais', --6
+        Feet = 'Cleric\'s Duckbills', --1
     },
     Cure5 = {
         --Main = 'Rucke\'s Rung',
         Range = '',
-        Ammo = 'Hedgehog Bomb',
-        Head = 'Healer\'s Cap',
+        Ammo = 'Hedgehog Bomb', --1
+        Head = 'Hydra Beret', --8
         Neck = 'Healing Torque',
-        Ear1 = 'Novia Earring',
+        Ear1 = 'Novia Earring', --7
         Ear2 = 'Magnetic Earring',
-        Body = 'Noble\'s Tunic',
-        Hands = 'Hlr. Mitts +1',
+        Body = 'Hydra Doublet',--9
+        Hands = 'Nashira Gages',--4
         Ring1 = 'Aqua Ring',
         Ring2 = 'Aqua Ring',
         Back = 'Altruistic Cape',
-        Waist = 'Cleric\'s Belt',
-        Legs = 'Cleric\'s Pantaln.',
-        Feet = 'Cleric\'s Duckbills',
+        Waist = 'Penitent\'s Rope',--3
+        Legs = 'Hydra Brais', --6
+        Feet = 'Cleric\'s Duckbills', --1
     },
     Regen = {
         Main = 'Rucke\'s Rung',
@@ -200,6 +248,9 @@ local sets = {
 		Ear1 = 'Loquac. Earring',
 		Head = 'Healer\'s Cap',
 		Body = 'Errant Hpl.',
+		Hands = 'Blessed Mitts',
+		Ring1 = 'Aqua Ring',
+		Ring2 = 'Aqua Ring',
 		Legs = 'Mahatma Slops',
 		Waist = 'Cleric\'s Belt',
 		Feet = 'Cleric\'s Duckbills',
@@ -334,10 +385,10 @@ local sets = {
     LockSet3 = {},
 
     TP = {
-		Main = 'Morgenstern',
+		Main = 'Prudence Rod',
 		Sub = 'Strike Shield',
 		Range = '',
-		Ammo = 'Tiphia Sting',
+		Ammo = 'Virtue Stone',
 		Ear1 = 'Brutal earring',
 		Ear2 = 'Knight\'s Earring',
 		Neck = 'Peacock Amulet',
@@ -352,19 +403,19 @@ local sets = {
 		Ring2 = 'Rajas Ring',
 	},
     TP_HighAcc = {
-		Main = 'Pole of Trials',
-		Sub = '',
+		Main = 'Prudence Rod',
+		Sub = 'Strike Shield',
 		Range = '',
-		Ammo = 'Tiphia Sting',
+		Ammo = 'Virtue Stone',
 		Ear1 = 'Brutal Earring',
-		Ear2 = 'Merman\'s Earring',
+		Ear2 = 'Knight\'s Earring',
 		Neck = 'Peacock Amulet',
 		Head = 'Optical Hat',
         Hands = 'Blessed Mitts',
-		Body = 'Cleric\'s Bliaut',
+		Body = 'Hydra Doublet',
 		Legs = 'Hydra Brais',
 		Feet = 'Marine F Boots',
-		Waist = 'Swift Belt',
+		Waist = 'Life Belt',
 		Back = 'Ryl. Army Mantle',
 		Ring1 = 'Toreador\'s Ring',
 		Ring2 = 'Toreador\'s Ring',
@@ -374,7 +425,7 @@ local sets = {
 		Sub = 'Prudence Rod',
 		Range = '',
 		Ammo = 'Virtue Stone',
-		Ear1 = 'Stealth Earring',
+		--Ear1 = 'Stealth Earring',
 		Ear2 = 'Knight\'s Earring',
 		Neck = 'Peacock Amulet',
 		Head = 'Optical Hat',
@@ -520,12 +571,23 @@ end
 
 profile.HandleDefault = function()
     local player = gData.GetPlayer()
+	
+	local environment = gData.GetEnvironment()
+	
+	
 	gcmage.DoDefault(ninSJMaxMP, nil, blmSJMaxMP, rdmSJMaxMP, nil)
 
     gFunc.EquipSet(gcinclude.BuildLockableSet(gData.GetEquipment()))
-	
+	if (player.SubJob == 'NIN' and player.Status == 'Engaged') then
+        gFunc.Equip('Ear1', 'Stealth Earring')
+    end
 	if (player.Status == 'Idle' and player.HPP < 95 and conquest:GetOutsideControl()) then
         gFunc.Equip('Head', 'President. Hairpin')
+    end
+	if ((player.Status == 'Idle' or player.Status == 'Resting')) then
+		if (environment.Time >= 6 and environment.Time < 18) then
+			gFunc.Equip('Hands', 'Garden Bangles')
+		end
     end
 end
 

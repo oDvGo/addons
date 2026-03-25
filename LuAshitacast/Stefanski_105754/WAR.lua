@@ -7,12 +7,12 @@ local sets = {
 		Head = 'Genbu\'s Kabuto',
 		Neck = 'Fortitude Torque',
 		Ear1 = 'Merman\'s Earring',
-		Ear2 = 'Brutal Earring',
-		Body = 'Custom Vest',
+		Ear2 = 'Merman\'s Earring',
+		Body = 'Haubergeon',
 		Hands = 'Seiryu\'s Kote',
 		Ring1 = 'Jelly Ring',
-		Ring2 = 'Rajas Ring',
-		Back = 'Forager\'s Mantle',
+		Ring2 = 'Merman\'s Ring',
+		Back = 'Boxer\'s Mantle',
 		Waist = 'Warwolf Belt',
 		Legs = 'Byakko\'s Haidate',
 		Feet = 'Suzaku\'s Sune-Ate',
@@ -22,9 +22,17 @@ local sets = {
 		Ear1 = 'Sanative Earring',
 	},
     Town = {},
-    Movement = {},
+    Movement = {
+		Hands = 'Tarasque Mitts +1',
+		Feet = 'Marine F Boots',
+	},
 
-    DT = {},
+    DT = {
+		Head = 'Darksteel Cap +1',
+		Body = 'Dst. Harness +1',
+		Hands = 'Dst. Mittens +1',
+		Legs = 'Dst. Subligar +1',
+	},
     MDT = { -- Shell IV provides 23% MDT
     },
     FireRes = {},
@@ -106,7 +114,9 @@ local sets = {
 		Waist = 'Warwolf Belt',
 	},
 
-    Warcry = {},
+    Warcry = {
+		Head = 'Warrior\'s Mask',
+	},
     Provoke = {
 		Waist = 'Warwolf Belt',
 	},
@@ -116,19 +126,12 @@ local sets = {
 		Neck = 'Peacock Amulet',
 		Body = 'Scp. Harness +1',
 		Hands = 'Custom F Gloves',
-		Ring1 = 'Woodsman Ring',
+		Ring1 = 'Merman\'s Ring',
 		Ring2 = 'Sniper\'s Ring',
 		Back = 'Amemet Mantle +1',
 		Legs = 'Barone Cosciales',
 		Feet = 'Custom F Boots',
 	},
-
-    DW = {
-        Ear1 = 'Stealth Earring',
-    },
-    SAM = {
-        Ear1 = 'Attila\'s Earring',
-    },
 	
 	['Rampage'] = {
 		Head = 'Optical Hat',
@@ -233,6 +236,10 @@ profile.HandleWeaponskill = function()
     if (WeaponSkills:contains(action.Name)) then
       gFunc.EquipSet(sets[action.Name])
     end
+	
+	if (gData.GetPlayer().SubJob == 'SAM') then
+        gFunc.Equip('Ear1', 'Attila\'s Earring')
+    end
 end
 
 profile.OnLoad = function()
@@ -264,18 +271,20 @@ profile.HandleDefault = function()
     gcmelee.DoDefault()
 
     local player = gData.GetPlayer()
-    --if (player.SubJob == 'SAM') then
-    --    gFunc.EquipSet(sets.SAM)
-    --end
+    if (player.SubJob == 'SAM' and player.Status ~= 'Idle') then
+        gFunc.Equip('Ear1', 'Attila\'s Earring')
+    end
     if (gcdisplay.GetToggle('DW') and player.Status == 'Engaged') then
-        gFunc.EquipSet(sets.DW)
+        gFunc.Equip('Ear1', 'Stealth Earring')
     end
 
     local aggressor = gData.GetBuffCount('Aggressor')
     if (aggressor == 1 and gcdisplay.IdleSet == 'LowAcc') then
         gFunc.EquipSet(sets.TP_Aggressor)
     end
-
+	if (gcdisplay.IdleSet == 'MDT' and conquest:GetOutsideControl()) then
+		gFunc.Equip('Back', 'Resentment Cape')
+	end
     gcmelee.DoDefaultOverride()
     gFunc.EquipSet(gcinclude.BuildLockableSet(gData.GetEquipment()))
 end

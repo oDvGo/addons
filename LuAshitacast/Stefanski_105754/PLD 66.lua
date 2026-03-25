@@ -4,7 +4,7 @@ local fastCastValue = 0 -- 7% from gear
 
 local parade_gorget = true
 
-local hercules_ring = true
+local hercules_ring = false
 local hercules_ring_slot = 'Ring1'
 
 -- Replace these with '' if you do not have them
@@ -22,7 +22,7 @@ local sets = {
         --Main = 'Tutelary',
         --Sub = 'Aegis',
         --Range = '',
-        Ammo = 'Fenrir\'s Stone',
+        Ammo = 'Happy Egg',
         Head = 'Gallant Coronet',
         Body = 'Gallant Surcoat',
         Neck = 'Shield Torque',
@@ -31,7 +31,7 @@ local sets = {
         Hands = 'Gallant Gauntlets',
         Ring1 = 'Hercules\' Ring',
         Ring2 = 'Mermaid Ring',
-        Back = 'Valor Cape',
+        --Back = 'Resentment Cape',
         Waist = 'Astral Rope',
         Legs = 'Gallant Breeches',
         Feet = 'Gallant Leggings',
@@ -40,16 +40,16 @@ local sets = {
 		Main = 'Terra\'s Staff',
         Sub = '',
         --Range = '',
-        Ammo = 'Fenrir\'s Stone',
+        Ammo = 'Happy Egg',
         Head = 'Gallant Coronet',
         Body = 'Gallant Surcoat',
         Neck = 'Shield Torque',
         Ear1 = 'Merman\'s Earring',
         Ear2 = 'Cassie Earring',
         Hands = 'Gallant Gauntlets',
-        Ring1 = 'Toreador\'s Ring',
+        Ring1 = 'Hercules\' Ring',
         Ring2 = 'Mermaid Ring',
-        Back = 'Valor Cape',
+        --Back = 'Resentment Cape',
         Waist = 'Astral Rope',
         Legs = 'Gallant Breeches',
         Feet = 'Gallant Leggings',
@@ -58,7 +58,7 @@ local sets = {
         --Main = 'Tutelary',
         --Sub = 'Aegis',
         --Range = '',
-        Ammo = 'Fenrir\'s Stone',
+        Ammo = 'Happy Egg',
         Head = 'Darksteel Cap +1', -- 2
         Body = 'Dst. Harness +1', -- 4
         Neck = 'Shield Torque',
@@ -67,7 +67,7 @@ local sets = {
         Hands = 'Dst. Mittens +1', -- 3
         Ring1 = 'Jelly Ring',
         Ring2 = 'Mermaid Ring',
-        Back = 'Boxer\'s Mantle',
+        --Back = 'Resentment Cape',
         Waist = 'Astral Rope',
         Legs = 'Dst. Subligar +1',
         Feet = 'Gallant Leggings',
@@ -76,7 +76,7 @@ local sets = {
 		Main = 'Terra\'s Staff',
         Sub = '',
         --Range = '',
-        Ammo = 'Fenrir\'s Stone',
+        Ammo = 'Happy Egg',
         Head = 'Gallant Coronet',
         Body = 'Gallant Surcoat',
         Neck = 'Shield Torque',
@@ -85,7 +85,7 @@ local sets = {
         Hands = 'Gallant Gauntlets',
         Ring1 = 'Toreador\'s Ring',
         Ring2 = 'Mermaid Ring',
-        Back = 'Boxer\'s Mantle',
+        --Back = 'Resentment Cape',
         Waist = 'Astral Rope',
         Legs = 'Gallant Breeches',
         Feet = 'Gallant Leggings',
@@ -98,10 +98,10 @@ local sets = {
         Ear2 = 'Sanative Earring',
     },
     Town = {
-        Main = 'Joyeuse',
-        Sub = 'Master Shield',
-        Range = '',
-        Ammo = 'Fenrir\'s Stone',
+        --Main = 'Tutelary',
+        --Sub = 'Aegis',
+        --Range = '',
+        --Ammo = '',
         Head = 'Darksteel Cap +1',
         Body = 'Dst. Harness +1',
         Neck = 'Parade Gorget',
@@ -110,7 +110,7 @@ local sets = {
         Hands = 'Dst. Mittens +1',
         Ring1 = 'Hercules\' Ring',
         Ring2 = 'Mermaid Ring',
-        Back = 'Boxer\'s Mantle',
+        Back = 'Resentment Cape',
         Waist = 'Astral Rope',
         Legs = 'Dst. Subligar +1',
         Feet = 'Gallant Leggings',
@@ -132,17 +132,17 @@ local sets = {
         Hands = 'Dst. Mittens +1', -- 3
         Ring1 = 'Jelly Ring', -- 5
         Ring2 = 'Mermaid Ring',
-        Back = 'Boxer\'s Mantle',
+        --Back = 'Shadow Mantle',
         Waist = 'Warwolf Belt',
         Legs = 'Dst. Subligar +1',
         Feet = 'Gallant Leggings',
     },
     MDT = { -- Shell IV provides 23% MDT
-        --Neck = 'Jeweled Collar +1',
+        Neck = 'Jeweled Collar +1',
         Ear1 = 'Merman\'s Earring', -- 2
         Ear2 = 'Cassie Earring',
-        Ring1 = 'Merman\'s Ring',
-        Ring2 = 'Merman\'s Ring',
+        Ring1 = 'Shadow Ring',
+        Ring2 = 'Sattva Ring',
     },
     FireRes = { -- 137
         Range = 'Rosenbogen',
@@ -264,7 +264,7 @@ local sets = {
         Hands = 'Heavy Gauntlets',
         Ring1 = 'Shadow Ring',
         Ring2 = 'Sattva Ring',
-        Back = 'Boxer\'s Mantle',
+        Back = 'Shadow Mantle',
         Waist = 'Silver Obi +1', -- 8
         Legs = 'Vlr. Breeches +1',
         Feet = 'Glt. Leggings +1',
@@ -280,7 +280,7 @@ local sets = {
         Hands = 'Dusk Gloves +1',
         Ring1 = 'Shadow Ring',
         Ring2 = 'Sattva Ring',
-        Back = 'Boxer\'s Mantle',
+        Back = 'Shadow Mantle',
         Waist = 'Sonic Belt', -- 6
         Legs = 'Homam Cosciales', -- 3
         Feet = 'Homam Gambieras', -- 3
@@ -301,7 +301,7 @@ local sets = {
         Hands = 'Devotee\'s Mitts',
         Ring1 = 'Hercules\' Ring',
         Ring2 = 'Mermaid Ring',
-        Back = 'Valor Cape',
+        --Back = 'Valor Cape',
         Waist = 'Astral Rope',
         Legs = 'Custom Pants',
         Feet = 'Vlr. Leggings +1',
@@ -317,7 +317,7 @@ local sets = {
         Hands = 'Devotee\'s Mitts',
         Ring1 = 'Hercules\' Ring',
         Ring2 = 'Mermaid Ring',
-        Back = 'Valor Cape',
+        --Back = 'Valor Cape',
         Waist = 'Astral Rope',
         Legs = 'Custom Pants',
         Feet = 'Vlr. Leggings +1',
@@ -335,7 +335,7 @@ local sets = {
         Hands = 'Devotee\'s Mitts',
         Ring1 = 'Ether Ring',
         Ring2 = 'Serket Ring',
-        Back = 'Boxer\'s Mantle',
+        --Back = 'Shadow Mantle',
         --Waist = 'Silver Obi +1', -- 8
         Legs = 'Custom Pants', -- 10
         Feet = 'Custom F Boots', -- 5
@@ -351,11 +351,11 @@ local sets = {
         Ear1 = 'Hospitaler Earring',
         Ear2 = 'Cassie Earring',
         Hands = 'Gallant Gauntlets',
-        Ring1 = 'Hercules\' Ring',
+        Ring1 = 'Bomb Queen Ring',
         Ring2 = 'Mermaid Ring',
-        Back = 'Valor Cape',
+        --Back = 'High Brth. Mantle',
         Waist = 'Astral Rope',
-        Legs = 'Gallant Breeches',
+        Legs = 'Custom Pants',
         Feet = 'Gallant Leggings',
     },
     Cheat_C4HPDown = { -- 1072
@@ -371,7 +371,7 @@ local sets = {
         Hands = 'Hydra Moufles',
         Ring1 = 'Ether Ring',
         Ring2 = 'Serket Ring',
-        Back = 'Boxer\'s Mantle',
+        --Back = 'Shadow Mantle',
         Waist = 'Swift Belt', -- 8
         Legs = 'Custom Pants', -- 10
         Feet = 'Custom F Boots', -- 5
@@ -387,11 +387,11 @@ local sets = {
         Ear2 = 'Cassie Earring',
         Body = 'Gallant Surcoat',
         Hands = 'Gallant Gauntlets',
-        Ring1 = 'Hercules\' Ring',
-        Ring2 = 'Bomb Queen Ring',
-        Back = 'Gigant Mantle',
-        Waist = 'Swift Belt',
-        Legs = 'Gallant Breeches',
+        Ring1 = 'Bomb Queen Ring',
+        Ring2 = 'Mermaid Ring',
+        --Back = 'Valor Cape',
+        Waist = 'Astral Rope',
+        Legs = 'Custom Pants',
         Feet = 'Gallant Leggings',
     },
 
@@ -404,7 +404,7 @@ local sets = {
         --Sub = 'Aegis',
         --Range = '',
         Ammo = 'Tiphia Sting',
-        Head = 'Optical Hat',
+        Head = 'Luisant Salade',
         Body = 'Haubergeon',
         Neck = 'Peacock Amulet',
         Ear1 = 'Merman\'s Earring',
@@ -417,34 +417,17 @@ local sets = {
         Legs = 'Luisant Brayettes',
         Feet = 'Luisant Sollerets',
     },
-    TP_HighAcc = {
-		--Main = 'Tutelary',
-        --Sub = 'Aegis',
-        --Range = '',
-        Ammo = 'Tiphia Sting',
-        Head = 'Optical Hat',
-        Body = 'Haubergeon',
-        Neck = 'Peacock Amulet',
-        Ear1 = 'Merman\'s Earring',
-        Ear2 = 'Cassie Earring',
-        Hands = 'Luisant Moufles',
-        Ring1 = 'Toreador\'s Ring',
-        Ring2 = 'Toreador\'s Ring',
-        Back = 'Amemet Mantle +1',
-        Waist = 'Swift Belt',
-        Legs = 'Luisant Brayettes',
-        Feet = 'Luisant Sollerets',
-	},
+    TP_HighAcc = {},
     TP_Mjollnir_Haste = {},
 
     WS = {
         Ammo = 'Tiphia Sting',
-		Head = 'Optical Hat',
+		Head = 'Luisant Salade',
         Neck = 'Soil Gorget',
         Ear1 = 'Merman\'s Earring',
         Ear2 = 'Cassie Earring',
         Body = 'Haubergeon',
-        Hands = 'Tarasque Mitts +1',
+        Hands = 'Pallas\'s Bracelets',
         Ring1 = 'Toreador\'s Ring',
         Ring2 = 'Rajas Ring',
         Back = 'Amemet Mantle +1',
@@ -472,7 +455,6 @@ local sets = {
 		Body = 'Gallant Surcoat',
 		Hands = 'Devotee\'s Mitts',
 		Legs = 'Custom Pants',
-		Back = 'Valor Cape',
 	},
     Rampart = { -- Rampart gives VIT x2 damage shield in era
         --Main = { Name = 'Durandal', Priority = -1 },
@@ -581,25 +563,17 @@ profile.HandleWeaponskill = function()
 end
 
 profile.OnLoad = function()
-    gcinclude.SetAlias(T{'dw'})
-    gcdisplay.CreateToggle('DW', true)
-	gcmelee.Load()
+    gcmelee.Load()
     gcmelee.SetIsDPS(false)
     profile.SetMacroBook()
 end
 
 profile.OnUnload = function()
     gcmelee.Unload()
-	gcinclude.ClearAlias(T{'dw'})
 end
 
 profile.HandleCommand = function(args)
-    if (args[1] == 'dw') then
-        gcdisplay.AdvanceToggle('DW')
-        gcinclude.Message('DW', gcdisplay.GetToggle('DW'))
-    else
-        gcmelee.DoCommands(args)
-    end
+    gcmelee.DoCommands(args)
 
     if (args[1] == 'horizonmode') then
         profile.HandleDefault()
@@ -615,9 +589,7 @@ profile.HandleDefault = function()
     if (cover >= 1) then
         gFunc.EquipSet(sets.Cover)
     end
-	if (gcdisplay.GetToggle('DW') and player.Status == 'Engaged' and gcmelee.GetIsDPS() and player.SubJob == 'NIN') then
-        gFunc.Equip('Ear2', 'Stealth Earring')
-    end
+
     if (arco_de_velocidad) then
         local environment = gData.GetEnvironment()
         if (environment.Time >= 6 and environment.Time < 18 and player.HPP < 100) then
@@ -627,7 +599,7 @@ profile.HandleDefault = function()
 	if (player.MPP < 100 and player.Status ~= 'Engaged') then
         gFunc.EquipSet(sets.Vermi)
 	end
-	if (parade_gorget and player.HPP >= 85 and player.MPP < 100) then
+	if (parade_gorget and player.HPP >= 85) then
         -- If gcmelee.GetIsDPS() is true, we ONLY equip it when NOT engaged
         if (gcmelee.GetIsDPS()) then
             if (player.Status ~= 'Engaged') then

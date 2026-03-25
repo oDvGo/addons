@@ -1,6 +1,6 @@
 local profile = {}
 
-local fastCastValue = 0.05 -- 7% from gear
+local fastCastValue = 0.07 -- 7% from gear
 
 local use_chaos_burgeonet_for_tp_during_souleater = false
 
@@ -25,13 +25,13 @@ local sets = {
 		Ammo = 'Fenrir\'s Stone',
 		Head = 'displaced',
         Neck = 'Fortitude Torque',
-        Ear1 = 'Merman\'s Earring',
-        Ear2 = 'Brutal Earring',
+		Ear1 = 'Merman\'s Earring',
+		Ear2 = 'Merman\'s Earring',
         Body = 'Vampire Cloak',
         Hands = 'Blood Fng. Gnt.',
         Ring1 = 'Jelly Ring',
-        Ring2 = 'Rajas Ring',
-        Back = 'Forager\'s Mantle',
+        Ring2 = 'Merman\'s Ring',
+        Back = 'Boxer\'s Mantle',
         Waist = 'Warwolf Belt',
         Legs = 'Crimson Cuisses',
         Feet = 'Homam Gambieras',
@@ -59,12 +59,12 @@ local sets = {
         --Sub = '',
 		--Range = 'Thug\'s Zamburak',
 		--Ammo = 'Acid Bolt',
-		Head = 'Emperor\'s Hairpin',
+		Head = 'Darksteel Cap +1',
         Neck = 'Peacock Amulet',
         Ear1 = 'Merman\'s Earring',
         Ear2 = 'Brutal Earring',
-        Body = 'Scp. Harness +1',
-        Hands = 'Pallas\'s Bracelets',
+        Body = 'Dst. Harness +1',
+        Hands = 'Dst. Mittens +1',
         Ring1 = 'Toreador\'s Ring',
         Ring2 = 'Rajas Ring',
         Back = 'Forager\'s Mantle',
@@ -77,12 +77,12 @@ local sets = {
         --Sub = '',
 		--Range = 'Thug\'s Zamburak',
 		--Ammo = 'Acid Bolt',
-		Head = 'Emperor\'s Hairpin',
+		Head = 'Darksteel Cap +1',
         Neck = 'Peacock Amulet',
         Ear1 = 'Merman\'s Earring',
         Ear2 = 'Brutal Earring',
-        Body = 'Scp. Harness +1',
-        Hands = 'Pallas\'s Bracelets',
+        Body = 'Dst. Harness +1',
+        Hands = 'Dst. Mittens +1',
         Ring1 = 'Toreador\'s Ring',
         Ring2 = 'Rajas Ring',
         Back = 'Forager\'s Mantle',
@@ -122,7 +122,7 @@ local sets = {
         --Ear1 = 'Diabolos\'s Earring',
         Ear2 = { Name = 'Cassie Earring', Priority = 100 },
         Body = 'Dst. Harness +1', -- 4
-        Hands = 'Heavy Gauntlets', -- 3
+        Hands = 'Dst. Mittens +1', -- 3
         Ring1 = 'Jelly Ring', -- 5
         Ring2 = { Name = 'Sattva Ring', Priority = 100 }, -- 5
         Back = 'Shadow Mantle',
@@ -133,12 +133,12 @@ local sets = {
     MDT = { -- Shell IV provides 23% MDT
         Head = 'Darksteel Cap +1',
         Neck = 'Jeweled Collar +1',
-        --Ear1 = 'Diabolos\'s Earring', -- 2
-        Ear2 = 'Diabolos\'s Earring', -- 2
+        Ear1 = 'Merman\'s Earring', -- 2
+        Ear2 = 'Merman\'s Earring', -- 2
         Body = 'Cor. Scale Mail +1', -- 4
-        Hands = 'Coral Fng. Gnt. +1', -- 2
-        Ring1 = 'Shadow Ring',
-        Ring2 = { Name = 'Sattva Ring', Priority = 100 }, -- 5
+        Hands = 'Merman\'s Bangles', -- 2
+        Ring1 = 'Merman\'s Ring',
+        Ring2 = { Name = 'Merman\'s Ring', Priority = 100 }, -- 5
         Back = 'Shadow Mantle',
         Waist = 'Warwolf Belt',
         Legs = 'Coral Cuisses +1', -- 3
@@ -413,22 +413,58 @@ local sets = {
         Neck = 'Peacock Amulet',
         --Ear1 = 'Merman\'s Earring',
         Ear2 = 'Brutal Earring',
-        Body = 'Hecatomb Harness',
-        Hands = 'Homam Manopolas',
-        Ring1 = 'Toreador\'s Ring',
+        Body = 'Haubergeon',
+        Hands = 'Pallas\'s Bracelets',
+        Ring1 = 'Flame Ring',
         Ring2 = 'Rajas Ring',
-        Back = 'Abyss Cape',
+        Back = 'Forager\'s Mantle',
         Waist = 'Warwolf Belt',
         Legs = 'Black Cuisses',
         Feet = 'Chaos Sollerets',
 	},
     WS_SpinningSlash = {
-	        --Main = 'Tredecim Scythe',
+	    --Main = 'Tredecim Scythe',
         --Sub = '',
 		--Range = 'Thug\'s Zamburak',
 		--Ammo = 'Acid Bolt',
 		Head = 'Wyvern Helm',
         Neck = 'Peacock Amulet',
+        --Ear1 = 'Merman\'s Earring',
+        Ear2 = 'Brutal Earring',
+        Body = 'Hecatomb Harness',
+        Hands = 'Pallas\'s Bracelets',
+        Ring1 = 'Flame Ring',
+        Ring2 = 'Rajas Ring',
+        Back = 'Forager\'s Mantle',
+        Waist = 'Warwolf Belt',
+        Legs = 'Black Cuisses',
+        Feet = 'Hct. Leggings',
+	},
+	 WS_SpiralHell = {
+	    --Main = 'Tredecim Scythe',
+        --Sub = '',
+		--Range = 'Thug\'s Zamburak',
+		--Ammo = 'Acid Bolt',
+		Head = 'Wyvern Helm',
+        Neck = 'Soil Gorget',
+        --Ear1 = 'Merman\'s Earring',
+        Ear2 = 'Brutal Earring',
+        Body = 'Hecatomb Harness',
+        Hands = 'Pallas\'s Bracelets',
+        Ring1 = 'Flame Ring',
+        Ring2 = 'Rajas Ring',
+        Back = 'Forager\'s Mantle',
+        Waist = 'Warwolf Belt',
+        Legs = 'Black Cuisses',
+        Feet = 'Hct. Leggings',
+	},
+	WS_SickleMoon = {
+	        --Main = 'Tredecim Scythe',
+        --Sub = '',
+		--Range = 'Thug\'s Zamburak',
+		--Ammo = 'Acid Bolt',
+		Head = 'Wyvern Helm',
+        Neck = 'Soil Gorget',
         --Ear1 = 'Merman\'s Earring',
         Ear2 = 'Brutal Earring',
         Body = 'Hecatomb Harness',
@@ -446,7 +482,7 @@ local sets = {
 		--Range = 'Thug\'s Zamburak',
 		--Ammo = 'Acid Bolt',
 		Head = 'Wyvern Helm',
-        Neck = 'Peacock Amulet',
+        Neck = 'Aqua Gorget',
         --Ear1 = 'Merman\'s Earring',
         Ear2 = 'Brutal Earring',
         Body = 'Hecatomb Harness',
@@ -606,7 +642,15 @@ profile.HandleWeaponskill = function()
         gFunc.EquipSet(sets.WS_CrossReaper)
     elseif (action.Name == 'Steel Cyclone') then
 		gFunc.EquipSet(sets.WS_SteelCyclone)
+	elseif (action.Name == 'Sickle Moon') then
+		gFunc.EquipSet(sets.WS_SickleMoon)
+	elseif (action.Name == 'Spiral Hell') then
+		gFunc.EquipSet(sets.WS_SpiralHell)
 	end
+	
+	if (gcdisplay.GetToggle('Attila')) then
+        gFunc.Equip('Ear1', 'Attila\'s Earring')
+    end
 
     local souleater = gData.GetBuffCount('Souleater')
     if (souleater > 0) then
@@ -615,6 +659,10 @@ profile.HandleWeaponskill = function()
 end
 
 profile.OnLoad = function()
+	gcinclude.SetAlias(T{'dw'})
+    gcdisplay.CreateToggle('DW', false)
+	gcinclude.SetAlias(T{'attila'})
+    gcdisplay.CreateToggle('Attila', false)
 	gSettings.CastDelayTimeout = 10.0;
 	gcinclude.SetAlias(T{'hate'})
     gcdisplay.CreateToggle('Hate', false)
@@ -634,6 +682,18 @@ profile.HandleCommand = function(args)
     else
         gcmelee.DoCommands(args)
     end
+	if (args[1] == 'dw') then
+        gcdisplay.AdvanceToggle('DW')
+        gcinclude.Message('DW', gcdisplay.GetToggle('DW'))
+    else
+        gcmelee.DoCommands(args)
+    end
+	if (args[1] == 'attila') then
+        gcdisplay.AdvanceToggle('Attila')
+        gcinclude.Message('Attila', gcdisplay.GetToggle('Attila'))
+    else
+        gcmelee.DoCommands(args)
+    end
 
     if (args[1] == 'horizonmode') then
         profile.HandleDefault()
@@ -644,6 +704,21 @@ profile.HandleDefault = function()
     gcmelee.DoDefault()
 
     local player = gData.GetPlayer()
+	local environment = gData.GetEnvironment()
+	if ((player.Status == 'Idle' or player.Status == 'Resting')) then
+		if (environment.Time >= 6 and environment.Time < 18) then
+			gFunc.Equip('Hands', 'Garden Bangles')
+		end
+    end
+	
+	if (gcdisplay.GetToggle('Attila') and player.Status ~= 'Idle') then
+        gFunc.Equip('Ear1', 'Attila\'s Earring')
+    end
+	
+	if (gcdisplay.GetToggle('DW') and player.Status == 'Engaged') then
+        gFunc.Equip('Ear1', 'Stealth Earring')
+    end
+	
     local souleater = gData.GetBuffCount('Souleater')
     if (souleater > 0 and player.Status == 'Engaged' and use_chaos_burgeonet_for_tp_during_souleater) then
         gFunc.EquipSet(sets.SoulEater)
@@ -660,7 +735,9 @@ profile.HandleDefault = function()
     if (gcdisplay.IdleSet == 'Evasion' and fenrirs_stone and (environment.Time >= 6 and environment.Time < 18)) then
         gFunc.Equip('Ammo', 'Fenrir\'s Stone')
     end
-
+	if (gcdisplay.IdleSet == 'MDT' and conquest:GetOutsideControl()) then
+		gFunc.Equip('Back', 'Resentment Cape')
+	end
     gFunc.EquipSet(gcinclude.BuildLockableSet(gData.GetEquipment()))
 end
 

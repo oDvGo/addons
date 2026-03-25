@@ -27,7 +27,7 @@ local dream_boots = true
 local dream_mittens = true
 local skulkers_cape = false
 local wizards_mantle = false
-local republic_gold_medal = true -- Note: Disabled for BRD
+local republic_gold_medal = false -- Note: Disabled for BRD
 
 local diabolos_earring = true
 local diabolos_earring_slot = 'Ear1'
@@ -39,7 +39,7 @@ local water_ring = false
 local water_ring_slot = 'Ring2'
 local overlords_ring = false
 local overlords_ring_slot = 'Ring1'
-local wizards_earring = true
+local wizards_earring = false
 local wizards_earring_slot = 'Ear1'
 local healers_earring = false
 local healers_earring_slot = 'Ear1'
@@ -221,6 +221,9 @@ function gcmage.SetVariables()
     if (player.MainJob == 'WHM') then
         gcdisplay.CreateToggle('Yellow', true)
     end
+	if (player.MainJob == 'SMN') then
+        gcdisplay.CreateToggle('Yellow', true)
+    end
 end
 
 function gcmage.DoCommands(args)
@@ -296,7 +299,7 @@ function gcmage.DoCommands(args)
         end
     end
 
-    if (player.MainJob == 'BLM' or player.MainJob == 'WHM') then
+    if (player.MainJob == 'BLM' or player.MainJob == 'WHM' or player.MainJob == 'SMN') then
         if (args[1] == 'yellow') then
             gcdisplay.AdvanceToggle('Yellow')
             gcinclude.Message('Yellow', gcdisplay.GetToggle('Yellow'))
@@ -377,7 +380,10 @@ function gcmage.DoDefault(ninSJMMP, whmSJMMP, blmSJMMP, rdmSJMMP, drkSJMMP)
                 end
                 if (yinyang_robe) then
                     gFunc.Equip('Body', 'Yinyang Robe')
-                end
+                else
+					gFunc.Equip('Head', 'remove')
+					gFunc.Equip('Body', 'Vermillion Cloak')
+				end
             elseif (lastSummoningElement == environment.DayElement) then
                 if (summoners_doublet ~= '') then
                     gFunc.Equip('Body', summoners_doublet)
@@ -386,6 +392,7 @@ function gcmage.DoDefault(ninSJMMP, whmSJMMP, blmSJMMP, rdmSJMMP, drkSJMMP)
             if (lastSummoningElement == environment.WeatherElement) then
                 if (summoners_horn ~= '') then
                     gFunc.Equip('Head', summoners_horn)
+					gFunc.Equip('Body', summoners_doublet)
                 end
             end
         end
@@ -934,7 +941,7 @@ function gcmage.EquipStaff()
         end
 
         if (DiabolosPoleSpells:contains(action.Name)) then
-            if (environment.WeatherElement == 'Dark' and diabolos_pole) then gFunc.Equip('Main', 'Diabolos\'s Pole') end
+            if (environment.WeatherElement == 'Dark' and diabolos_pole and player.MainJob == 'BLM') then gFunc.Equip('Main', 'Diabolos\'s Pole') end
         end
         if (player.MainJob == 'WHM' and mjollnir and CureSpells:contains(action.Name)) then
             gFunc.Equip('Main', 'Mjollnir')

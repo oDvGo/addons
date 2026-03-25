@@ -41,6 +41,10 @@ function gcmelee.SetIsDPS(isDPSVal)
     isDPS = isDPSVal
 end
 
+function gcmelee.GetIsDPS()
+    return isDPS
+end
+
 function gcmelee.Load()
     gcinclude.SetAlias(AliasList)
     gcinclude.Load()
@@ -111,21 +115,23 @@ function gcmelee.DoDefault()
     end
 
     if (player.MainJob == 'PLD' or player.MainJob == 'NIN' or player.MainJob == 'DRK' or gcdisplay.GetToggle('Hate')) then
-        if (player.SubJob == 'NIN' or player.MainJob == 'NIN') then
-            local function GetShadowCount()
-                for buffId, shadowCount in pairs(utsuBuffs) do
-                    if (gData.GetBuffCount(buffId) > 0) then
-                        return shadowCount
-                    end
-                end
+        if (not isDPS) then
+			if (player.SubJob == 'NIN' or player.MainJob == 'NIN') then
+				local function GetShadowCount()
+					for buffId, shadowCount in pairs(utsuBuffs) do
+						if (gData.GetBuffCount(buffId) > 0) then
+							return shadowCount
+						end
+					end
 
-                return 0
-            end
-            if (GetShadowCount() == 0) then
-                gFunc.EquipSet('IdleDT')
-                if (gcdisplay.IdleSet == 'Alternate') then gFunc.EquipSet('IdleALTDT') end
-            end
-        end
+					return 0
+				end
+				if (GetShadowCount() == 0) then
+					gFunc.EquipSet('IdleDT')
+					if (gcdisplay.IdleSet == 'Alternate') then gFunc.EquipSet('IdleALTDT') end
+				end
+			end
+		end
     end
 end
 
@@ -202,7 +208,9 @@ function gcmelee.SetupInterimEquipSet(sets)
         gFunc.InterimEquipSet(sets.SIRD)
     end
 
-    if (gcdisplay.IdleSet == 'MDT') then gFunc.InterimEquipSet(sets.MDT) end
+    if (gcdisplay.IdleSet == 'MDT') then
+		gFunc.InterimEquipSet(sets.MDT)
+	end
     if (gcdisplay.IdleSet == 'FireRes') then gFunc.InterimEquipSet(sets.FireRes) end
     if (gcdisplay.IdleSet == 'IceRes') then gFunc.InterimEquipSet(sets.IceRes) end
     if (gcdisplay.IdleSet == 'LightningRes') then gFunc.InterimEquipSet(sets.LightningRes) end

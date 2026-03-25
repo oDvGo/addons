@@ -5,7 +5,7 @@ local fastCastValue = 0.04 -- 4% from gear not including carbuncles cuffs or evo
 local carbuncles_cuffs = false
 local evokers_boots = false
 
-local whmSJMaxMP = 1160
+local whmSJMaxMP = 1164
 local blmSJMaxMP = 1170
 
 local cureMP = 895 -- Cure set max MP
@@ -20,7 +20,7 @@ local sets = {
         Neck = 'Uggalepih Pendant',
         Body = 'Vermillion Cloak',
         Hands = 'Evoker\'s Bracers',
-        Ring1 = 'Ether Ring',
+        Ring1 = 'Serket Ring',
         Ring2 = 'Evoker\'s Ring',
         Back = 'Summoner\'s Cape',
         Waist = 'Hierarch belt',
@@ -37,7 +37,7 @@ local sets = {
         Neck = 'Uggalepih Pendant',
         Body = 'Hydra Doublet',
         Hands = 'Evoker\'s Bracers',
-        Ring1 = 'Ether Ring',
+        Ring1 = 'Serket Ring',
         Ring2 = 'Evoker\'s Ring',
         Back = 'Summoner\'s Cape',
         Waist = 'Hierarch belt',
@@ -53,7 +53,7 @@ local sets = {
         Body = 'Errant Hpl.',
         --Hands = 'Hydra Gloves',
         --Ring1 = 'Bomb Queen Ring',
-        --Ring2 = 'Ether Ring',
+        --Ring2 = 'Serket Ring',
         --Back = 'Errant Cape',
         Waist = 'Hierarch Belt',
         Legs = 'Hydra Brais',
@@ -65,7 +65,8 @@ local sets = {
     },
 
     Perpetuation = { -- There is no point in using this set over an Idle set except for equipping Penance Robe
-    },
+		Hands = 'Nashira Gages',
+	},
 
     DT = {
         Main = 'Terra\'s Staff',
@@ -75,7 +76,7 @@ local sets = {
         Hands = 'Merman\'s Bangles',
         Ring1 = 'Jelly Ring',
         Ring2 = 'Sattva Ring',
-        Back = 'Umbra Cape',
+        Back = 'Cheviot Cape',
     },
     DTNight = {
         Main = 'Terra\'s Staff',
@@ -85,7 +86,7 @@ local sets = {
         Hands = 'Merman\'s Bangles',
         Ring1 = 'Jelly Ring',
         Ring2 = 'Sattva Ring',
-        Back = 'Umbra Cape',
+        Back = 'Cheviot Cape',
     },
     MDT = { -- Shell IV provides 23% MDT
         Main = 'Terra\'s Staff',
@@ -94,8 +95,8 @@ local sets = {
         Ear1 = 'Merman\'s Earring', -- 2
         Ear2 = 'Merman\'s Earring', -- 2
         Hands = 'Merman\'s Bangles', -- 3
-        Ring1 = 'Shadow Ring',
-        Ring2 = 'Sattva Ring', -- 5
+        Ring1 = 'Merman\'s Ring',
+        Ring2 = 'Merman\'s Ring', -- 5
         Back = 'Hexerei Cape', -- 3
     },
     FireRes = {
@@ -178,18 +179,18 @@ local sets = {
         Feet = 'Rostrum Pumps',
     },
     Casting = { -- Default Casting Equipment when using Idle sets
-        --Main = 'Eremite\'s Wand', -- 25
+        Main = 'Eremite\'s Wand', -- 25
         --Sub = 'Eremite\'s Wand', -- 25
         Ammo = 'Hedgehog Bomb',
-        --Head = 'Nashira Turban', -- 10
+        Head = 'Nashira Turban', -- 10
         --Neck = 'Willpower Torque', -- 5
         Ear1 = 'Loquac. Earring',
-        --Ear2 = 'Magnetic Earring', -- 8
-        --Body = 'Yinyang Robe',
+        Ear2 = 'Magnetic Earring', -- 8
+        Body = 'Hydra Doublet',
         --Hands = 'Merman\'s Bangles',
-        --Ring1 = 'Sattva Ring',
+        Ring1 = 'Jelly Ring',
         Ring2 = 'Evoker\'s Ring',
-        --Back = { Name = 'Errant Cape', Priority = 100 },
+        Back = 'Cheviot Cape',
         --Waist = 'Druid\'s Rope', -- 10
         --Legs = { Name = 'Evk. Spats +1', Priority = 100 },
         --Feet = { Name = 'Mountain Gaiters', Priority = 100 }, -- 5
@@ -236,8 +237,8 @@ local sets = {
         Body = 'Hydra Doublet', -- 9
         Hands = 'Hydra Gloves', -- 5
         Ring1 = 'Aqua Ring',
-        Ring2 = 'Communion Ring',
-        Back = { Name = 'Errant Cape', Priority = 100 }, -- 5
+        Ring2 = 'Aqua Ring',
+        Back = { Name = 'Altruistic Cape', Priority = 100 }, -- 5
         Waist = 'Penitent\'s Rope', -- 3
         Legs = 'Hydra Brais', -- 6
         Feet = 'Hydra Gaiters', -- 5
@@ -256,7 +257,7 @@ local sets = {
         Body = 'Mahatma Hpl.',
         Hands = 'Devotee\'s Mitts',
         Ring1 = 'Aqua Ring',
-        Ring2 = 'Communion Ring',
+        Ring2 = 'Aqua Ring',
         Back = 'Merciful Cape',
         Waist = 'Penitent\'s Rope',
         Legs = 'Mahatma Slops',
@@ -264,7 +265,7 @@ local sets = {
     },
     Stoneskin = {
         Main = 'Kirin\'s Pole',
-		Neck = 'Stone Gorget',
+		Neck = 'Enhancing Torque',
         Back = 'Merciful Cape',
     },
     Spikes = {},
@@ -293,15 +294,15 @@ local sets = {
         Legs = 'Summoner\'s Spats',
         Ring2 = 'Evoker\'s Ring',
         Ear1 = 'Loquac. Earring',
-        Ear2 = 'Magnetic Earring',
-        Ring1 = { Name = 'Bomb Queen Ring', Priority = 100 },
+        Ear2 = 'Novia Earring',
+        --Ring1 = { Name = 'Bomb Queen Ring', Priority = 100 },
         Back = 'Errant Cape',
-        Body = 'Sommoner\'s Dblt.',
+        Body = 'Summoner\'s Dblt.',
         Hands = 'Summoner\'s Brcr.',
         Feet = 'Summoner\'s Pgch.',
         Ammo = 'Hedgehog Bomb',
         Waist = { Name = 'Penitent\'s Rope', Priority = -1 },
-        --Neck = 'Smn. Torque',
+        Neck = 'Smn. Torque',
     },
 
     BP = {
@@ -312,16 +313,16 @@ local sets = {
         Ear1 = 'Loquac. Earring',
         Ear2 = 'Magnetic Earring',
         Back = 'Astute Cape',
-        Body = 'Sommoner\'s Dblt.',
+        Body = 'Summoner\'s Dblt.',
         Hands = 'Summoner\'s Brcr.',
         --Feet = 'Nashira Crackows',
         Ammo = 'Hedgehog Bomb',
         Waist = { Name = 'Hierarch Belt', Priority = 100 },
-        --Neck = 'Smn. Torque',
+        Neck = 'Smn. Torque',
     },
     BP_Magical = {
 		Head = 'Evoker\'s Horn',
-		Body = 'Sommoner\'s Dblt.',
+		Body = 'Summoner\'s Dblt.',
 		Hands = 'Summoner\'s Brcr.',
 		Legs = 'Evoker\'s Spats',
 		Feet = 'Summoner\'s Pgch.',
@@ -330,7 +331,7 @@ local sets = {
     BP_Physical = {
 		Back = 'Astute Cape',
 		Head = 'Evoker\'s Horn',
-		Body = 'Sommoner\'s Dblt.',
+		Body = 'Summoner\'s Dblt.',
 		Legs = 'Evoker\'s Spats',
 		Feet = 'Summoner\'s Pgch.',
 		Hands = 'Summoner\'s Brcr.',
@@ -338,7 +339,7 @@ local sets = {
     BP_Hybrid = {
 		Back = 'Astute Cape',
 		Head = 'Evoker\'s Horn',
-		Body = 'Sommoner\'s Dblt.',
+		Body = 'Summoner\'s Dblt.',
 		Legs = 'Evoker\'s Spats',
 		Feet = 'Summoner\'s Pgch.',
 		Hands = 'Summoner\'s Brcr.',
@@ -382,6 +383,16 @@ local sets = {
         Feet = 'Rostrum Pumps',
 	},
     WS_HighAcc = {},
+	Yellow = {
+		Ammo = 'Tiphia Sting',
+		Head = 'Zenith Crown',
+		Neck = 'checkered Scarf',
+		Hands = 'Zenith Mitts',
+		Ring2 = 'Ether Ring',
+		Legs = 'Zenith Slacks',
+		Feet = 'Rostrum Pumps',
+		Waist = 'Penitent\'s Rope',
+	},
 }
 profile.Sets = sets
 
@@ -398,6 +409,7 @@ end
 Everything below can be ignored.
 --------------------------------
 ]]
+playerHP = 890
 
 local SmnSkill = T{'Shining Ruby','Glittering Ruby','Crimson Howl','Inferno Howl','Frost Armor','Crystal Blessing','Aerial Armor','Hastega II','Fleet Wind','Hastega','Earthen Ward','Earthen Armor','Rolling Thunder','Lightning Armor','Soothing Current','Ecliptic Growl','Heavenward Howl','Ecliptic Howl','Noctoshield','Dream Shroud','Altana\'s Favor','Reraise','Reraise II','Reraise III','Raise','Raise II','Raise III','Wind\'s Blessing'}
 local SmnHealing = T{'Healing Ruby','Healing Ruby II','Whispering Wind','Spring Water'}
@@ -451,7 +463,12 @@ profile.HandleCommand = function(args)
 end
 
 profile.HandleDefault = function()
+	
+	local player = gData.GetPlayer()
+	local environment = gData.GetEnvironment()
 	local petAction = gData.GetPetAction()
+	local pet = gData.GetPet()
+	
     if (petAction ~= nil) then
         gFunc.EquipSet('BP')
 
@@ -471,6 +488,17 @@ profile.HandleDefault = function()
         end
     else
         gcmage.DoDefault(nil, whmSJMaxMP, blmSJMaxMP, nil)
+    end
+	if (pet ~= nil and pet.Name ~= 'Carbuncle') then
+        if (player.HP > 0.75*playerHP and gcdisplay.GetToggle('Yellow')) then
+            gFunc.EquipSet(sets.Yellow)
+        end
+    end
+	
+	if (player.Status == 'Idle' or player.Status == 'Resting') then
+		if (environment.Time >= 6 and environment.Time < 18 and gData.GetPet() == nil and gcdisplay.IdleSet ~= 'MDT') then
+			gFunc.Equip('Hands', 'Garden Bangles')
+		end
     end
     gFunc.EquipSet(gcinclude.BuildLockableSet(gData.GetEquipment()))
 end

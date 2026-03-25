@@ -16,12 +16,12 @@ local sets = {
 		Head = 'Genbu\'s Kabuto',
 		Neck = 'Fortitude Torque',
 		Ear1 = 'Merman\'s Earring',
-		Ear2 = 'Brutal Earring',
+		Ear2 = 'Merman\'s Earring',
 		Body = 'Bst. Jackcoat +1',
 		Hands = 'Seiryu\'s Kote',
 		Ring1 = 'Jelly Ring',
-		Ring2 = 'Rajas Ring',
-		Back = 'Forager\'s Mantle',
+		Ring2 = 'Merman\'s Ring',
+		Back = 'Boxer\'s Mantle',
 		Waist = 'Warwolf Belt',
 		Legs = 'Byakko\'s Haidate',
 		Feet = 'Suzaku\'s Sune-Ate',
@@ -30,33 +30,38 @@ local sets = {
         --Main = 'Warrior\'s Axe',
 		--Sub = '',
 		--Range = 'Freesword\'s Bow',
-		Ammo = 'Tiphia Sting',
-		Head = 'Ryl.Kgt. Bascinet',
-		Neck = 'Peacock Amulet',
-		Ear1 = 'Spike Earring',
-		Ear2 = 'Spike Earring',
+		Ammo = 'Fenrir\'s Stone',
+		Head = 'Genbu\'s Kabuto',
+		Neck = 'Fortitude Torque',
+		Ear1 = 'Merman\'s Earring',
+		Ear2 = 'Merman\'s Earring',
 		Body = 'Scp. Harness +1',
-		Hands = 'Ogre Gloves +1',
-		Ring1 = 'Ether Ring',
-		Ring2 = 'Astral Ring',
+		Hands = 'Seiryu\'s Kote',
+		Ring1 = 'Jelly Ring',
+		Ring2 = 'Merman\'s Ring',
 		Back = 'Forager\'s Mantle',
 		Waist = 'Swift Belt',
 		Legs = 'Byakko\'s Haidate',
-		Feet = 'Marine F Boots',
+		Feet = 'Suzaku\'s Sune-Ate',
     },
     Resting = {
-		Head = 'President. Hairpin',
+		--Head = 'President. Hairpin',
 		Ear1 = 'Relaxing Earring',
 		Ear2 = 'Sanative Earring',
 		Legs = 'Monster Trousers',
 	},
     Town = {},
     Movement = {
-		Hands = 'Seiryu\'s Kote',
-		Feet = 'Suzaku\'s Sune-Ate',
+		--Hands = 'Seiryu\'s Kote',
+		--Feet = 'Suzaku\'s Sune-Ate',
 	},
 
-    DT = {},
+    DT = {
+		Head = 'Darksteel Cap +1',
+		Body = 'Dst. Harness +1',
+		Hands = 'Dst. Mittens +1',
+		Legs = 'Dst. Subligar +1',
+	},
     MDT = { -- Shell IV provides 23% MDT
     },
     FireRes = {},
@@ -88,7 +93,7 @@ local sets = {
 		--Range = '',
 		Ammo = 'Virtue Stone',
 		Head = 'Panther Mask',
-		Neck = 'Peacock Amulet',
+		Neck = 'Temp. Torque',
 		Ear1 = 'Merman\'s Earring',
 		Ear2 = 'Brutal Earring',
 		Body = 'Haubergeon',
@@ -124,7 +129,7 @@ local sets = {
 		--Range = '',
 		Ammo = 'Virtue Stone',
 		Head = 'Panther Mask',
-		Neck = 'Peacock Amulet',
+		Neck = 'Temp. Torque',
 		Ear1 = 'Stealth Earring',
 		Ear2 = 'Brutal Earring',
 		Body = 'Haubergeon',
@@ -393,10 +398,15 @@ end
 
 profile.HandleWeaponskill = function()
     gcmelee.DoWS()
-	
+	local environment = gData.GetEnvironment()
 	local action = gData.GetAction()
     if (WeaponSkills:contains(action.Name)) then
       gFunc.EquipSet(sets[action.Name])
+    end
+	if (environment.Time >= 6 and environment.Time < 18) then
+        gFunc.Equip('Ear1', 'Fenrir\'s Earring')
+	else
+		gFunc.Equip('Ear1', 'Merman\'s Earring')
     end
 end
 
@@ -429,6 +439,7 @@ profile.HandleDefault = function()
     gcmelee.DoDefault()
 
     local player = gData.GetPlayer()
+	local environment = gData.GetEnvironment()
 	
 	if (player.SubJob == 'NIN' and player.Status == 'Engaged') then
         gFunc.Equip('Ear1', 'Stealth Earring')
@@ -436,24 +447,24 @@ profile.HandleDefault = function()
     if (player.Status == 'Idle' and player.HPP < 50 and muscle_belt ~= '') then
         gFunc.Equip('Waist', muscle_belt)
     end
-	if (player.Status == 'Idle' and player.HPP < 90 and conquest:GetOutsideControl()) then
-        gFunc.Equip('Head', 'President. Hairpin')
+	if ((player.Status == 'Idle' or player.Status == 'Resting')) then
+		if (conquest:GetOutsideControl()) then
+			gFunc.Equip('Head', 'President. Hairpin')
+		end
     end
     if (player.SubJob == 'NIN' and player.Status == 'Engaged') then
         gFunc.EquipSet('TP_NIN')
     end
 
     gcmelee.DoDefaultOverride()
-
     if (player.MP < 50 and (player.SubJob == 'WHM' or player.SubJob == 'BLM' or player.SubJob == 'RDM')) then
         if (gaudy_harness) then
             gFunc.Equip('Body', 'Gaudy Harness')
         end
     end
-	--if (gData.GetEquipment().Main == 'Temperance Axe' and player.Status == 'Engaged') then
-	--	gFunc.Equip('Ammo', 'Virtue Stone')
-	--end
-
+	if (gcdisplay.IdleSet == 'MDT' and conquest:GetOutsideControl()) then
+		gFunc.Equip('Back', 'Resentment Cape')
+	end
     local petAction = gData.GetPetAction()
     if (petAction ~= nil) then
         gFunc.EquipSet(sets.Ready_Physical)
@@ -461,7 +472,7 @@ profile.HandleDefault = function()
             gFunc.EquipSet(sets.Ready_Magic)
         end
     end
-
+	
     gFunc.EquipSet(gcinclude.BuildLockableSet(gData.GetEquipment()))
 end
 

@@ -1,7 +1,7 @@
 local profile = {}
 
 local fastCastValue = 0.04 -- Only include Fast Cast e.g. Loquacious Earring, Rostrum Pumps
-local fastCastValueSong = 0.37 -- Only include Song Spellcasting Time e.g. Minstrel's Ring, Sha'ir Manteel
+local fastCastValueSong = 0.25 -- Only include Song Spellcasting Time e.g. Minstrel's Ring, Sha'ir Manteel
 
 local ninSJMaxMP = nil -- The Max MP you have when /nin in your idle set
 local whmSJMaxMP = 188 -- The Max MP you have when /whm in your idle set
@@ -14,18 +14,18 @@ local sets = {
     Idle = {
         Main = 'Terra\'s Staff',
         Range = 'Faerie Piccolo',
-        Ear1 = 'Melody Earring',
-        Ear2 = 'Novio Earring',
-        Head = 'Optical Hat',
-        Body = 'Scp. Harness +1',
-        Hands = 'Bard\'s Cuffs',
+        Ear1 = 'Merman\'s Earring',
+		Ear2 = 'Merman\'s Earring',
+        Head = 'Darksteel Cap +1',
+        Body = 'Dst. Harness +1',
+        Hands = 'Dst. Mittens +1',
         Ring1 = 'Jelly Ring',
-        Ring2 = 'Ether Ring',
-        Back = 'Bard\'s Cape',
+        Ring2 = 'Merman\'s Ring',
+        Back = 'Cheviot Cape',
         Waist = 'Warwolf Belt',
-        Legs = 'Hydra Brais',
+        Legs = 'Dst. Subligar +1',
         Feet = 'Choral Slippers',
-        Neck = 'Temp. Torque',
+        Neck = 'Fortitude Torque',
     },
     IdleALT = {
         Main = 'Terra\'s Staff',
@@ -37,7 +37,7 @@ local sets = {
         Hands = 'Dst. Mittens +1',
         Ring1 = 'Merman\'s Ring',
         Ring2 = 'Sattva Ring',
-        Back = 'Umbra Cape',
+        Back = 'Cheviot Cape',
         Waist = 'Scouter\'s Rope',
         Legs = 'Dst. Subligar +1',
         Feet = 'Dst. Leggings +1',
@@ -61,7 +61,12 @@ local sets = {
     },
     Movement = {},
 
-    DT = {},
+    DT = {
+		Head = 'Darksteel Cap +1',
+		Body = 'Dst. Harness +1',
+		Hands = 'Dst. Mittens +1',
+		Legs = 'Dst. Subligar +1',
+	},
     DTNight = {},
     MDT = { -- Shell IV provides 23% MDT
         Main = 'Terra\'s Staff',
@@ -69,10 +74,10 @@ local sets = {
         Ear1 = 'Merman\'s Earring',
         Ear2 = 'Merman\'s Earring',
         Head = 'displaced',
-        Body = 'Royal Cloak',
+        Body = 'Vermillion Cloak',
         Hands = 'Merman\'s Bangles',
         Ring1 = 'Merman\'s Ring',
-        Ring2 = 'Sattva Ring',
+        Ring2 = 'Merman\'s Ring',
         Back = 'Hexerei Cape',
         Waist = 'Scouter\'s Rope',
         Legs = 'Dst. Subligar +1',
@@ -98,7 +103,7 @@ local sets = {
     Evasion = {},
 
     Precast_Songs_HPDown = { -- This set will equip even before precast for songs in case you require HP Down equipment to trigger Minstrel's Ring
-		--Head = 'Zenith Crown',
+		Head = 'Zenith Crown',
 		Range = '',
 		--Ammo = 'Tiphia Sting',
 		Neck = 'Checkered Scarf',
@@ -108,7 +113,7 @@ local sets = {
 		Waist = 'Penitent\'s Rope',
 	},
     Precast = {
-       Ear1 = 'Loquac. Earring',
+       Ear2 = 'Loquac. Earring',
        Feet = 'Rostrum Pumps',
     },
     Precast_Songs = {
@@ -117,7 +122,7 @@ local sets = {
         --Ammo = 'Happy Egg',
         Head = 'Genbu\'s Kabuto',
         Neck = 'Temp. Torque',
-        Ear1 = 'Melody Earring',
+        Ear1 = 'Cassie Earring',
         Ear2 = 'Loquac. Earring',
         Body = 'Sha\'ir Manteel',
         Hands = 'Seiryu\'s Kote',
@@ -126,20 +131,20 @@ local sets = {
         Back = 'Gigant Mantle',
         Waist = 'Swift Belt',
         Legs = 'Byakko\'s Haidate',
-        Feet = 'Marine F Boots',
+        Feet = 'Rostrum Pumps',
     },
     Casting = { -- Default Casting Equipment when using Idle sets
         Main = 'Terra\'s Staff',
         Range = 'Mythic Harp +1',
         Neck = 'Jeweled Collar',
-        --Ear1 = 'Merman\'s Earring',
+        Ear1 = 'Merman\'s Earring',
         Ear2 = 'Merman\'s Earring',
         Head = 'Darksteel Cap +1',
         Body = 'Dst. Harness +1',
         Hands = 'Dst. Mittens +1',
-        Ring1 = 'Merman\'s Ring',
-        Ring2 = 'Sattva Ring',
-        Back = 'Umbra Cape',
+        Ring1 = 'Jelly Ring',
+        Ring2 = 'Merman\'s Ring',
+        Back = 'Cheviot Cape',
         Waist = 'Powerful Rope',
         Legs = 'Dst. Subligar +1',
         Feet = 'Dst. Leggings +1',
@@ -281,13 +286,13 @@ local sets = {
     Cure = {
         Main = 'Light Staff',
         Head = 'Hydra Beret',
-        Neck = 'Justice Badge',
+        Neck = 'Healing Torque',
         Ear1 = 'Magnetic Earring',
         Ear2 = 'Merman\'s Earring',
         Body = 'Hydra Doublet',
         Hands = 'Hydra Gloves',
         Ring1 = 'Aqua Ring',
-        Ring2 = 'Tamas Ring',
+        Ring2 = 'Aqua Ring',
         Back = 'Errant Cape',
         Waist = 'Penitent\'s Rope',
         Legs = 'Hydra Brais',
@@ -354,6 +359,10 @@ local sets = {
     TP_Mjollnir_Haste = {},
     WS = {},
     WS_HighAcc = {},
+	Vermi = {
+		Head = 'displaced',
+		Body = 'Vermillion Cloak',
+	},
 }
 profile.Sets = sets
 
@@ -429,8 +438,24 @@ end
 
 profile.HandleDefault = function()
     gcmage.DoDefault(ninSJMaxMP, whmSJMaxMP, blmSJMaxMP, rdmSJMaxMP, nil)
-
+	
+	local player = gData.GetPlayer()
+	local environment = gData.GetEnvironment()
+	if ((player.Status == 'Idle' or player.Status == 'Resting')) then
+		if (environment.Time >= 6 and environment.Time < 18) then
+			gFunc.Equip('Hands', 'Garden Bangles')
+		end
+    end
+	
     gFunc.EquipSet(gcinclude.BuildLockableSet(gData.GetEquipment()))
+	if ((player.SubJob == 'WHM' or player.SubJob == 'RDM' or player.SubJob == 'BLM') and player.Status ~= 'Resting' and player.MPP < 80) then
+        gFunc.EquipSet(sets.Vermi)
+    elseif ((player.Status == 'Idle' or player.Status == 'Resting') and conquest:GetOutsideControl() and player.HPP < 100) then
+		gFunc.Equip('Head', 'President. Hairpin')
+	end
+	if (gcdisplay.IdleSet == 'MDT' and conquest:GetOutsideControl()) then
+		gFunc.Equip('Back', 'Resentment Cape')
+	end
 end
 
 profile.HandlePrecast = function()

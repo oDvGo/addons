@@ -1,6 +1,6 @@
 local profile = {}
 
-local fastCastValue = 0.00 -- 0% from gear
+local fastCastValue = 0.07 -- 0% from gear
 
 local ethereal_earring = false
 local ethereal_earring_slot = 'Ear2'
@@ -14,16 +14,16 @@ local sets = {
     Idle = {
 		Ammo = 'Fenrir\'s Stone',
 		Head = 'Wyvern Helm',
-        Neck = 'Peacock Amulet',
+        Neck = 'Fortitude Torque',
 		Ear1 = 'Merman\'s Earring',
-		Ear2 = 'Brutal Earring',
+		Ear2 = 'Merman\'s Earring',
 		Body = 'Drachen Mail',
 		Hands = 'Wyrm Fng.Gnt.',
 		Ring1 = 'Jelly Ring',
-		Ring2 = 'Rajas Ring',
-		Back = 'Forager\'s Mantle',
+		Ring2 = 'Merman\'s Ring',
+		Back = 'Boxer\'s Mantle',
 		Waist = 'Warwolf Belt',
-		Legs = 'Homam Cosciales',
+		Legs = 'Crimson Cuisses',
 		Feet = 'Homam Gambieras',
     },
     IdleALT = {},
@@ -49,10 +49,15 @@ local sets = {
 		Feet = 'Homam Gambieras',
 	},
     Movement = {
-		Legs = 'Crimson Cuisses',
+		--Legs = 'Crimson Cuisses',
 	},
 
-    DT = {},
+    DT = {
+		Head = 'Darksteel Cap +1',
+		Body = 'Dst. Harness +1',
+		Hands = 'Dst. Mittens +1',
+		Legs = 'Dst. Subligar +1',
+	},
     MDT = { -- Shell IV provides 23% MDT
     },
     FireRes = {},
@@ -66,6 +71,7 @@ local sets = {
     Precast = {
 		Head = 'Drachen Armet',
 		Ear1 = 'Loquac. Earring',
+		Ear2 = 'Magnetic Earring',
 		Ring2 = 'Bomb Queen Ring',
 		Back = 'Gigant Mantle',
 	},
@@ -210,7 +216,7 @@ local sets = {
 		--Ear1 = 'Minuet Earring',
 		--Ear2 = 'Merman\'s Earring',
 		Body = 'Hecatomb Harness',
-		Hands = 'Wyrm Fng.Gnt.',
+		Hands = 'Tarasque Mitts +1',
 		Ring1 = 'Toreador\'s Ring',
 		Ring2 = 'Rajas Ring',
 		Back = 'Forager\'s Mantle',
@@ -225,12 +231,12 @@ local sets = {
 		--Ear1 = 'Minuet Earring',
 		--Ear2 = 'Merman\'s Earring',
 		Body = 'Hecatomb Harness',
-		Hands = 'Wyrm Fng.Gnt.',
+		Hands = 'Tarasque Mitts +1',
 		Ring1 = 'Flame Ring',
 		Ring2 = 'Rajas Ring',
 		Back = 'Forager\'s Mantle',
 		Waist = 'Wyrm Belt',
-		Legs = 'Drachen Brais',
+		Legs = 'Barone Cosciales',
 		Feet = 'Hct. Leggings',
 	},
     ['Wheeling Thrust'] = {
@@ -262,8 +268,8 @@ local sets = {
 		Feet = 'Hct. Leggings',
 	},
     ['Skewer'] = {
-		Head = 'Homam Zucchetto',
-        Neck = 'Peacock Amulet',
+		Head = 'Wyvern Helm',
+        Neck = 'Light Gorget',
 		--Ear1 = 'Minuet Earring',
 		--Ear2 = 'Merman\'s Earring',
 		Body = 'Hecatomb Harness',
@@ -375,7 +381,7 @@ profile.HandleDefault = function()
     local isMage = isWHM or isRDM
     local weakened = gData.GetBuffCount('Weakness')
 	
-	if (player.Status == 'Idle' and player.HPP < 95 and conquest:GetOutsideControl()) then
+	if (player.Status == 'Idle' and player.Status == 'Resting' and conquest:GetOutsideControl()) then
         gFunc.Equip('Head', 'President. Hairpin')
     end
 	
@@ -389,6 +395,9 @@ profile.HandleDefault = function()
     if (ethereal_earring == true and isMage) then
         gFunc.Equip(ethereal_earring_slot, 'Ethereal Earring')
     end
+	if (gcdisplay.IdleSet == 'MDT' and conquest:GetOutsideControl()) then
+		gFunc.Equip('Back', 'Resentment Cape')
+	end
 
     gcmelee.DoDefaultOverride()
 

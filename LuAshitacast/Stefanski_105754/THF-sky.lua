@@ -1,24 +1,24 @@
 local profile = {}
 
-local fastCastValue = 0.05 -- 0% from gear
+local fastCastValue = 0.00 -- 0% from gear
 
 local ta_rogue_armlets = false
 local displayheadOnAbility = true
 
 local sets = {
     Idle = {
-		Head = 'Optical Hat',
+		Head = 'Emperor Hairpin',
 		Neck = 'Evasion Torque',
-		Ear1 = 'Merman\'s Earring',
-		Ear2 = 'Novia Earring',
+		Ear1 = 'Drone Earring',
+		Ear2 = 'Drone Earring',
 		Body = 'Scp. Harness +1',
-		Hands = 'War Gloves +1',
+		Hands = 'Battle Gloves',
 		Ring1 = 'Jelly Ring',
-		Ring2 = 'Merman\'s Ring',
-		Back = 'Boxer\'s Mantle',
-		Waist = 'Scouter\'s Rope',
+		Ring2 = 'Scorpion Ring +1',
+		Back = 'Amemet Mantle +1',
+		Waist = 'Swift Belt',
 		Legs = 'Raven Hose',
-		Feet = 'Homam Gambieras',
+		Feet = 'Marine F Boots',
 	},
     IdleALT = {},
     Resting = {
@@ -26,42 +26,24 @@ local sets = {
 		Ear1 = 'Sanative Earring',
 	},
     Town = {
-		Head = 'Homam Zucchetto',
+		Head = 'Emperor Hairpin',
 		Neck = 'Peacock Amulet',
-		Ear1 = 'Novia Earring',
-		Ear2 = 'Brutal Earring',
+		Ear1 = 'Drone Earring',
+		Ear2 = 'Drone Earring',
 		Body = 'Rapparee Harness',
-		Hands = 'Homam Manopolas',
-		Ring1 = 'Jelly Ring',
-		Ring2 = 'Merman\'s Ring',
-		Back = 'Boxer\'s Mantle',
-		Waist = 'Scouter\'s Rope',
-		Legs = 'Homam Cosciales',
-		Feet = 'Homam Gambieras',
+		Hands = 'Noct Gloves +1',
+		Ring1 = 'Scorpion Ring +1',
+		Ring2 = 'Rajas Ring',
+		Back = 'Amemet Mantle +1',
+		Waist = 'Swift Belt',
+		Legs = 'Bravo\'s Subligar',
+		Feet = 'Marine F Boots',
 	},
     Movement = {},
 
-	DT = {
-		Head = 'Darksteel Cap +1',
-		Neck = 'Fortitude Torque',
-		Ear1 = 'Knight\'s Earring',
-		Ear2 = 'Cassie Earring',
-		Body = 'Dst. Harness +1',
-		Hands = 'Dst. Mittens +1',
-		Ring1 = 'Jelly Ring',
-		Ring2 = 'Merman\'s Ring',
-		Back = 'Boxer\'s Mantle',
-		Waist = 'Warwolf Belt',
-		Legs = 'Dst. Subligar +1',
-		Feet = 'Marine F Boots',
-	},
+    DT = {},
     MDT = { -- Shell IV provides 23% MDT
-		Ear1 = 'Merman\'s Earring',
-		Ear2 = 'Merman\'s Earring',
-		Hands = 'Merman\'s Bangles',
-		Ring1 = 'Merman\'s Ring',
-		Ring2 = 'Merman\'s Ring',
-	},
+    },
     FireRes = {},
     IceRes = {},
     LightningRes = {},
@@ -69,34 +51,27 @@ local sets = {
     WindRes = {},
     WaterRes = {},
     Evasion = {
-		Head = 'Optical Hat',
+		Head = 'Emperor Hairpin',
 		Neck = 'Evasion Torque',
 		Ear1 = 'Drone Earring',
-		Ear2 = 'Novia Earring',
+		Ear2 = 'Drone Earring',
 		Body = 'Scp. Harness +1',
-		Hands = 'War Gloves +1',
+		Hands = 'Battle Gloves',
 		Ring1 = 'Toreador\'s Ring',
-		Ring2 = 'Toreador\'s Ring',
-		Back = 'Boxer\'s Mantle',
-		Waist = 'Scouter\'s Rope',
+		Ring2 = 'Rajas Ring',
+		Back = 'Amemet Mantle +1',
+		Waist = 'Swift Belt',
 		Legs = 'Raven Hose',
 		Feet = 'Bounding Boots',
 	},
 
-    Precast = {
-		Ear1 = 'Loquac. Earring',
-		Legs = 'Homam Cosciales',
-	},
+    Precast = {},
     SIRD = {
     },
     Haste = { -- Used for Utsusemi cooldown
-		Head = 'Homam Zucchetto',
-		Ear1 = 'Loquac. Earring',
 		Body = 'Rapparee Harness',
-		Hands = 'Homam Manopolas',
 		Waist = 'Swift Belt',
-		Legs = 'Homam Cosciales',
-		Feet = 'Homam Gambieras',
+		Legs = 'Bravo\'s Subligar',
     },
 
     LockSet1 = {},
@@ -104,132 +79,130 @@ local sets = {
     LockSet3 = {},
 
     TP_LowAcc = {
-		Head = 'Homam Zucchetto',
+		Head = 'Emperor Hairpin',
 		Neck = 'Peacock Amulet',
 		Ear1 = 'Merman\'s Earring',
-		Ear2 = 'Brutal Earring',
+		Ear2 = 'Spike Earring',
 		Body = 'Rapparee Harness',
-		Hands = 'Homam Manopolas',
+		Hands = 'Battle Gloves',
 		Ring1 = 'Toreador\'s Ring',
 		Ring2 = 'Rajas Ring',
-		Back = 'Forager\'s Mantle',
+		Back = 'Amemet Mantle +1',
 		Waist = 'Swift Belt',
-		Legs = 'Homam Cosciales',
-		Feet = 'Homam Gambieras',
+		Legs = 'Bravo\'s Subligar',
+		Feet = 'Marine F Boots',
 	},
     TP_HighAcc = {
-		Head = 'Optical Hat',
+		Head = 'Emperor Hairpin',
 		Neck = 'Peacock Amulet',
 		Ear1 = 'Merman\'s Earring',
-		Ear2 = 'Brutal Earring',
-		Body = 'Homam Corazza',
-		Hands = 'Homam Manopolas',
+		Ear2 = 'Spike Earring',
+		Body = 'Scp. Harness +1',
+		Hands = 'Battle Gloves',
 		Ring1 = 'Toreador\'s Ring',
 		Ring2 = 'Toreador\'s Ring',
-		Back = 'Forager\'s Mantle',
+		Back = 'Amemet Mantle +1',
 		Waist = 'Swift Belt',
-		Legs = 'Homam Cosciales',
-		Feet = 'Homam Gambieras',
+		Legs = 'Bravo\'s Subligar',
+		Feet = 'Marine F Boots',
 	},
     TP_NIN = {
-		--Ear1 = 'Merman\'s Earring',
-		Ear1 = 'Stealth Earring',
+		Ear1 = 'Optical Earring',
+		--Ear1 = 'Stealth Earring',
 		--Ear2 = 'Merman\'s Earring',
 	},
     TP_Mjollnir_Haste = {},
 
     WS = {
-		Head = 'Optical Hat',
+		Head = 'Emperor Hairpin',
 		Neck = 'Peacock Amulet',
 		Ear1 = 'Merman\'s Earring',
-		Ear2 = 'Brutal Earring',
-		Body = 'Hecatomb Harness',
-		Hands = 'Hecatomb Mittens',
-		Ring1 = 'Flame Ring',
-		Ring2 = 'Rajas Ring',
-		Back = 'Forager\'s Mantle',
-		Waist = 'Warwolf Belt',
-		Legs = 'Homam Cosciales',
-		Feet = 'Hct. Leggings',
-	},
-    WS_HighAcc = {
-		Head = 'Optical Hat',
-		Neck = 'Peacock Amulet',
-		Ear1 = 'Merman\'s Earring',
-		Ear2 = 'Brutal Earring',
-		Body = 'Hecatomb Harness',
-		Hands = 'Hecatomb Mittens',
+		Ear2 = 'Merman\'s Earring',
+		Body = 'Black Cotehardie',
+		Hands = 'Custom F Gloves',
 		Ring1 = 'Toreador\'s Ring',
 		Ring2 = 'Rajas Ring',
-		Back = 'Forager\'s Mantle',
-		Waist = 'Warwolf Belt',
-		Legs = 'Homam Cosciales',
-		Feet = 'Hct. Leggings',
+		Back = 'Amemet Mantle +1',
+		Waist = 'Life Belt',
+		Legs = 'Republic Subligar',
+		Feet = 'Marine F Boots',
+	},
+    WS_HighAcc = {
+		Head = 'Emperor Hairpin',
+		Neck = 'Peacock Amulet',
+		Ear1 = 'Merman\'s Earring',
+		Ear2 = 'Merman\'s Earring',
+		Body = 'Black Cotehardie',
+		Hands = 'Custom F Gloves',
+		Ring1 = 'Toreador\'s Ring',
+		Ring2 = 'Rajas Ring',
+		Back = 'Amemet Mantle +1',
+		Waist = 'Life Belt',
+		Legs = 'Republic Subligar',
+		Feet = 'Marine F Boots',
 	},
 
     WS_Evisceration = {
-		Head = 'Optical Hat',
-		Neck = 'Peacock Amulet',
-		Ear1 = 'Merman\'s Earring',
-		Ear2 = 'Brutal Earring',
-		Body = 'Hecatomb Harness',
-		Hands = 'Hecatomb Mittens',
-		Ring1 = 'Flame Ring',
-		Ring2 = 'Rajas Ring',
-		Back = 'Forager\'s Mantle',
-		Waist = 'Warwolf Belt',
-		Legs = 'Homam Cosciales',
-		Feet = 'Hct. Leggings',
-	},
-    WS_SharkBite = {
-		Head = 'Optical Hat',
+		Head = 'Emperor Hairpin',
 		Neck = 'Peacock Amulet',
 		Ear1 = 'Merman\'s Earring',
 		Ear2 = 'Merman\'s Earring',
-		Body = 'Dragon Harness',
-		Hands = 'Hecatomb Mittens',
-		Ring1 = 'Flame Ring',
+		Body = 'Black Cotehardie',
+		Hands = 'Custom F Gloves',
+		Ring1 = 'Toreador\'s Ring',
 		Ring2 = 'Rajas Ring',
-		Back = 'Forager\'s Mantle',
-		Waist = 'Warwolf Belt',
-		Legs = 'Homam Cosciales',
-		Feet = 'Hct. Leggings',
+		Back = 'Amemet Mantle +1',
+		Waist = 'Life Belt',
+		Legs = 'Republic Subligar',
+		Feet = 'Marine F Boots',
+	},
+    WS_SharkBite = {
+		Head = 'Emperor Hairpin',
+		Neck = 'Peacock Amulet',
+		Ear1 = 'Merman\'s Earring',
+		Ear2 = 'Merman\'s Earring',
+		Body = 'Black Cotehardie',
+		Hands = 'Custom F Gloves',
+		Ring1 = 'Toreador\'s Ring',
+		Ring2 = 'Rajas Ring',
+		Back = 'Amemet Mantle +1',
+		Waist = 'Life Belt',
+		Legs = 'Republic Subligar',
+		Feet = 'Marine F Boots',
 	},
 	WS_Elemental = {
-		Head = 'Optical Hat',
+		Head = 'Emperor Hairpin',
 		Neck = 'Peacock Amulet',
 		Ear1 = 'Moldavite Earring',
 		Ear2 = 'Merman\'s Earring',
-		Body = 'Blue Cotehardie',
-		Hands = 'Tarasque Mitts +1',
+		Body = 'Black Cotehardie',
+		Hands = 'Custom F Gloves',
 		Ring1 = 'Grace Ring',
 		Ring2 = 'Rajas Ring',
-		Back = 'Forager\'s Mantle',
-		Waist = 'Warwolf Belt',
-		Legs = 'Homam Cosciales',
+		Back = 'Amemet Mantle +1',
+		Waist = 'Life Belt',
+		Legs = 'Republic Subligar',
 		Feet = 'Bounding Boots',
 	},
 	
     SA = {
 		Head = 'Emperor Hairpin',
-		Ear1 = 'Intruder Earring',
-		Body = 'Dragon Harness',
-		Hands = 'Hecatomb Mittens',
+		Body = 'Black Cotehardie',
+		Hands = 'Custom F Gloves',
 		Ring1 = 'Grace Ring',
 		Ring2 = 'Rajas Ring',
 		Back = 'Assassin\'s Cape',
-		Waist = 'Warwolf Belt',
-		Feet = 'Marine F Boots',
+		Waist = 'Life Belt',
 	},
     TA = {
 		Ear1 = 'Drone Earring',
 		Ear2 = 'Drone Earring',
 		Head = 'Emperor Hairpin',
-		Body = 'Dragon Harness',
+		Body = 'Black Cotehardie',
 		Legs = 'Rogue\'s Culottes',
 		Feet = 'Custom F Boots',
 		Back = 'Assassin\'s Cape',
-		Waist = 'Warwolf Belt',
+		Waist = 'Life Belt',
 	},
     SATA = {
 		Ring1 = 'Grace Ring',
@@ -237,12 +210,12 @@ local sets = {
 		Ear1 = 'Drone Earring',
 		Ear2 = 'Drone Earring',
 		Head = 'Emperor Hairpin',
-		Body = 'Dragon Harness',
-		Hands = 'Hecatomb Mittens',
+		Body = 'Black Cotehardie',
+		Hands = 'Custom F Gloves',
 		Legs = 'Rogue\'s Culottes',
 		Feet = 'Bounding Boots',
 		Back = 'Assassin\'s Cape',
-		Waist = 'Warwolf Belt',
+		Waist = 'Life Belt',
 	},
 
     Flee = {
@@ -251,49 +224,40 @@ local sets = {
     Hide = {},
     Steal = {
 		Head = 'Rogue\'s Bonnet',
-		Ear1 = 'Cassie Earring',
-		Hands = 'Thief\'s Kote',
-		Legs = 'Assassin\'s Culottes',
 		Feet = 'Rogue\'s Poulaines',
 		Ring2 = 'Bomb Queen Ring',
 		Back = 'Gigant Mantle',
 	},
-    Mug = {
-		'Assassin\'s Bonnet',
-	},
+    Mug = {},
 
     TH = {
-		Neck = 'Nanaa\'s Charm',
-		Hands = 'Assassin\'s Armlets',
+		--Neck = 'Nanaa\'s Charm',
 	},
 
     Ranged = {
-		Head = 'Optical Head',
+		Head = 'Emperor Hairpin',
 		Neck = 'Peacock Amulet',
 		Ear1 = 'Drone Earring',
 		Ear2 = 'Drone Earring',
-		Head = 'Optical Hat',
 		Body = 'Rapparee Harness',
 		Hands = 'Noct Gloves +1',
-		Ring1 = 'Merman\'s Ring',
-		Ring2 = 'Merman\'s Ring',
+		Ring1 = 'Scorpion Ring +1',
+		Ring2 = 'Scorpion Ring +1',
 		Back = 'Amemet Mantle +1',
-		Waist = 'Scouter\'s Rope',
-		Legs = 'Noct Brais +1',
-		Feet = 'Homam Gambieras',
+		Legs = 'Bravo\'s Subligar',
+		Feet = 'Custom F Boots',
 	},
     Ranged_INT = {
 		Ear1 = 'Omn. Earring',
 		Ear2 = 'Drone Earring',
 		Head = 'Rogue\'s Bonnet',
 		Neck = 'Peacock Amulet',
-		Body = 'Blue Cotehardie',
+		Body = 'Rapparee Harness',
 		Hands = 'Noct Gloves +1',
-		Ring1 = 'Snow Ring',
-		Ring2 = 'Snow Ring',
+		Ring1 = 'Scorpion Ring +1',
+		Ring2 = 'Scorpion Ring +1',
 		Back = 'Amemet Mantle +1',
-		Waist = 'Scouter\'s Rope',
-		Legs = 'Noct Brais +1',
+		Legs = 'Bravo\'s Subligar',
 		Feet = 'Custom F Boots',
 	},
 }
@@ -422,14 +386,12 @@ profile.HandleDefault = function()
         gFunc.EquipSet('TP_NIN')
     end
 	
-	--if (gData.GetBuffCount('Minuet') > 0) then
-	--	gFunc.Equip('Ear2', 'Minuet Earring');
-    --end
+	if (gData.GetBuffCount('Minuet') > 0) then
+		gFunc.Equip('Ear2', 'Minuet Earring');
+    end
 
     gcmelee.DoDefaultOverride()
-	if (gcdisplay.IdleSet == 'Evasion' and conquest:GetOutsideControl()) then
-        gFunc.Equip('Hands', 'Mst.Cst. Mitts')
-    end
+
     local sa = gData.GetBuffCount('Sneak Attack')
     local ta = gData.GetBuffCount('Trick Attack')
 
@@ -440,18 +402,14 @@ profile.HandleDefault = function()
     elseif (ta == 1) or (os.clock() < taOverride) then
         gFunc.EquipSet(sets.TA)
     end
-	--if (player.Status == 'Idle' and player.HPP < 95 and conquest:GetOutsideControl() and gcdisplay.IdleSet ~= 'Evasion') then
-    --    gFunc.Equip('Head', 'President. Hairpin')
-    --end
-	if ((player.Status == 'Idle' or player.Status == 'Resting') and gcdisplay.IdleSet ~= 'Evasion' and gcdisplay.IdleSet ~= 'MDT') then
+	if (player.Status == 'Idle' and player.HPP < 75 and conquest:GetOutsideControl()) then
+        gFunc.Equip('Head', 'President. Hairpin')
+    end
+	if ((player.Status == 'Idle' or player.Status == 'Resting')) then
 		if (environment.Time >= 6 and environment.Time < 18) then
 			gFunc.Equip('Hands', 'Garden Bangles')
 		end
     end
-	if (gcdisplay.IdleSet == 'MDT' and conquest:GetOutsideControl()) then
-		gFunc.Equip('Back', 'Resentment Cape')
-	end
-	
     gFunc.EquipSet(gcinclude.BuildLockableSet(gData.GetEquipment()))
 
     if (player.Status == 'Engaged' and profile.NeedTH()) then
@@ -467,7 +425,6 @@ profile.HandleMidcast = function()
     gcmelee.DoMidcast(sets)
 
     local action = gData.GetAction()
-	gFunc.EquipSet(sets.TH)
     if (action.Skill ~= 'Ninjutsu' and profile.NeedTH()) then
         gFunc.EquipSet(sets.TH)
     end
