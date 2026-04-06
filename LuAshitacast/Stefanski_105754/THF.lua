@@ -1,6 +1,6 @@
 local profile = {}
 
-local fastCastValue = 0.05 -- 0% from gear
+local fastCastValue = 0.07 -- 0% from gear
 
 local ta_rogue_armlets = false
 local displayheadOnAbility = true
@@ -9,16 +9,16 @@ local sets = {
     Idle = {
 		Head = 'Optical Hat',
 		Neck = 'Evasion Torque',
-		Ear1 = 'Merman\'s Earring',
+		Ear1 = 'Drone Earring',
 		Ear2 = 'Novia Earring',
 		Body = 'Scp. Harness +1',
 		Hands = 'War Gloves +1',
-		Ring1 = 'Jelly Ring',
-		Ring2 = 'Merman\'s Ring',
+		Ring1 = 'Toreador\'s Ring',
+		Ring2 = 'Toreador\'s Ring',
 		Back = 'Boxer\'s Mantle',
 		Waist = 'Scouter\'s Rope',
 		Legs = 'Raven Hose',
-		Feet = 'Homam Gambieras',
+		Feet = 'Dance Shoes',
 	},
     IdleALT = {},
     Resting = {
@@ -45,7 +45,7 @@ local sets = {
 		Head = 'Darksteel Cap +1',
 		Neck = 'Fortitude Torque',
 		Ear1 = 'Knight\'s Earring',
-		Ear2 = 'Cassie Earring',
+		--Ear2 = 'Cassie Earring',
 		Body = 'Dst. Harness +1',
 		Hands = 'Dst. Mittens +1',
 		Ring1 = 'Jelly Ring',
@@ -53,7 +53,7 @@ local sets = {
 		Back = 'Boxer\'s Mantle',
 		Waist = 'Warwolf Belt',
 		Legs = 'Dst. Subligar +1',
-		Feet = 'Marine F Boots',
+		Feet = 'Dst. Leggings +1',
 	},
     MDT = { -- Shell IV provides 23% MDT
 		Ear1 = 'Merman\'s Earring',
@@ -80,7 +80,7 @@ local sets = {
 		Back = 'Boxer\'s Mantle',
 		Waist = 'Scouter\'s Rope',
 		Legs = 'Raven Hose',
-		Feet = 'Bounding Boots',
+		Feet = 'Dance Shoes',
 	},
 
     Precast = {
@@ -88,6 +88,18 @@ local sets = {
 		Legs = 'Homam Cosciales',
 	},
     SIRD = {
+		Head = 'Optical Hat',
+		Neck = 'Evasion Torque',
+		Ear1 = 'Drone Earring',
+		Ear2 = 'Novia Earring',
+		Body = 'Scp. Harness +1',
+		Hands = 'War Gloves +1',
+		Ring1 = 'Toreador\'s Ring',
+		Ring2 = 'Toreador\'s Ring',
+		Back = 'Boxer\'s Mantle',
+		Waist = 'Scouter\'s Rope',
+		Legs = 'Raven Hose',
+		Feet = 'Dance Shoes',
     },
     Haste = { -- Used for Utsusemi cooldown
 		Head = 'Homam Zucchetto',
@@ -185,7 +197,7 @@ local sets = {
 		Head = 'Optical Hat',
 		Neck = 'Peacock Amulet',
 		Ear1 = 'Merman\'s Earring',
-		Ear2 = 'Merman\'s Earring',
+		Ear2 = 'Brutal Earring',
 		Body = 'Dragon Harness',
 		Hands = 'Hecatomb Mittens',
 		Ring1 = 'Flame Ring',
@@ -251,20 +263,21 @@ local sets = {
     Hide = {},
     Steal = {
 		Head = 'Rogue\'s Bonnet',
-		Ear1 = 'Cassie Earring',
-		Hands = 'Thief\'s Kote',
+		--Ear1 = 'Cassie Earring',
+		Hands = 'Rogue\'s Armlets',
 		Legs = 'Assassin\'s Culottes',
 		Feet = 'Rogue\'s Poulaines',
 		Ring2 = 'Bomb Queen Ring',
 		Back = 'Gigant Mantle',
 	},
     Mug = {
-		'Assassin\'s Bonnet',
+		Head = 'Assassin\'s Bonnet',
 	},
 
     TH = {
 		Neck = 'Nanaa\'s Charm',
 		Hands = 'Assassin\'s Armlets',
+		--Legs = 'Assassin\'s Cullotes',
 	},
 
     Ranged = {
@@ -427,7 +440,7 @@ profile.HandleDefault = function()
     --end
 
     gcmelee.DoDefaultOverride()
-	if (gcdisplay.IdleSet == 'Evasion' and conquest:GetOutsideControl()) then
+	if ((gcdisplay.IdleSet == 'Evasion' or player.Status == 'Idle') and conquest:GetOutsideControl()) then
         gFunc.Equip('Hands', 'Mst.Cst. Mitts')
     end
     local sa = gData.GetBuffCount('Sneak Attack')

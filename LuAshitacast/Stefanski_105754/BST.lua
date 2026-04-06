@@ -61,6 +61,7 @@ local sets = {
 		Body = 'Dst. Harness +1',
 		Hands = 'Dst. Mittens +1',
 		Legs = 'Dst. Subligar +1',
+		Feet = 'Dst. Leggings +1',
 	},
     MDT = { -- Shell IV provides 23% MDT
     },

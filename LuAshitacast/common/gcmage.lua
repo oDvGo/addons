@@ -392,7 +392,6 @@ function gcmage.DoDefault(ninSJMMP, whmSJMMP, blmSJMMP, rdmSJMMP, drkSJMMP)
             if (lastSummoningElement == environment.WeatherElement) then
                 if (summoners_horn ~= '') then
                     gFunc.Equip('Head', summoners_horn)
-					gFunc.Equip('Body', summoners_doublet)
                 end
             end
         end

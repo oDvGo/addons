@@ -31,7 +31,9 @@ local sets = {
 		Head = 'Darksteel Cap +1',
 		Body = 'Dst. Harness +1',
 		Hands = 'Dst. Mittens +1',
+		Ring1 = 'Jelly Ring',
 		Legs = 'Dst. Subligar +1',
+		Feet = 'Dst. Leggings +1',
 	},
     MDT = { -- Shell IV provides 23% MDT
     },

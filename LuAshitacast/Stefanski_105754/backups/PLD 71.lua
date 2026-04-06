@@ -1,6 +1,6 @@
 local profile = {}
 
-local fastCastValue = 0.07 -- 7% from gear
+local fastCastValue = 0 -- 7% from gear
 
 local parade_gorget = true
 
@@ -8,7 +8,7 @@ local hercules_ring = true
 local hercules_ring_slot = 'Ring1'
 
 -- Replace these with '' if you do not have them
-local gallant_leggings = 'Glt. Leggings +1'
+local gallant_leggings = 'Gallant Leggings'
 local valor_leggings = 'Valor Leggings'
 
 local arco_de_velocidad = false
@@ -23,100 +23,97 @@ local sets = {
         --Sub = 'Aegis',
         --Range = '',
         Ammo = 'Fenrir\'s Stone',
-        Head = 'Valor Coronet',
-        Body = 'Valor Surcoat',
-        Neck = 'Harmonia\'s Torque',
-        Ear1 = 'Knight\'s Earring',
+        Head = 'Gallant Coronet',
+        Body = 'Gallant Surcoat',
+        Neck = 'Shield Torque',
+        Ear1 = 'Buckler Earring',
         Ear2 = 'Cassie Earring',
-        Hands = 'Homam Manopolas',
+        Hands = 'Gallant Gauntlets',
         Ring1 = 'Hercules\' Ring',
         Ring2 = 'Toreador\'s Ring',
         Back = 'Valor Cape',
         Waist = 'Warwolf Belt',
-        Legs = 'Valor Breeches',
-        Feet = 'Valor Leggings',
+        Legs = 'Gallant Breeches',
+        Feet = 'Gallant Leggings',
     },
     IdleALT = {
 		Main = 'Terra\'s Staff',
         Sub = '',
         --Range = '',
         Ammo = 'Fenrir\'s Stone',
-        Head = 'Valor Coronet',
-        Body = 'Valor Surcoat',
-        Neck = 'Harmonia\'s Torque',
-        Ear1 = 'Knight\'s Earring',
+        Head = 'Gallant Coronet',
+        Body = 'Gallant Surcoat',
+        Neck = 'Shield Torque',
+        Ear1 = 'Merman\'s Earring',
         Ear2 = 'Cassie Earring',
-        Hands = 'Homam Manopolas',
-        Ring1 = 'Hercules\' Ring',
+        Hands = 'Gallant Gauntlets',
+        Ring1 = 'Toreador\'s Ring',
         Ring2 = 'Toreador\'s Ring',
         Back = 'Valor Cape',
         Waist = 'Warwolf Belt',
-        Legs = 'Valor Breeches',
-        Feet = 'Valor Leggings',
+        Legs = 'Gallant Breeches',
+        Feet = 'Gallant Leggings',
     },
     IdleDT = { -- 1415
         --Main = 'Tutelary',
         --Sub = 'Aegis',
         --Range = '',
         Ammo = 'Fenrir\'s Stone',
-        Head = 'Koenig Schaller', -- 2
+        Head = 'Darksteel Cap +1', -- 2
         Body = 'Dst. Harness +1', -- 4
         Neck = 'Shield Torque',
-        Ear1 = 'Knight\'s Earring',
+        Ear1 = 'Buckler Earring',
         Ear2 = 'Cassie Earring',
         Hands = 'Dst. Mittens +1', -- 3
         Ring1 = 'Jelly Ring',
-        Ring2 = 'Merman\'s Ring',
+        Ring2 = 'Toreador\'s Ring',
         Back = 'Boxer\'s Mantle',
         Waist = 'Warwolf Belt',
         Legs = 'Dst. Subligar +1',
-        Feet = 'Glt. Leggings +1',
+        Feet = 'Gallant Leggings',
     },
     IdleALTDT = {
 		Main = 'Terra\'s Staff',
         Sub = '',
         --Range = '',
         Ammo = 'Fenrir\'s Stone',
-        Head = 'Koenig Schaller', -- 2
-        Body = 'Dst. Harness +1', -- 4
-        Neck = 'Fortitude Torque',
-        Ear1 = 'Knight\'s Earring',
+        Head = 'Gallant Coronet',
+        Body = 'Gallant Surcoat',
+        Neck = 'Shield Torque',
+        Ear1 = 'Merman\'s Earring',
         Ear2 = 'Cassie Earring',
-        Hands = 'Dst. Mittens +1', -- 3
-        Ring1 = 'Jelly Ring',
-        Ring2 = 'Merman\'s Ring',
+        Hands = 'Gallant Gauntlets',
+        Ring1 = 'Toreador\'s Ring',
+        Ring2 = 'Toreador\'s Ring',
         Back = 'Boxer\'s Mantle',
         Waist = 'Warwolf Belt',
-        Legs = 'Dst. Subligar +1',
-        Feet = 'Dst. Leggings +1',
+        Legs = 'Gallant Breeches',
+        Feet = 'Gallant Leggings',
     },
     Resting = {
         --Main = 'Pluto\'s Staff',
         --Sub = 'remove',
-		Head = '',
-		Body = 'Vermillion Cloak',
 		Neck = 'Parade Gorget',
         Ear1 = 'Relaxing Earring',
         Ear2 = 'Sanative Earring',
-		Waist = 'Hierarch Belt',
     },
     Town = {
         Main = 'Joyeuse',
-        Sub = 'Koenig Shield',
+        Sub = 'Master Shield',
         Range = '',
         Ammo = 'Fenrir\'s Stone',
-        Head = 'Koenig Schaller',
-        Body = 'Valor Surcoat',
-        Neck = 'Fortitude Torque',
-        Ear1 = 'Knight\'s Earring',
+        Head = 'Darksteel Cap +1',
+        Body = 'Dst. Harness +1',
+        Neck = 'Parade Gorget',
+        Ear1 = 'Buckler Earring',
         Ear2 = 'Cassie Earring',
-        Hands = 'Homam Manopolas',
+        Hands = 'Dst. Mittens +1',
         Ring1 = 'Hercules\' Ring',
         Ring2 = 'Mermaid Ring',
         Back = 'Boxer\'s Mantle',
         Waist = 'Warwolf Belt',
-        Legs = 'Crimson Cuisses',
-        Feet = 'Glt. Leggings +1',
+        Legs = 'Dst. Subligar +1',
+        Feet = 'Gallant Leggings',
     },
     Movement = {
         Legs = 'Crimson Cuisses',
@@ -127,27 +124,25 @@ local sets = {
         --Sub = 'Aegis',
         --Range = 'Rosenbogen',
         --Ammo = '',
-        Head = 'Koenig Schaller', -- 2
+        Head = 'Darksteel Cap +1', -- 2
         Body = 'Dst. Harness +1', -- 4
         Neck = 'Shield Torque',
-        Ear1 = 'Knight\'s Earring',
+        Ear1 = 'Buckler Earring',
         Ear2 = 'Cassie Earring',
         Hands = 'Dst. Mittens +1', -- 3
         Ring1 = 'Jelly Ring', -- 5
-        Ring2 = 'Merman\'s Ring',
+        Ring2 = 'Toreador\'s Ring',
         Back = 'Boxer\'s Mantle',
         Waist = 'Warwolf Belt',
         Legs = 'Dst. Subligar +1',
-        Feet = 'Glt. Leggings +1',
+        Feet = 'Gallant Leggings',
     },
     MDT = { -- Shell IV provides 23% MDT
-        Ammo = 'Phtm. Tathlum',
-		--Neck = 'Jeweled Collar +1',
+        --Neck = 'Jeweled Collar +1',
         Ear1 = 'Merman\'s Earring', -- 2
         Ear2 = 'Cassie Earring',
         Ring1 = 'Merman\'s Ring',
         Ring2 = 'Merman\'s Ring',
-		Back = 'Resentment Cape',
     },
     FireRes = { -- 137
         Range = 'Rosenbogen',
@@ -263,15 +258,15 @@ local sets = {
         --Sub = 'Aegis',
         Head = 'Koenig Schaller',
         Neck = 'Willpower Torque', -- 5
-        Ear1 = 'Knight\'s Earring',
-        Ear2 = 'Magnetic Earring',
+        Ear1 = 'Buckler Earring',
+        Ear2 = 'Knightly Earring',
         Body = 'Dst. Harness +1',
-        Hands = 'Dst. Mittens +1',
-        Ring1 = 'Jelly Ring',
-        Ring2 = 'Merman\'s Ring',
+        Hands = 'Heavy Gauntlets',
+        Ring1 = 'Shadow Ring',
+        Ring2 = 'Sattva Ring',
         Back = 'Boxer\'s Mantle',
         Waist = 'Silver Obi +1', -- 8
-        Legs = 'Dst. Subligar +1',
+        Legs = 'Vlr. Breeches +1',
         Feet = 'Glt. Leggings +1',
     },
     Haste = { -- 1416
@@ -282,11 +277,11 @@ local sets = {
         Ear1 = 'Loquac. Earring', -- FC
         Ear2 = 'Magnetic Earring',
         Body = 'Dst. Harness +1',
-        Hands = 'Homam Manopolas',
-        Ring1 = 'Jelly Ring',
-        Ring2 = 'Merman\'s Ring',
+        Hands = 'Dusk Gloves +1',
+        Ring1 = 'Shadow Ring',
+        Ring2 = 'Sattva Ring',
         Back = 'Boxer\'s Mantle',
-        Waist = 'Swift Belt', -- 6
+        Waist = 'Sonic Belt', -- 6
         Legs = 'Homam Cosciales', -- 3
         Feet = 'Homam Gambieras', -- 3
     },
@@ -298,70 +293,70 @@ local sets = {
     Hate = { -- 1419
         --Main = 'Tutelary',
         --Sub = 'Koenig Shield',
-        Head = 'Valor Coronet',
+        Head = 'Gallant Coronet',
         Neck = 'Harmonia\'s Torque',
-        --Ear1 = 'Hades Earring +1',
+        Ear1 = 'Hades Earring +1',
         Ear2 = 'Cassie Earring',
-        Body = 'Valor Surcoat',
-        Hands = 'Homam Manopolas',
+        Body = 'Gallant Surcoat',
+        Hands = 'Devotee\'s Mitts',
         Ring1 = 'Hercules\' Ring',
         Ring2 = 'Mermaid Ring',
         Back = 'Valor Cape',
         Waist = 'Warwolf Belt',
-        Legs = 'Valor Breeches',
-        Feet = 'Valor Leggings',
+        Legs = 'Custom Pants',
+        Feet = 'Vlr. Leggings +1',
     },
     Hate_Flash = { -- Optional, provided here only if you wish to mix in haste or other stats over max +enmity
         --Main = 'Tutelary',
         --Sub = 'Koenig Shield',
-        Head = 'Valor Coronet',
+        Head = 'Gallant Coronet',
         Neck = 'Harmonia\'s Torque',
-        --Ear1 = 'Hades Earring +1',
+        Ear1 = 'Hades Earring +1',
         Ear2 = 'Cassie Earring',
-        Body = 'Valor Surcoat',
-        Hands = 'Homam Manopolas',
+        Body = 'Gallant Surcoat',
+        Hands = 'Devotee\'s Mitts',
         Ring1 = 'Hercules\' Ring',
         Ring2 = 'Mermaid Ring',
         Back = 'Valor Cape',
-        Waist = 'Swift Belt',
+        Waist = 'Warwolf Belt',
         Legs = 'Custom Pants',
-        Feet = 'Dusk Ledelsens',
+        Feet = 'Vlr. Leggings +1',
     },
     Cheat_C3HPDown = { -- 1207
         --Main = 'Durandal',
         --Sub = 'Aegis',
         --Range = 'Lightning Bow +1',
-        --Ammo = 'Tiphia Sting',
-        --Head = 'Emperor Hairpin', -- 2
-        Body = 'Dst. Harness +1',
-        Neck = 'Fortitude Torque', -- 5
+        Ammo = 'Tiphia Sting',
+        Head = 'Emperor Hairpin', -- 2
+        Body = 'Ducal Aketon',
+        Neck = 'Peacock Amulet', -- 5
         Ear1 = 'Hospitaler Earring',
-        Ear2 = 'Magnetic Earring', -- 9
-        Hands = 'Homam Manopolas',
+        Ear2 = 'Drone Earring', -- 9
+        Hands = 'Devotee\'s Mitts',
         Ring1 = 'Ether Ring',
         Ring2 = 'Serket Ring',
         Back = 'Boxer\'s Mantle',
-        Waist = 'Swift Belt', -- 8
-        Legs = 'Dst. Subligar +1', -- 10
-        Feet = 'Dst. Leggings +1', -- 5
+        --Waist = 'Silver Obi +1', -- 8
+        Legs = 'Custom Pants', -- 10
+        Feet = 'Custom F Boots', -- 5
     },
     Cheat_C3HPUp = { -- 1430 (223)
         --Main = 'Tutelary',
         --Sub = 'Aegis',
         --Range = '',
-        --Ammo = 'Happy Egg',
-        Head = 'Valor Coronet',
-        Body = 'Valor Surcoat',
-        Neck = 'Harmonia\'s Torque',
+        Ammo = 'Happy Egg',
+        Head = 'Gallant Coronet',
+        Body = 'Gallant Surcoat',
+        Neck = 'Shield Torque',
         Ear1 = 'Hospitaler Earring',
         Ear2 = 'Cassie Earring',
-        Hands = 'Homam Manopolas',
+        Hands = 'Gallant Gauntlets',
         Ring1 = 'Hercules\' Ring',
         Ring2 = 'Mermaid Ring',
         Back = 'Valor Cape',
         Waist = 'Warwolf Belt',
-        Legs = 'Valor Breeches',
-        Feet = 'Valor Leggings',
+        Legs = 'Gallant Breeches',
+        Feet = 'Gallant Leggings',
     },
     Cheat_C4HPDown = { -- 1072
         --Main = 'Durandal',
@@ -369,35 +364,35 @@ local sets = {
         --Range = 'Lightning Bow +1',
         Ammo = 'Tiphia Sting',
         Head = 'Emperor Hairpin',
-        Neck = 'Fortitude Torque',
+        Neck = 'Peacock Amulet',
         Ear1 = 'Hospitaler Earring',
-        Ear2 = 'Magnetic Earring', -- 9
-        Body = 'Dst. Harness +1',
-        Hands = 'Devotee\'s Mitts',
+        Ear2 = 'Drone Earring', -- 9
+        Body = 'Ducal Aketon',
+        Hands = 'Hydra Moufles',
         Ring1 = 'Ether Ring',
         Ring2 = 'Serket Ring',
         Back = 'Boxer\'s Mantle',
         Waist = 'Swift Belt', -- 8
-        Legs = 'Dst. Subligar +1', -- 10
-        Feet = 'Dst. Leggings +1', -- 5
+        Legs = 'Custom Pants', -- 10
+        Feet = 'Custom F Boots', -- 5
     },
     Cheat_C4HPUp = { -- 1514 (441 +1)
         --Main = 'Apollo\'s Staff',
         --Sub = '',
         --Range = 'Rosenbogen',
         Ammo = 'Happy Egg',
-        Head = 'Valor Coronet',
-        Neck = 'Harmonia\'s Torque',
+        Head = 'Gallant Coronet',
+        Neck = 'Shield Torque',
         Ear1 = 'Hospitaler Earring',
         Ear2 = 'Cassie Earring',
-        Body = 'Valor Surcoat',
-        Hands = 'Homam Manopolas',
+        Body = 'Gallant Surcoat',
+        Hands = 'Gallant Gauntlets',
         Ring1 = 'Hercules\' Ring',
         Ring2 = 'Bomb Queen Ring',
         Back = 'Gigant Mantle',
         Waist = 'Warwolf Belt',
-        Legs = 'Valor Breeches',
-        Feet = 'Valor Leggings',
+        Legs = 'Gallant Breeches',
+        Feet = 'Gallant Leggings',
     },
 
     LockSet1 = {},
@@ -409,36 +404,36 @@ local sets = {
         --Sub = 'Aegis',
         --Range = '',
         Ammo = 'Tiphia Sting',
-        Head = 'Homam Zucchetto',
+        Head = 'Optical Hat',
         Body = 'Haubergeon',
         Neck = 'Peacock Amulet',
-        Ear1 = 'Knight\'s Earring',
-        Ear2 = 'Brutal Earring',
-        Hands = 'Homam Manopolas',
+        Ear1 = 'Merman\'s Earring',
+        Ear2 = 'Cassie Earring',
+        Hands = 'Luisant Moufles',
         Ring1 = 'Toreador\'s Ring',
         Ring2 = 'Rajas Ring',
         Back = 'Forager\'s Mantle',
         Waist = 'Swift Belt',
-        Legs = 'Homam Cosciales',
-        Feet = 'Homam Gambieras',
+        Legs = 'Luisant Brayettes',
+        Feet = 'Luisant Sollerets',
     },
     TP_HighAcc = {
 		--Main = 'Tutelary',
         --Sub = 'Aegis',
         --Range = '',
         Ammo = 'Tiphia Sting',
-        Head = 'Homam Zucchetto',
-        Body = 'Homam Corazza',
+        Head = 'Optical Hat',
+        Body = 'Haubergeon',
         Neck = 'Peacock Amulet',
-        Ear1 = 'Knight\'s Earring',
-        Ear2 = 'Brutal Earring',
+        Ear1 = 'Merman\'s Earring',
+        Ear2 = 'Cassie Earring',
         Hands = 'Luisant Moufles',
         Ring1 = 'Toreador\'s Ring',
         Ring2 = 'Toreador\'s Ring',
         Back = 'Forager\'s Mantle',
         Waist = 'Swift Belt',
-        Legs = 'Homam Cosciales',
-        Feet = 'Homam Gambieras',
+        Legs = 'Luisant Brayettes',
+        Feet = 'Luisant Sollerets',
 	},
     TP_Mjollnir_Haste = {},
 
@@ -446,82 +441,74 @@ local sets = {
         Ammo = 'Tiphia Sting',
 		Head = 'Optical Hat',
         Neck = 'Soil Gorget',
-        Ear1 = 'Knight\'s Earring',
-        Ear2 = 'Brutal Earring',
-        Body = 'Hecatomb Harness',
+        Ear1 = 'Merman\'s Earring',
+        Ear2 = 'Cassie Earring',
+        Body = 'Haubergeon',
         Hands = 'Tarasque Mitts +1',
-        Ring1 = 'Flame Ring',
+        Ring1 = 'Toreador\'s Ring',
         Ring2 = 'Rajas Ring',
         Back = 'Forager\'s Mantle',
-        Waist = 'Warwolf Belt',
-        Legs = 'Valor Breeches',
-        Feet = 'Hct. Leggings',
+        Waist = 'Life Belt',
+        Legs = 'Luisant Brayettes',
+        Feet = 'Marine F Boots',
     },
     WS_HighAcc = {},
 
     WS_Spirits = {},
 
     Cover = {
-        --Head = 'Gallant Coronet', -- This doesn't work on ASB anyway?...
-        Body = 'Valor Surcoat',
+        Head = 'Gallant Coronet', -- This doesn't work on ASB anyway?...
+        --Body = 'Vlr. Surcoat +1',
     },
     Cure = {
         --Main = 'Apollo\'s Staff',
-		Head = 'Valor Coronet',
-		Neck = 'Healing Torque',
         Ear1 = 'Hospitaler Earring',
-		Ear2 = 'Magnetic Earring',
-		Body = 'Valor Surcoat',
-		Hands = 'Homam Manopolas',
-		Ring1 = 'Hercules\' Ring',
-		Ring2 = 'Mermaid Ring',
-		Back = 'Valor Cape',
-		Waist = 'Warwolf Belt',
-		Legs = 'Valor Breeches',
-		Feet = 'Valor Leggings',
+		Head = 'Gallant Coronet',
+		Neck = 'Peacock Amulet',
+		Hands = 'Gallant Gauntlets',
     },
     Divine = {
 		Neck = 'Divine Torque',
 		Body = 'Gallant Surcoat',
 		Hands = 'Devotee\'s Mitts',
 		Legs = 'Custom Pants',
-		Feet = 'Valor Leggings',
-		Back = 'Altruistic Cape',
+		Back = 'Valor Cape',
 	},
     Rampart = { -- Rampart gives VIT x2 damage shield in era
         --Main = { Name = 'Durandal', Priority = -1 },
         --Sub = 'Koenig Shield',
         --Range = 'Rosenbogen',
         --Ammo = '',
-        Head = 'Valor Coronet',
+        Head = 'Koenig Schaller',
         Neck = 'Fortitude Torque',
-        Ear1 = 'Knight\'s Earring',
-        Ear2 = 'Cassie Earring',
+        Ear1 = 'Robust Earring',
+        Ear2 = 'Robust Earring',
         Body = 'Gallant Surcoat',
-        Hands = 'Valor Gauntlets',
-        Ring1 = 'Hercules\' Ring',
-        Ring2 = 'Mermaid Ring',
+        Hands = 'Kng. Handschuhs',
+        Ring1 = 'Robust Ring',
+        Ring2 = 'Sattva Ring',
         Back = 'Valor Cape',
         Waist = 'Warwolf Belt',
-        --Legs = 'Adaman Cuisses',
+        Legs = 'Adaman Cuisses',
         Feet = 'Power Sandals',
     },
     ShieldBash = {
         --Sub = 'Aegis',
         --Ear1 = 'Knightly Earring',
         Hands = 'Valor Gauntlets',
-		Ring1 = 'Guardian\'s Ring',
+		--Ring1 = 'Guardian\'s Ring',
     },
     Enhancing = {
 		Neck = 'Enhancing Torque',
-		Ring1 = 'Aqua Ring',
-		Ring2 = 'Aqua Ring',
-		Legs = 'Gallant Breeches',
-		Back = 'Merciful Cape',
 	},
 	Vermi = {
 		Head = 'remove',
 		Body = 'Vermillion Cloak',
+	},
+	Charm = {
+		Main = 'Apollo\'s Staff',
+		Sub = '',
+		Legs = 'Custom Pants',
 	},
 }
 profile.Sets = sets
@@ -569,6 +556,9 @@ profile.HandleAbility = function()
     elseif (action.Name == 'Cover') then
         gFunc.EquipSet(sets.Cover)
     end
+	if (action.Name == 'Charm') then
+        gFunc.EquipSet(sets.Charm)
+    end
 end
 
 profile.HandleItem = function()
@@ -595,15 +585,11 @@ profile.OnLoad = function()
     gcdisplay.CreateToggle('DW', false)
 	gcmelee.Load()
     gcmelee.SetIsDPS(false)
-	gcdisplay.CreateToggle('DPS', false)
-	gcinclude.SetAlias(T{'vermi'})
-	gcdisplay.CreateToggle('Vermi', true)
     profile.SetMacroBook()
 end
 
 profile.OnUnload = function()
     gcmelee.Unload()
-	gcinclude.ClearAlias(T{'vermi'})
 	gcinclude.ClearAlias(T{'dw'})
 end
 
@@ -611,18 +597,12 @@ profile.HandleCommand = function(args)
     if (args[1] == 'dw') then
         gcdisplay.AdvanceToggle('DW')
         gcinclude.Message('DW', gcdisplay.GetToggle('DW'))
-	else
+    else
         gcmelee.DoCommands(args)
     end
-	if(args[1] == 'vermi') then
-		gcdisplay.AdvanceToggle('Vermi')
-        gcinclude.Message('Vermi', gcdisplay.GetToggle('Vermi'))
-	end
+
     if (args[1] == 'horizonmode') then
         profile.HandleDefault()
-    end
-	if (gcmelee.GetIsDPS() ~= gcdisplay.GetToggle('DPS')) then
-        gcdisplay.AdvanceToggle('DPS')
     end
 end
 
@@ -631,11 +611,10 @@ profile.HandleDefault = function()
 
     local player = gData.GetPlayer()
     local cover = gData.GetBuffCount('Cover')
-	
+
     if (cover >= 1) then
         gFunc.EquipSet(sets.Cover)
     end
-	
 	if (gcdisplay.GetToggle('DW') and player.Status == 'Engaged' and gcmelee.GetIsDPS() and player.SubJob == 'NIN') then
         gFunc.Equip('Ear2', 'Stealth Earring')
     end
@@ -645,7 +624,7 @@ profile.HandleDefault = function()
             gFunc.Equip('Range', 'Arco de Velocidad')
         end
     end
-	if (player.MPP < 90 and player.Status ~= 'Engaged' and gcdisplay.GetToggle('Vermi')) then
+	if (player.MPP < 100 and player.Status ~= 'Engaged') then
         gFunc.EquipSet(sets.Vermi)
 	end
 	if (parade_gorget and player.HPP >= 85 and player.MPP < 100) then

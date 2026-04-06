@@ -29,9 +29,9 @@ local sets = {
         Ear1 = 'Buckler Earring',
         Ear2 = 'Cassie Earring',
         Hands = 'Gallant Gauntlets',
-        Ring1 = 'Hercules\' Ring',
+        Ring1 = 'Toreador\'s Ring',
         Ring2 = 'Mermaid Ring',
-        --Back = 'Resentment Cape',
+        Back = 'Resentment Cape',
         Waist = 'Astral Rope',
         Legs = 'Gallant Breeches',
         Feet = 'Gallant Leggings',
@@ -47,9 +47,9 @@ local sets = {
         Ear1 = 'Merman\'s Earring',
         Ear2 = 'Cassie Earring',
         Hands = 'Gallant Gauntlets',
-        Ring1 = 'Hercules\' Ring',
+        Ring1 = 'Toreador\'s Ring',
         Ring2 = 'Mermaid Ring',
-        --Back = 'Resentment Cape',
+        Back = 'Resentment Cape',
         Waist = 'Astral Rope',
         Legs = 'Gallant Breeches',
         Feet = 'Gallant Leggings',
@@ -67,7 +67,7 @@ local sets = {
         Hands = 'Dst. Mittens +1', -- 3
         Ring1 = 'Jelly Ring',
         Ring2 = 'Mermaid Ring',
-        --Back = 'Resentment Cape',
+        Back = 'Resentment Cape',
         Waist = 'Astral Rope',
         Legs = 'Dst. Subligar +1',
         Feet = 'Gallant Leggings',
@@ -85,7 +85,7 @@ local sets = {
         Hands = 'Gallant Gauntlets',
         Ring1 = 'Toreador\'s Ring',
         Ring2 = 'Mermaid Ring',
-        --Back = 'Resentment Cape',
+        Back = 'Resentment Cape',
         Waist = 'Astral Rope',
         Legs = 'Gallant Breeches',
         Feet = 'Gallant Leggings',
@@ -254,20 +254,19 @@ local sets = {
         Legs = 'Homam Cosciales',
     },
     SIRD = { -- 1441
-        --Main = 'Tutelary',
-        --Sub = 'Aegis',
-        Head = 'Koenig Schaller',
-        Neck = 'Willpower Torque', -- 5
+        Ammo = 'Happy Egg',
+        Head = 'Darksteel Cap +1', -- 2
+        Body = 'Dst. Harness +1', -- 4
+        Neck = 'Shield Torque',
         Ear1 = 'Buckler Earring',
-        Ear2 = 'Knightly Earring',
-        Body = 'Dst. Harness +1',
-        Hands = 'Heavy Gauntlets',
-        Ring1 = 'Shadow Ring',
-        Ring2 = 'Sattva Ring',
-        Back = 'Shadow Mantle',
-        Waist = 'Silver Obi +1', -- 8
-        Legs = 'Vlr. Breeches +1',
-        Feet = 'Glt. Leggings +1',
+        Ear2 = 'Cassie Earring',
+        Hands = 'Dst. Mittens +1', -- 3
+        Ring1 = 'Jelly Ring',
+        Ring2 = 'Mermaid Ring',
+        Back = 'Resentment Cape',
+        Waist = 'Astral Rope',
+        Legs = 'Dst. Subligar +1',
+        Feet = 'Gallant Leggings',
     },
     Haste = { -- 1416
         --Main = { Name = 'Capricorn Staff', Priority = -1 }, -- 5
@@ -409,7 +408,7 @@ local sets = {
         Neck = 'Peacock Amulet',
         Ear1 = 'Merman\'s Earring',
         Ear2 = 'Cassie Earring',
-        Hands = 'Luisant Moufles',
+        Hands = 'Pallas\'s Bracelets',
         Ring1 = 'Toreador\'s Ring',
         Ring2 = 'Rajas Ring',
         Back = 'Amemet Mantle +1',
@@ -588,6 +587,10 @@ profile.HandleDefault = function()
 
     if (cover >= 1) then
         gFunc.EquipSet(sets.Cover)
+    end
+	
+	if (gData.GetBuffCount('Minuet') > 0) then
+		gFunc.Equip('Ear1', 'Minuet Earring')
     end
 
     if (arco_de_velocidad) then

@@ -65,7 +65,11 @@ local sets = {
     },
 
     Perpetuation = { -- There is no point in using this set over an Idle set except for equipping Penance Robe
+		Neck = 'Smn. Torque',
+		Head = 'Summoner\'s Horn',
+		Body = 'Austere Robe',
 		Hands = 'Nashira Gages',
+		Back = 'Astute Cape',
 	},
 
     DT = {
@@ -180,7 +184,7 @@ local sets = {
     },
     Casting = { -- Default Casting Equipment when using Idle sets
         Main = 'Eremite\'s Wand', -- 25
-        --Sub = 'Eremite\'s Wand', -- 25
+        Sub = 'Genbu\'s Shield',
         Ammo = 'Hedgehog Bomb',
         Head = 'Nashira Turban', -- 10
         --Neck = 'Willpower Torque', -- 5
@@ -197,7 +201,7 @@ local sets = {
     },
     SIRD = { -- Used on Stoneskin, Blink, Aquaveil and Utsusemi casts
         Main = 'Eremite\'s Wand', -- 25
-        Sub = 'Eremite\'s Wand', -- 25
+        Sub = 'Genbu\'s Shield',
         Ammo = 'Hedgehog Bomb',
         Head = 'Nashira Turban', -- 10
         Neck = 'Willpower Torque', -- 5
@@ -208,7 +212,7 @@ local sets = {
         Ring1 = 'Sattva Ring',
         Ring2 = 'Evoker\'s Ring',
         Back = { Name = 'Merciful Cape', Priority = 100 },
-        Waist = 'Druid\'s Rope', -- 10
+        Waist = 'Silver Obi +1', -- 10
         Legs = { Name = 'Evk. Spats +1', Priority = 100 },
         Feet = { Name = 'Mountain Gaiters', Priority = 100 }, -- 5
     },
@@ -297,11 +301,11 @@ local sets = {
         Ear2 = 'Novia Earring',
         --Ring1 = { Name = 'Bomb Queen Ring', Priority = 100 },
         Back = 'Errant Cape',
-        Body = 'Summoner\'s Dblt.',
+        Body = 'Austere Robe',
         Hands = 'Summoner\'s Brcr.',
         Feet = 'Summoner\'s Pgch.',
         Ammo = 'Hedgehog Bomb',
-        Waist = { Name = 'Penitent\'s Rope', Priority = -1 },
+        --Waist = { Name = 'Penitent\'s Rope', Priority = -1 },
         Neck = 'Smn. Torque',
     },
 

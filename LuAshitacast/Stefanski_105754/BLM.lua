@@ -217,7 +217,7 @@ local sets = {
     },
     Casting = {
         Main = 'Eremite\'s Wand', -- 25
-        --Sub = 'Eremite\'s Wand', -- 25
+        Sub = 'Genbu\'s Shield',
         Head = 'Nashira Turban', -- 10
         Neck = 'Willpower Torque', -- 5
         Ear1 = 'Merman\'s Earring',
@@ -228,15 +228,15 @@ local sets = {
         Feet = 'Wizard\'s Sabots', -- 20s
     },
     SIRD = { -- Used on Stoneskin, Blink, Aquaveil and Utsusemi casts
-        --Main = 'Eremite\'s Wand', -- 25
-        --Sub = 'Eremite\'s Wand', -- 25
+        Main = 'Eremite\'s Wand', -- 25
+        Sub = 'Genbu\'s Shield',
         --Head = 'Nashira Turban', -- 10
         --Neck = 'Willpower Torque', -- 5
 		Body = 'Errant Hpl.',
 		Ear1 = 'Loquac. Earring',
         --Ear1 = 'Merman\'s Earring',
         Ear2 = 'Magnetic Earring', -- 8
-        Waist = 'Swift Belt', -- 10
+        Waist = 'Silver Obi +1', -- 10
         Legs = 'Mahatma Slops',
         Feet = 'Sorcerer\'s Sabots', -- 20
 		Back = 'Rainbow Cape',

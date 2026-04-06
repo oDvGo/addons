@@ -127,7 +127,7 @@ local sets = {
         Back = 'Cheviot Cape', -- 6
         Waist = 'Warwolf Belt',
         Legs = 'Dst. Subligar +1', -- 3
-        Feet = 'Marine F Boots', -- 2
+        Feet = 'Dst. Leggings +1', -- 2
     },
     DTNight = {
         Main = 'Terra\'s Staff', -- 20
@@ -145,7 +145,7 @@ local sets = {
         Back = 'Cheviot Cape', -- 6
         Waist = 'Warwolf Belt',
         Legs = 'Dst. Subligar +1', -- 3
-        Feet = 'Marine F Boots', -- 2
+        Feet = 'Dst. Leggings +1', -- 2
     },
     MDT = { -- Shell IV provides 23% MDT
         Main = 'Terra\'s Staff',
@@ -317,7 +317,7 @@ local sets = {
         Ring1 = 'Aqua Ring',
         Ring2 = 'Aqua Ring',
         Back = 'Merciful Cape',
-        Waist = 'Swift Belt',
+        Waist = 'Silver Obi +1',
         Legs = 'Nashira Seraweels',
         Feet = 'Dls. Boots +1',
     },
@@ -748,7 +748,7 @@ local sets = {
         Back = 'Forager\'s Mantle',
         Waist = 'Swift Belt',
         Legs = 'Hydra Brais',
-        Feet = 'Marine F Boots',
+        Feet = 'Dusk Ledelsens',
     },
     TP_NIN = {
         Main = 'Enhancing Sword',

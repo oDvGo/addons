@@ -24,7 +24,7 @@ local sets = {
         Back = 'Cheviot Cape',
         Waist = 'Warwolf Belt',
         Legs = 'Dst. Subligar +1',
-        Feet = 'Choral Slippers',
+        Feet = 'Dst. Leggings +1',
         Neck = 'Fortitude Torque',
     },
     IdleALT = {
@@ -66,6 +66,7 @@ local sets = {
 		Body = 'Dst. Harness +1',
 		Hands = 'Dst. Mittens +1',
 		Legs = 'Dst. Subligar +1',
+		Feet = 'Dst. Leggings +1',
 	},
     DTNight = {},
     MDT = { -- Shell IV provides 23% MDT
@@ -103,35 +104,35 @@ local sets = {
     Evasion = {},
 
     Precast_Songs_HPDown = { -- This set will equip even before precast for songs in case you require HP Down equipment to trigger Minstrel's Ring
-		Head = 'Zenith Crown',
-		Range = '',
+		--Head = 'Zenith Crown',
+		--Range = '',
 		--Ammo = 'Tiphia Sting',
-		Neck = 'Checkered Scarf',
-		Body = 'Errant Hpl.',
-		Hands = 'Zenith Mitts',
+		--Neck = 'Checkered Scarf',
+		--Body = 'Errant Hpl.',
+		--Hands = 'Zenith Mitts',
 		--Feet = 'Rostrum Pumps',
-		Waist = 'Penitent\'s Rope',
+		--Waist = 'Penitent\'s Rope',
 	},
     Precast = {
        Ear2 = 'Loquac. Earring',
        Feet = 'Rostrum Pumps',
     },
     Precast_Songs = {
-        --Main = 'Tutelary',
+        Main = 'Tutelary', -- 30
         --Sub = 'She-slime Shield',
-        --Ammo = 'Happy Egg',
-        Head = 'Genbu\'s Kabuto',
-        Neck = 'Temp. Torque',
-        Ear1 = 'Cassie Earring',
+        Ammo = 'Happy Egg',
+        Head = 'Genbu\'s Kabuto', --50
+        Neck = 'Evasion Torque', -- 7
+        Ear1 = 'Cassie Earring', --50
         Ear2 = 'Loquac. Earring',
-        Body = 'Sha\'ir Manteel',
-        Hands = 'Seiryu\'s Kote',
+        Body = 'Custom Vest', --30
+        Hands = 'Seiryu\'s Kote', --50
         Ring1 = 'Minstrel\'s Ring',
-        Ring2 = 'Bomb Queen Ring',
-        Back = 'Gigant Mantle',
+        Ring2 = 'Bomb Queen Ring', --75
+        Back = 'Gigant Mantle', --80
         Waist = 'Swift Belt',
-        Legs = 'Byakko\'s Haidate',
-        Feet = 'Rostrum Pumps',
+        Legs = 'Bard\'s Cannions', --17
+        Feet = 'Rostrum Pumps', -- Minus 30
     },
     Casting = { -- Default Casting Equipment when using Idle sets
         Main = 'Terra\'s Staff',
@@ -151,7 +152,7 @@ local sets = {
     },
     SIRD = { -- 102% to Cap, used on Stoneskin, Blink, Aquaveil and Utsusemi casts
         Neck = 'Willpower Torque',
-        Waist = 'Druid\'s Rope',
+        Waist = 'Silver Obi +1',
         Feet = 'Mountain Gaiters',
     },
     Haste = { -- Used only on Haste, Refresh, Blink and Utsusemi casts
