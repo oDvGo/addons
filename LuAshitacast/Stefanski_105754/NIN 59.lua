@@ -60,10 +60,10 @@ local sets = {
         Ear1 = 'Drone Earring',
         Ear2 = 'Cassie Earring',
         Body = 'Ninja Chainmail',
-        Hands = 'Dst. Mittens +1',
-        Ring1 = 'Jelly Ring',
+        Hands = 'Ochiudo\'s Kote',
+        Ring1 = 'Toreador\'s Ring',
         Ring2 = 'Rajas Ring',
-        Back = 'Amemet Mantle +1',
+        Back = 'Resentment Cape',
         Waist = 'Swift Belt',
         Legs = 'Luisant Brayettes',
         Feet = 'Sarutobi Kyahan',
@@ -79,7 +79,7 @@ local sets = {
         Ear2 = 'Drone Earring',
         Body = 'Scp. Harness +1',
         Hands = 'Custom F Gloves',
-        Ring1 = 'Jelly Ring',
+        Ring1 = 'Mermaid Ring',
         Ring2 = 'Genius Ring',
         Back = 'Resentment Cape',
         Waist = 'Swift Belt',
@@ -105,47 +105,30 @@ local sets = {
     IdleALTDT = {},
     Resting = {},
     Town = {
-		--Main = 'Auster\'s Staff',
-		--Sub = '',
-		--Range = '',
-		--Ammo = 'Mille. Sachet',
+		Main = 'Auster\'s Staff',
+		Sub = '',
+		Range = '',
+		Ammo = 'Mille. Sachet',
         Head = 'Emperor Hairpin',
         Neck = 'Peacock Amulet',
 		Ear1 = 'Ninjutsu Earring',
         Ear2 = 'Moldavite Earring',
         Body = 'Scp. Harness +1',
         Hands = 'Ochiudo\'s Kote',
-        Ring1 = 'Jelly Ring',
-        Ring2 = 'Shinobi Ring',
-        Back = 'Amemet Mantle +1',
-        Waist = 'Swift Belt',
-        Legs = 'Luisant Brayettes',
+        Ring1 = 'Shinobi Ring',
+        Ring2 = 'Genius Ring',
+        Back = 'Resentment Cape',
+        Waist = 'Swordbelt +1',
+        Legs = 'Nokizaru Hakama',
         Feet = 'Sarutobi Kyahan',
 	},
     Movement = {
 		Feet = 'Ninja Kyahan',
 	},
 
-    DT = {
-		Head = 'Darksteel Cap +1',
-		--Neck = 'Fortitude Torque',
-		--Ear1 = 'Knight\'s Earring',
-		Ear2 = 'Cassie Earring',
-		Body = 'Dst. Harness +1',
-		Hands = 'Dst. Mittens +1',
-		Ring1 = 'Jelly Ring',
-		--Ring2 = 'Merman\'s Ring',
-		--Back = 'Boxer\'s Mantle',
-		--Waist = 'Warwolf Belt',
-		Legs = 'Dst. Subligar +1',
-		Feet = 'Dst. Leggings +1',
-	},
+    DT = {},
     MDT = { -- Shell IV provides 23% MDT
-		--Ammo = 'Phtm. Tathlum',
-        Ear1 = 'Merman\'s Earring', -- 2
-        Ear2 = 'Cassie Earring',
-		Back = 'Resentment Cape',
-	},
+    },
     FireRes = {},
     IceRes = {},
     LightningRes = {},
@@ -156,8 +139,6 @@ local sets = {
 
     Precast = {},
     SIRD = {
-		Hands = 'Dst. Mittens +1',
-		Ring1 = 'Jelly Ring',
     },
     Haste = { -- Used for Utsusemi cooldown
 		--Ear2 = 'Cassie Earring',
@@ -223,13 +204,13 @@ local sets = {
         --Ammo = 'Mille. Sachet',
         Head = 'Emperor Hairpin',
         Neck = 'Peacock Amulet',
-        Ear1 = 'Merman\'s Earring',
+        Ear1 = 'Optical Earring',
         Ear2 = 'Cassie Earring',
         Body = 'Scp. Harness +1',
         Hands = 'Ochiudo\'s Kote',
         Ring1 = 'Toreador\'s Ring',
         Ring2 = 'Rajas Ring',
-        Back = 'Amemet Mantle +1',
+        Back = 'Agile Mantle',
         Waist = 'Swift Belt',
         Legs = 'Luisant Brayettes',
         Feet = 'Sarutobi Kyahan',
@@ -244,8 +225,8 @@ local sets = {
         Hands = 'Ochiudo\'s Kote',
         Ring1 = 'Toreador\'s Ring',
         Ring2 = 'Toreador\'s Ring',
-        Back = 'Amemet Mantle +1',
-        Waist = 'Swift Belt',
+        Back = 'Agile Mantle',
+        Waist = 'Life Belt',
         Legs = 'Luisant Brayettes',
         Feet = 'Sarutobi Kyahan',
 	},
@@ -255,22 +236,20 @@ local sets = {
 		--Ammo = 'Mille. Sachet',
         Head = 'Emperor Hairpin',
         Neck = 'Peacock Amulet',
-        Ear1 = 'Merman\'s Earring',
+        Ear1 = 'Intruder Earring',
         Ear2 = 'Cassie Earring',
         Body = 'Haubergeon',
         Hands = 'Ochiudo\'s Kote',
         Ring1 = 'Victory Ring',
         Ring2 = 'Rajas Ring',
-        Back = 'Amemet Mantle +1',
+        Back = 'Ryl. Army Mantle',
         Waist = 'Swordbelt +1',
         Legs = 'Ryl.Kgt. Breeches',
         Feet = 'Bounding Boots',
 	},
     WS_HighAcc = {},
 
-    WS_BladeJin = {
-		Ear1 = 'Minuet Earring',
-	},
+    WS_BladeJin = {},
     WS_BladeKu = {},
 
     Ranged = {
@@ -283,7 +262,7 @@ local sets = {
         Hands = 'Ninja Tekko',
         Ring1 = 'Woodsman Ring',
         Ring2 = 'Rajas Ring',
-        Back = 'Amemet Mantle +1',
+        Back = 'Agile Mantle',
         Waist = 'Life Belt',
         Legs = 'Ninja Hakama',
         Feet = 'Custom F Boots',
@@ -394,9 +373,7 @@ end
 
 profile.OnLoad = function()
     gcinclude.SetAlias(T{'nuke'})
-	gcinclude.SetAlias(T{'staff'})
     gcdisplay.CreateCycle('Nuke', {[1] = 'Potency', [2] = 'Accuracy',})
-    gcdisplay.CreateToggle('Staff', false)
     gcmelee.Load()
     profile.SetMacroBook()
 end
@@ -404,17 +381,13 @@ end
 profile.OnUnload = function()
     gcmelee.Unload()
     gcinclude.ClearAlias(T{'nuke'})
-	gcinclude.ClearAlias(T{'staff'})
 end
 
 profile.HandleCommand = function(args)
     if (args[1] == 'nuke') then
         gcdisplay.AdvanceCycle('Nuke')
         gcinclude.Message('Nuke', gcdisplay.GetCycle('Nuke'))
-    elseif (args[1] == 'staff') then
-        gcdisplay.AdvanceToggle('Staff')
-		gcinclude.Message('Staff', gcdisplay.GetToggle('Staff'))
-	else
+    else
         gcmelee.DoCommands(args)
     end
 
@@ -425,11 +398,7 @@ end
 
 profile.HandleDefault = function()
     gcmelee.DoDefault()
-	
-	if (gData.GetBuffCount('Minuet') > 0 and gData.GetPlayer().Status ~= 'Idle') then
-		gFunc.Equip('Ear1', 'Minuet Earring');
-    end
-	
+
     local player = gData.GetPlayer()
     local environment = gData.GetEnvironment()
 
@@ -446,7 +415,6 @@ profile.HandleDefault = function()
     end
 
     gcmelee.DoDefaultOverride()
-
 	if (gcdisplay.IdleSet == 'Evasion' or player.Status == 'Idle') then
         -- Add the Monsoon Kyahan check for Water weather (Rain/Squall)
         if (environment.WeatherElement == 'Water') then
@@ -529,14 +497,9 @@ end
 
 function EquipStaffAndObi(action)
     local staff = ElementalStaffTable[action.Element]
-    
-    local staff = ElementalStaffTable[action.Element]
-    if (gcdisplay.GetToggle('Staff')) then
-        if staff ~= '' then
-			gFunc.Equip('Main', staff)
-		end
+    if staff ~= '' then
+        gFunc.Equip('Main', staff)
     end
-    
 
     if (ObiCheck(action)) then
         local obi = NukeObiTable[action.Element]

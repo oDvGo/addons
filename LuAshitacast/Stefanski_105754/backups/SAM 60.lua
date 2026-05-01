@@ -1,41 +1,41 @@
 local profile = {}
 
-local fastCastValue = 0.02 -- 0% from gear
+local fastCastValue = 0.00 -- 0% from gear
 
 -- Replace these with '' if you do not have them
 local myochin_kabuto = 'Myochin Kabuto'
-local saotome_kote = 'Saotome Kote'
+local saotome_kote = ''
 
 local sets = {
     Idle = {
 		Range = '',
-		Ammo = 'Fenrir\'s Stone',
-		Head = 'Darksteel Cap +1',
-		Neck = 'Fortitude Torque',
-		Ear1 = 'Merman\'s Earring',
-		Ear2 = 'Brutal Earring',
-		Body = 'Kirin\'s Osode',
-		Hands = 'Dst. Mittens +1',
-		Ring1 = 'Jelly Ring',
-		Ring2 = 'Merman\'s Ring',
-		Back = 'Boxer\'s Mantle',
-		Waist = 'Warwolf Belt',
-		Legs = 'Dst. Subligar +1',
-        Feet = 'Dst. Leggings +1',
-	},
-    IdleALT = {
-		Range = 'Expunger',
-		Ammo = 'Scorpion Arrow',
+		Ammo = 'Tiphia Sting',
 		Head = 'Myochin Kabuto',
 		Neck = 'Peacock Amulet',
-		Ear1 = 'Merman\'s Earring',
+		Ear1 = 'Optical Earring',
 		Ear2 = 'Cassie Earring',
 		Body = 'Haubergeon',
 		Hands = 'Pallas\'s Bracelets',
-		Ring1 = 'Jelly Ring',
+		Ring1 = 'Toreador\'s Ring',
 		Ring2 = 'Rajas Ring',
-		Back = 'Boxer\'s Mantle',
-		Waist = 'Warwolf Belt',
+		Back = 'Agile Mantle',
+		Waist = 'Swordbelt +1',
+		Legs = 'Luisant Brayettes',
+        Feet = 'Sarutobi Kyahan',
+	},
+    IdleALT = {
+		Range = 'Great Bow +1',
+		Ammo = 'Scorpion Arrow',
+		Head = 'Myochin Kabuto',
+		Neck = 'Peacock Amulet',
+		Ear1 = 'Optical Earring',
+		Ear2 = 'Cassie Earring',
+		Body = 'Haubergeon',
+		Hands = 'Pallas\'s Bracelets',
+		Ring1 = 'Toreador\'s Ring',
+		Ring2 = 'Rajas Ring',
+		Back = 'Agile Mantle',
+		Waist = 'Swordbelt +1',
 		Legs = 'Luisant Brayettes',
         Feet = 'Sarutobi Kyahan',
 	},
@@ -46,52 +46,32 @@ local sets = {
 		Main = 'Soboro Sukehiro',
 		Sub = '',
 		Range = '',
-		Ammo = 'Fenrir\'s Stone',
-		Head = 'Saotome Kabuto',
-		Neck = 'Aqua Gorget',
-		Ear1 = 'Fenrir\'s Earring',
-		Ear2 = 'Brutal Earring',
-		Body = 'Kirin\'s Osode',
+		Ammo = 'Tiphia Sting',
+		Head = 'Myochin Kabuto',
+		Neck = 'Peacock Amulet',
+		Ear1 = 'Optical Earring',
+		Ear2 = 'Cassie Earring',
+		Body = 'Haubergeon',
 		Hands = 'Ochiudo\'s Kote',
 		Ring1 = 'Toreador\'s Ring',
 		Ring2 = 'Rajas Ring',
-		Back = 'Forager\'s Mantle',
-		Waist = 'Warwolf Belt',
-		Legs = 'Byakko\'s Haidate',
+		Back = 'Resentment Cape',
+		Waist = 'Swordbelt +1',
+		Legs = 'Luisant Brayettes',
         Feet = 'Sarutobi Kyahan',
 	},
-    Movement = {
-		Hands = 'Ochiudo\'s Kote',
-	},
+    Movement = {},
 
     DT = {
 		Head = 'Darksteel Cap +1',
-		Neck = 'Fortitude Torque',
-		Ear1 = 'Knight\'s Earring',
-		Ear2 = 'Cassie Earring',
 		Body = 'Dst. Harness +1',
 		Hands = 'Dst. Mittens +1',
 		Ring1 = 'Jelly Ring',
-		Ring2 = 'Merman\'s Ring',
-		Back = 'Boxer\'s Mantle',
-		Waist = 'Warwolf Belt',
 		Legs = 'Dst. Subligar +1',
 		Feet = 'Dst. Leggings +1',
 	},
     MDT = { -- Shell IV provides 23% MDT
-		Ammo = 'Phtm. Tathlum',
-        Ear1 = 'Merman\'s Earring', -- 2
-        Ear2 = 'Merman\'s Earring',
-		Head = 'Coral Visor +1',
-		Neck = 'Harmonia\'s Torque',
-        Body = 'Cor. Scale Mail +1',
-		Hands = 'Coral Fng. Gnt. +1',
-		Ring1 = 'Merman\'s Ring',
-        Ring2 = 'Merman\'s Ring',
 		Back = 'Resentment Cape',
-		Waist = 'Warwolf Belt',
-		Legs = 'Coral Cuisses +1',
-		Feet = 'Coral Greaves +1',
 	},
     FireRes = {},
     IceRes = {},
@@ -101,9 +81,7 @@ local sets = {
     WaterRes = {},
     Evasion = {},
 
-    Precast = {
-		Ear1 = 'Loquac. Earring',
-	},
+    Precast = {},
     SIRD = {
     },
     Haste = { -- Used for Utsusemi cooldown
@@ -116,98 +94,93 @@ local sets = {
     LockSet3 = {},
 
     TP_LowAcc = {
-		Ammo = 'Tiphia Sting',
-		Head = 'Saotome Kabuto',
+		Head = 'Luisant Salade',
 		Neck = 'Peacock Amulet',
-		Ear1 = 'Merman\'s Earring',
-		Ear2 = 'Brutal Earring',
+		Ear1 = 'Optical Earring',
+		Ear2 = 'Cassie Earring',
 		Body = 'Haubergeon',
-		Hands = 'Dusk Gloves',
+		Hands = 'Ochiudo\'s Kote',
 		Ring1 = 'Toreador\'s Ring',
 		Ring2 = 'Rajas Ring',
-		Back = 'Forager\'s Mantle',
+		Back = 'Agile Mantle',
 		Waist = 'Swift Belt',
-		Legs = 'Byakko\'s Haidate',
+		Legs = 'Luisant Brayettes',
         Feet = 'Sarutobi Kyahan',
 	},
     TP_HighAcc = {
-		Head = 'Saotome Kabuto',
+		Head = 'Luisant Salade',
 		Neck = 'Peacock Amulet',
 		Ear1 = 'Optical Earring',
-		Ear2 = 'Brutal Earring',
+		Ear2 = 'Cassie Earring',
 		Body = 'Scp. Harness +1',
-		Hands = 'Dusk Gloves',
+		Hands = 'Luisant Moufles',
 		Ring1 = 'Toreador\'s Ring',
 		Ring2 = 'Toreador\'s Ring',
-		Back = 'Forager\'s Mantle',
+		Back = 'Agile Mantle',
 		Waist = 'Swift Belt',
-		Legs = 'Byakko\'s Haidate',
+		Legs = 'Luisant Brayettes',
         Feet = 'Sarutobi Kyahan',
 	},
     TP_Mjollnir_Haste = {},
 
     WS = {
-		Head = 'Hachiman Jinpachi',
+		Head = 'Luisant Salade',
 		Neck = 'Peacock Amulet',
-		Ear1 = 'Merman\'s Earring',
-		Ear2 = 'Brutal Earring',
-		Body = 'Hachiman Domaru',
+		Ear1 = 'Optical Earring',
+		Ear2 = 'Cassie Earring',
+		Body = 'Haubergeon',
 		Hands = 'Pallas\'s Bracelets',
-		Ring1 = 'Flame Ring',
+		Ring1 = 'Victory Ring',
 		Ring2 = 'Rajas Ring',
-		Back = 'Forager\'s Mantle',
-		Waist = 'Warwolf Belt',
-		Legs = 'Shura Haidate',
-        Feet = 'Hmn. Sune-Ate',
+		Back = 'Ryl. Army Mantle',
+		Waist = 'Swordbelt +1',
+		Legs = 'Luisant Brayettes',
+        Feet = 'Luisant Sollerets',
 	},
     WS_HighAcc = {
-		Head = 'Hachiman Jinpachi',
+		Head = 'Luisant Salade',
 		Neck = 'Peacock Amulet',
-		Ear1 = 'Merman\'s Earring',
-		Ear2 = 'Brutal Earring',
-		Body = 'Hachiman Domaru',
+		Ear1 = 'Optical Earring',
+		Ear2 = 'Cassie Earring',
+		Body = 'Haubergeon',
 		Hands = 'Pallas\'s Bracelets',
-		Ring1 = 'Flame Ring',
+		Ring1 = 'Victory Ring',
 		Ring2 = 'Rajas Ring',
-		Back = 'Forager\'s Mantle',
-		Waist = 'Warwolf Belt',
-		Legs = 'Shura Haidate',
-        Feet = 'Hmn. Sune-Ate',
+		Back = 'Ryl. Army Mantle',
+		Waist = 'Life Belt',
+		Legs = 'Luisant Brayettes',
+        Feet = 'Luisant Sollerets',
 	},
 
     WS_Kaiten = {},
 	
-	WS_Gekko = {
-		Neck = 'Aqua Gorget',
-	},
-	
 	WS_Jinpu = {
-		Head = 'Hachiman Jinpachi',
+		Head = 'Luisant Salade',
 		Neck = 'Peacock Amulet',
 		Ear1 = 'Moldavite Earring',
-		Ear2 = 'Brutal Earring',
-		Body = 'Hachiman Domaru',
+		Ear2 = 'Cassie Earring',
+		Body = 'Luisant Haubert',
 		Hands = 'Pallas\'s Bracelets',
-		Ring1 = 'Flame Ring',
+		Ring1 = 'Victory Ring',
 		Ring2 = 'Rajas Ring',
-		Back = 'Forager\'s Mantle',
-		Waist = 'Warwolf Belt',
-		Legs = 'Shura Haidate',
-        Feet = 'Hmn. Sune-Ate',
+		Back = 'Ryl. Army Mantle',
+		Waist = 'Swordbelt +1',
+		Legs = 'Luisant Brayettes',
+        Feet = 'Custom F Boots',
 	},
 	
 	Ranged = {
-		Head = 'Optical Hat',
+		Head = 'Emperor Hairpin',
 		Neck = 'Peacock Amulet',
 		Ear1 = 'Drone Earring',
 		Ear2 = 'Drone Earring',
 		Body = 'Custom Vest',
 		Hands = 'Ochiudo\'s Kote',
-		Ring1 = 'Merman\'s Ring',
-		Ring2 = 'Merman\'s Ring',
-		Back = 'Forager\'s Mantle',
-		Waist = 'Sao. Koshi-Ate',
-		Legs = 'Ryl.Kgt. Breeches',
+		Ring1 = 'Woodsman Ring',
+		Ring2 = 'Rajas Ring',
+		Back = 'Agile Mantle',
+		Waist = 'Swordbelt +1',
+		Legs = 'Jujitsu Sitabaki',
 		Feet = 'Custom F Boots',
 	},
 }
@@ -256,9 +229,6 @@ profile.HandleWeaponskill = function()
     if (action.Name == 'Tachi: Kaiten') then
         gFunc.EquipSet(sets.WS_Kaiten)
     end
-	if (action.Name == 'Tachi: Gekko') then
-        gFunc.EquipSet(sets.WS_Gekko)
-    end
 	if (action.Name == 'Tachi: Jinpu') then
         gFunc.EquipSet(sets.WS_Jinpu)
     end
@@ -283,11 +253,6 @@ end
 
 profile.HandleDefault = function()
     gcmelee.DoDefault()
-	
-	if (gData.GetBuffCount('Minuet') > 0 and gData.GetPlayer().Status ~= 'Idle') then
-		gFunc.Equip('Ear1', 'Minuet Earring');
-    end
-	
     gcmelee.DoDefaultOverride()
     gFunc.EquipSet(gcinclude.BuildLockableSet(gData.GetEquipment()))
 end

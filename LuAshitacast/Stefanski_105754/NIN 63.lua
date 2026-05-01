@@ -126,26 +126,9 @@ local sets = {
 		Feet = 'Ninja Kyahan',
 	},
 
-    DT = {
-		Head = 'Darksteel Cap +1',
-		--Neck = 'Fortitude Torque',
-		--Ear1 = 'Knight\'s Earring',
-		Ear2 = 'Cassie Earring',
-		Body = 'Dst. Harness +1',
-		Hands = 'Dst. Mittens +1',
-		Ring1 = 'Jelly Ring',
-		--Ring2 = 'Merman\'s Ring',
-		--Back = 'Boxer\'s Mantle',
-		--Waist = 'Warwolf Belt',
-		Legs = 'Dst. Subligar +1',
-		Feet = 'Dst. Leggings +1',
-	},
+    DT = {},
     MDT = { -- Shell IV provides 23% MDT
-		--Ammo = 'Phtm. Tathlum',
-        Ear1 = 'Merman\'s Earring', -- 2
-        Ear2 = 'Cassie Earring',
-		Back = 'Resentment Cape',
-	},
+    },
     FireRes = {},
     IceRes = {},
     LightningRes = {},
@@ -223,7 +206,7 @@ local sets = {
         --Ammo = 'Mille. Sachet',
         Head = 'Emperor Hairpin',
         Neck = 'Peacock Amulet',
-        Ear1 = 'Merman\'s Earring',
+        Ear1 = 'Optical Earring',
         Ear2 = 'Cassie Earring',
         Body = 'Scp. Harness +1',
         Hands = 'Ochiudo\'s Kote',
@@ -446,7 +429,6 @@ profile.HandleDefault = function()
     end
 
     gcmelee.DoDefaultOverride()
-
 	if (gcdisplay.IdleSet == 'Evasion' or player.Status == 'Idle') then
         -- Add the Monsoon Kyahan check for Water weather (Rain/Squall)
         if (environment.WeatherElement == 'Water') then

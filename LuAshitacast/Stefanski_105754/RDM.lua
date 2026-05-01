@@ -148,22 +148,22 @@ local sets = {
         Feet = 'Dst. Leggings +1', -- 2
     },
     MDT = { -- Shell IV provides 23% MDT
-        Main = 'Terra\'s Staff',
-		Sub = '',
+        Main = 'Eremite\'s Wand',
+		Sub = 'Genbu\'s Shield',
         Range = '',
         Ammo = 'Phtm. Tathlum',
-        Head = 'Dls. Chapeau +1',
-        Neck = 'Checkered Scarf',
         Ear1 = 'Merman\'s Earring', -- 2
-        Ear2 = 'Merman\'s Earring', -- 2
-        Body = 'Errant Hpl.', -- 4
-        Hands = 'Merman\'s Bangles', -- 2
-        Ring1 = 'Merman\'s Ring',
-        Ring2 = 'Merman\'s Ring', -- 5
-        Back = 'Merciful Cape', -- 3
-        Waist = 'Penitent\'s Rope',
-        Legs = 'Crimson Cuisses', -- 3
-        Feet = 'Custom F Boots', -- 2
+        Ear2 = 'Merman\'s Earring',
+		Head = 'Coral Visor +1',
+		Neck = 'Uggalepih Pendant',
+        Body = 'Cor. Scale Mail +1',
+		Hands = 'Coral Fng. Gnt. +1',
+		Ring1 = 'Merman\'s Ring',
+        Ring2 = 'Merman\'s Ring',
+		Back = 'Resentment Cape',
+		Waist = 'Duelist\'s Belt',
+		Legs = 'Coral Cuisses +1',
+		Feet = 'Coral Greaves +1',
     },
     FireRes = { -- 145
         Main = 'Neptune\'s Staff', -- 20
@@ -269,15 +269,20 @@ local sets = {
         Feet = 'Custom F Boots', -- 4
     },
     Evasion = {
-		Main = 'Auster\'s Staff',
+		Main = 'Terra\'s Staff',
 		Sub = '',
 		Range = '',
 		Ammo = 'Happy Egg',
-		Head = 'Optical Hat',
+		Head = 'Dls. Chapeau +1',
+		Neck = 'Fortitude Torque',
+		Ear1 = 'Knight\'s Earring',
+		Ear2 = 'Cassie Earring',
 		Body = 'Scp. Harness +1',
+		Hands = 'Blood Fng. Gnt.',
+		Ring1 = 'Bomb Queen Ring',
+		Ring2 = 'Merman\'s Ring',
 		Feet = 'Marine F Boots',
-		Ring1 = 'Snow Ring',
-		Back = 'Traveler\'s Mantle',
+		Back = 'Gigant Mantle',
 		Waist = 'Warwolf Belt',
 	},
 
@@ -288,7 +293,7 @@ local sets = {
     },
     Casting = { -- Default Casting Equipment when using Idle sets
         Main = 'Eremite\'s Wand',
-		Sub = 'Strike Shield',
+		Sub = 'Genbu\'s Shield',
 		--Range = '',
         --Ammo = 'Hedgehog Bomb',
         Head = 'Nashira Turban',
@@ -516,7 +521,7 @@ local sets = {
         Back = 'Altruistic Cape',
         Waist = 'Penitent\'s Rope',
         Legs = 'Nashira Seraweels',
-        Feet = 'Dls. Boots +1',
+        Feet = 'Nashira Crackows',
     },
     EnfeeblingMND = {
         Range = '',
@@ -564,7 +569,7 @@ local sets = {
         Back = 'Altruistic Cape',
         Waist = 'Penitent\'s Rope',
         Legs = 'Nashira Seraweels',
-        Feet = 'Dls. Boots +1',
+        Feet = 'Nashira Crackows',
     },
 
     Divine = { -- Just using my Hate set here for Flash
@@ -626,7 +631,7 @@ local sets = {
         Back = 'Merciful Cape',
         Waist = 'Penitent\'s Rope',
         Legs = 'Dls. Tights +1',
-        Feet = 'Dls. Boots +1',
+        Feet = 'Nashira Crackows',
     },
     NukeDOT = {
         Ammo = 'Phtm. Tathlum',
@@ -710,13 +715,13 @@ local sets = {
         Back = 'Merciful Cape',
         Waist = 'Penitent\'s Rope',
         Legs = 'Nashira Seraweels',
-        Feet = 'Custom F Boots',
+        Feet = 'Nashira Crackows',
     },
 
     TP = {
         
         Main = 'Joyeuse',
-		Sub = 'Strike Shield',
+		Sub = 'Genbu\'s Shield',
         Range = '',
         Ammo = 'Tiphia Sting',
         Head = 'Optical Hat',
@@ -734,12 +739,12 @@ local sets = {
     },
     TP_HighAcc = {
         Main = 'Joyeuse',
-		Sub = 'Strike Shield',
+		Sub = 'Genbu\'s Shield',
 		Range = '',
         Ammo = 'Tiphia Sting',
         Head = 'Optical Hat',
         Neck = 'Peacock Amulet',
-        Ear1 = 'Merman\'s Earring',
+        Ear1 = 'Brutal Earring',
         Ear2 = 'Knight\'s Earring',
         Body = 'Scp. Harness +1',
         Hands = 'Dusk Gloves',
@@ -790,7 +795,7 @@ local sets = {
         Hands = 'Tarasque Mitts +1',
 		Back = 'Forager\'s Mantle',
         Waist = 'Warwolf Belt',
-		Ring1 = 'Flame Ring',
+		Ring1 = 'Rajas Ring',
         Legs = 'Hydra Brais',
         Feet = 'Marine F Boots',
     },
@@ -801,7 +806,7 @@ local sets = {
         Hands = 'Tarasque Mitts +1',
 		Back = 'Forager\'s Mantle',
         Waist = 'Warwolf Belt',
-		Ring1 = 'Flame Ring',
+		Ring1 = 'Rajas Ring',
         Legs = 'Hydra Brais',
         --Feet = 'Rutter Sabatons',
     },
@@ -948,7 +953,7 @@ profile.HandleDefault = function()
 
     local player = gData.GetPlayer()
 	local environment = gData.GetEnvironment()
-	if ((player.Status == 'Idle' or player.Status == 'Resting')) then
+	if ((player.Status == 'Idle' or player.Status == 'Resting') and gcdisplay.IdleSet ~= 'MDT' and gcdisplay.IdleSet ~= 'DT') then
 		if (environment.Time >= 6 and environment.Time < 18) then
 			gFunc.Equip('Hands', 'Garden Bangles')
 		end

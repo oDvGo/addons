@@ -131,18 +131,19 @@ local sets = {
         Feet = 'Dst. Leggings +1', -- 2
     },
     MDT = { -- Shell IV provides 23% MDT
-        Head = 'Darksteel Cap +1',
-        Neck = 'Jeweled Collar +1',
+        Ammo = 'Phtm. Tathlum',
         Ear1 = 'Merman\'s Earring', -- 2
-        Ear2 = 'Merman\'s Earring', -- 2
-        Body = 'Cor. Scale Mail +1', -- 4
-        Hands = 'Merman\'s Bangles', -- 2
-        Ring1 = 'Merman\'s Ring',
-        Ring2 = { Name = 'Merman\'s Ring', Priority = 100 }, -- 5
-        Back = 'Shadow Mantle',
-        Waist = 'Warwolf Belt',
-        Legs = 'Coral Cuisses +1', -- 3
-        Feet = 'Coral Greaves +1', -- 2
+        Ear2 = 'Merman\'s Earring',
+		Head = 'Coral Visor +1',
+		Neck = 'Harmonia\'s Torque',
+        Body = 'Cor. Scale Mail +1',
+		Hands = 'Coral Fng. Gnt. +1',
+		Ring1 = 'Merman\'s Ring',
+        Ring2 = 'Merman\'s Ring',
+		Back = 'Resentment Cape',
+		Waist = 'Warwolf Belt',
+		Legs = 'Coral Cuisses +1',
+		Feet = 'Coral Greaves +1',
     },
     FireRes = {
         Main = 'Neptune\'s Staff', -- 20
