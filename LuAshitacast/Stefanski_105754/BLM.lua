@@ -119,7 +119,7 @@ local sets = {
         Hands = 'Merman\'s Bangles', -- 3
         Ring1 = 'Merman\'s Ring', -- 4 -- Using this over Shadow Ring for consistency
         Ring2 = { Name = 'Merman\'s Ring', Priority = 100 }, -- 5
-        Back = { Name = 'Gigant Mantle', Priority = 100 }, -- 3
+        Back = { Name = 'Prism Cape', Priority = 100 }, -- 3
         Waist = { Name = 'Sorcerer\'s Belt', Priority = 100 },
         Legs = 'Mahatma Slops',
         Feet = 'Rostrum Pumps',
@@ -469,7 +469,7 @@ local sets = {
         Hands = 'Zenith Mitts',
         Ring1 = 'Snow Ring',
         Ring2 = 'Snow Ring',
-        Back = 'Merciful Cape',
+        Back = 'Prism Cape',
         Waist = 'Sorcerer\'s Belt',
         Legs = 'Mahatma Slops',
         Feet = 'Sorcerer\'s Sabots',
@@ -515,7 +515,7 @@ local sets = {
         Hands = 'Wizard\'s Gloves',
         Ring1 = 'Snow Ring',
         Ring2 = 'Snow Ring',
-        Back = 'Merciful Cape',
+        Back = 'Prism Cape',
         Waist = 'Sorcerer\'s Belt',
         Legs = 'Mahatma Slops',
         Feet = 'Sorcerer\'s Sabots',
@@ -526,14 +526,14 @@ local sets = {
         Ear1 = 'Loquac. Earring',
         Ear2 = 'Moldavite Earring',
 		Head = 'Wizard\'s Petasos',
-        Body = 'Igqira Weskit',
+        Body = 'Sorcerer\'s Coat',
         Hands = 'Wizard\'s Gloves',
         Ring1 = 'Snow Ring',
         Ring2 = 'Snow Ring',
-        Back = 'Merciful Cape',
+        Back = 'Prism Cape',
         Waist = 'Sorcerer\'s Belt',
         Legs = 'Mahatma Slops',
-        Feet = 'Rostrum Pumpss',
+        Feet = 'Rostrum Pumps',
     },
     MB = {
         Hands = 'Src. Gloves +1',
@@ -597,7 +597,7 @@ end
 
 profile.OnLoad = function()
     gcinclude.SetAlias(T{'extra'})
-    gcdisplay.CreateToggle('Extra', false)
+    gcdisplay.CreateToggle('Extra', true)
     gcmage.Load()
     profile.SetMacroBook()
 end

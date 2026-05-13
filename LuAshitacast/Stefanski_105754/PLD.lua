@@ -320,11 +320,11 @@ local sets = {
     Hate_Flash = { -- Optional, provided here only if you wish to mix in haste or other stats over max +enmity
         --Main = 'Tutelary',
         --Sub = 'Koenig Shield',
-        Head = 'Valor Coronet',
+        Head = 'Hydra Salade',
         Neck = 'Harmonia\'s Torque',
         --Ear1 = 'Hades Earring +1',
         Ear2 = 'Cassie Earring',
-        Body = 'Valor Surcoat',
+        Body = 'Hydra Haubert',
         Hands = 'Homam Manopolas',
         Ring1 = 'Hercules\' Ring',
         Ring2 = 'Mermaid Ring',
@@ -644,6 +644,7 @@ profile.HandleDefault = function()
 	
 	if (gcdisplay.GetToggle('DW') and player.Status == 'Engaged' and gcmelee.GetIsDPS() and player.SubJob == 'NIN') then
         gFunc.Equip('Ear2', 'Stealth Earring')
+		gFunc.Equip('Ammo', 'Virtue Stone')
     end
     if (arco_de_velocidad) then
         local environment = gData.GetEnvironment()

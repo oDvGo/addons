@@ -508,7 +508,7 @@ profile.HandleDefault = function()
     else
         gcmage.DoDefault(nil, whmSJMaxMP, blmSJMaxMP, nil)
     end
-	if (pet ~= nil and pet.Name ~= 'Carbuncle') then
+	if (pet ~= nil and pet.Name ~= 'Carbuncle' and player.MP < 900) then
         if (player.HP > 0.75*playerHP and gcdisplay.GetToggle('Yellow')) then
             gFunc.EquipSet(sets.Yellow)
         end

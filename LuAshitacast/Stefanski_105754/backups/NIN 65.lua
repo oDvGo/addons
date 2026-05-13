@@ -56,16 +56,16 @@ local sets = {
 		--Range = 'Rogetsurin',
 		--Ammo = '',
         Head = 'Emperor Hairpin',
-        Neck = 'Peacock Amulet',
+        Neck = 'Evasion Torque',
         Ear1 = 'Drone Earring',
         Ear2 = 'Cassie Earring',
         Body = 'Ninja Chainmail',
-        Hands = 'Ochiudo\'s Kote',
-        Ring1 = 'Toreador\'s Ring',
+        Hands = 'Dst. Mittens +1',
+        Ring1 = 'Jelly Ring',
         Ring2 = 'Rajas Ring',
         Back = 'Amemet Mantle +1',
         Waist = 'Swift Belt',
-        Legs = 'Luisant Brayettes',
+        Legs = 'Dst. Subligar +1',
         Feet = 'Sarutobi Kyahan',
     },
     IdleALT = {
@@ -74,23 +74,23 @@ local sets = {
 		Range = '',
 		Ammo = 'Mille. Sachet',
         Head = 'Emperor Hairpin',
-        Neck = 'Peacock Amulet',
+        Neck = 'Evasion Torque',
         Ear1 = 'Drone Earring',
         Ear2 = 'Drone Earring',
         Body = 'Scp. Harness +1',
-        Hands = 'Custom F Gloves',
-        Ring1 = 'Mermaid Ring',
-        Ring2 = 'Genius Ring',
+        Hands = 'Dst. Mittens +1',
+        Ring1 = 'Jelly Ring',
+        Ring2 = 'Bomb Queen Ring',
         Back = 'Resentment Cape',
         Waist = 'Swift Belt',
-        Legs = 'Luisant Brayettes',
+        Legs = 'Dst. Subligar +1',
         Feet = 'Bounding Boots',
 	},
     IdleDT = {
         Range = 'Rogetsurin',
 		Ammo = '',
         Head = 'Emperor Hairpin',
-        Neck = 'Peacock Amulet',
+        Neck = 'Evasion Torque',
         Ear1 = 'Intruder Earring',
         Ear2 = 'Cassie Earring',
         Body = 'Scp. Harness +1',
@@ -99,7 +99,7 @@ local sets = {
         Ring2 = 'Rajas Ring',
         Back = 'Resentment Cape',
         Waist = 'Life Belt',
-        Legs = 'Luisant Brayettes',
+        Legs = 'Dst. Subligar +1',
         Feet = 'Sarutobi Kyahan',
     },
     IdleALTDT = {},
@@ -110,25 +110,42 @@ local sets = {
 		--Range = '',
 		--Ammo = 'Mille. Sachet',
         Head = 'Emperor Hairpin',
-        Neck = 'Peacock Amulet',
+        Neck = 'Ninjutsu Torque',
 		Ear1 = 'Ninjutsu Earring',
         Ear2 = 'Moldavite Earring',
         Body = 'Scp. Harness +1',
         Hands = 'Ochiudo\'s Kote',
-        Ring1 = 'Shinobi Ring',
-        Ring2 = 'Genius Ring',
+        Ring1 = 'Jelly Ring',
+        Ring2 = 'Shinobi Ring',
         Back = 'Amemet Mantle +1',
-        Waist = 'Swordbelt +1',
-        Legs = 'Nokizaru Hakama',
+        Waist = 'Swift Belt',
+        Legs = 'Dst. Subligar +1',
         Feet = 'Sarutobi Kyahan',
 	},
     Movement = {
 		Feet = 'Ninja Kyahan',
 	},
 
-    DT = {},
+    DT = {
+		Head = 'Darksteel Cap +1',
+		--Neck = 'Fortitude Torque',
+		--Ear1 = 'Knight\'s Earring',
+		Ear2 = 'Cassie Earring',
+		Body = 'Dst. Harness +1',
+		Hands = 'Dst. Mittens +1',
+		Ring1 = 'Jelly Ring',
+		--Ring2 = 'Merman\'s Ring',
+		--Back = 'Boxer\'s Mantle',
+		--Waist = 'Warwolf Belt',
+		Legs = 'Dst. Subligar +1',
+		Feet = 'Dst. Leggings +1',
+	},
     MDT = { -- Shell IV provides 23% MDT
-    },
+		--Ammo = 'Phtm. Tathlum',
+        Ear1 = 'Merman\'s Earring', -- 2
+        Ear2 = 'Cassie Earring',
+		Back = 'Resentment Cape',
+	},
     FireRes = {},
     IceRes = {},
     LightningRes = {},
@@ -139,6 +156,8 @@ local sets = {
 
     Precast = {},
     SIRD = {
+		Hands = 'Dst. Mittens +1',
+		Ring1 = 'Jelly Ring',
     },
     Haste = { -- Used for Utsusemi cooldown
 		--Ear2 = 'Cassie Earring',
@@ -159,7 +178,9 @@ local sets = {
     NinDebuff = {
 		Ear1 = 'Ninjutsu Earring',
 		Head = 'Ninja Hatsuburi',
-		Body = 'Nokizaru Gi',
+		Neck = 'Ninjutsu Torque',
+		Body = 'Black Cotehardie',
+		Hands = 'Sennight Bangles',
 		Legs = 'Nokizaru Hakama',
 		Back = 'Resentment Cape',
 		Waist = 'Astral Rope',
@@ -171,7 +192,9 @@ local sets = {
 		Ear1 = 'Ninjutsu Earring',
 		Ear2 = 'Moldavite Earring',
 		Head = 'Ninja Hatsuburi',
-		Body = 'Nokizaru Gi',
+		Neck = 'Ninjutsu Torque',
+		Body = 'Black Cotehardie',
+		Hands = 'Sennight Bangles',
 		Legs = 'Nokizaru Hakama',
 		Back = 'Gramary Cape',
 		Waist = 'Ryl.Kgt. Belt',
@@ -183,7 +206,9 @@ local sets = {
 		Ear1 = 'Ninjutsu Earring',
 		Ear2 = 'Moldavite Earring',
 		Head = 'Ninja Hatsuburi',
-		Body = 'Nokizaru Gi',
+		Neck = 'Ninjutsu Torque',
+		Body = 'Black Cotehardie',
+		Hands = 'Sennight Bangles',
 		Legs = 'Nokizaru Hakama',
 		Back = 'Gramary Cape',
 		Waist = 'Ryl.Kgt. Belt',
@@ -191,10 +216,16 @@ local sets = {
 		Ring2 = 'Genius Ring',
 		Feet = 'Custom F Boots',
 	},
-    DrkDarkMagic = {},
+    DrkDarkMagic = {
+		Neck = 'Dark Torque',
+	},
 
-    Enhancing = {},
-    Cure = {},
+    Enhancing = {
+		Neck = 'Enhancing Torque',
+	},
+    Cure = {
+		Neck = 'Healing Torque',
+	},
 
     LockSet1 = {},
     LockSet2 = {},
@@ -204,7 +235,7 @@ local sets = {
         --Ammo = 'Mille. Sachet',
         Head = 'Emperor Hairpin',
         Neck = 'Peacock Amulet',
-        Ear1 = 'Optical Earring',
+        Ear1 = 'Merman\'s Earring',
         Ear2 = 'Cassie Earring',
         Body = 'Scp. Harness +1',
         Hands = 'Ochiudo\'s Kote',
@@ -235,8 +266,8 @@ local sets = {
     WS = {
 		--Ammo = 'Mille. Sachet',
         Head = 'Emperor Hairpin',
-        Neck = 'Peacock Amulet',
-        Ear1 = 'Intruder Earring',
+        Neck = 'Spike Necklace',
+        Ear1 = 'Merman\'s Earring',
         Ear2 = 'Cassie Earring',
         Body = 'Haubergeon',
         Hands = 'Ochiudo\'s Kote',
@@ -249,7 +280,9 @@ local sets = {
 	},
     WS_HighAcc = {},
 
-    WS_BladeJin = {},
+    WS_BladeJin = {
+		Ear1 = 'Minuet Earring',
+	},
     WS_BladeKu = {},
 
     Ranged = {
@@ -258,7 +291,7 @@ local sets = {
         Neck = 'Peacock Amulet',
         Ear1 = 'Drone Earring',
         Ear2 = 'Drone Earring',
-        Body = 'Nokizaru Gi',
+        Body = 'Black Cotehardie',
         Hands = 'Ninja Tekko',
         Ring1 = 'Woodsman Ring',
         Ring2 = 'Rajas Ring',
@@ -373,7 +406,9 @@ end
 
 profile.OnLoad = function()
     gcinclude.SetAlias(T{'nuke'})
+	gcinclude.SetAlias(T{'staff'})
     gcdisplay.CreateCycle('Nuke', {[1] = 'Potency', [2] = 'Accuracy',})
+    gcdisplay.CreateToggle('Staff', false)
     gcmelee.Load()
     profile.SetMacroBook()
 end
@@ -381,13 +416,17 @@ end
 profile.OnUnload = function()
     gcmelee.Unload()
     gcinclude.ClearAlias(T{'nuke'})
+	gcinclude.ClearAlias(T{'staff'})
 end
 
 profile.HandleCommand = function(args)
     if (args[1] == 'nuke') then
         gcdisplay.AdvanceCycle('Nuke')
         gcinclude.Message('Nuke', gcdisplay.GetCycle('Nuke'))
-    else
+    elseif (args[1] == 'staff') then
+        gcdisplay.AdvanceToggle('Staff')
+		gcinclude.Message('Staff', gcdisplay.GetToggle('Staff'))
+	else
         gcmelee.DoCommands(args)
     end
 
@@ -419,11 +458,9 @@ profile.HandleDefault = function()
     end
 
     gcmelee.DoDefaultOverride()
+
 	if (gcdisplay.IdleSet == 'Evasion' or player.Status == 'Idle') then
-        -- Add the Monsoon Kyahan check for Water weather (Rain/Squall)
-        if (environment.WeatherElement == 'Water') then
-            gFunc.Equip('Feet', 'Monsoon Kyahan')
-        end
+
 
         if (fenrirs_stone and (environment.Time < 6 or environment.Time >= 18)) then
             gFunc.Equip('Ammo', 'Fenrir\'s Stone')
@@ -439,6 +476,9 @@ profile.HandleDefault = function()
     end
 
     gFunc.EquipSet(gcinclude.BuildLockableSet(gData.GetEquipment()))
+	if (player.Status == 'Idle' and player.HPP < 75 and conquest:GetOutsideControl()) then
+        gFunc.Equip('Head', 'President. Hairpin')
+    end
 end
 
 profile.HandlePrecast = function()
@@ -501,9 +541,14 @@ end
 
 function EquipStaffAndObi(action)
     local staff = ElementalStaffTable[action.Element]
-    if staff ~= '' then
-        gFunc.Equip('Main', staff)
+    
+    local staff = ElementalStaffTable[action.Element]
+    if (gcdisplay.GetToggle('Staff')) then
+        if staff ~= '' then
+			gFunc.Equip('Main', staff)
+		end
     end
+    
 
     if (ObiCheck(action)) then
         local obi = NukeObiTable[action.Element]

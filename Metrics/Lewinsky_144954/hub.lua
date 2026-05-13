@@ -2,8 +2,8 @@ require('common');
 
 local settings = T{ };
 settings["Visible"] = T{ };
+settings["Y"] = 100;
+settings["X"] = 100;
 settings["Visible"][1] = true;
-settings["X"] = 1834;
-settings["Y"] = 430;
 
 return settings;

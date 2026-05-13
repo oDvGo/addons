@@ -1,21 +1,21 @@
 local profile = {}
 
 local max_hp_in_idle_with_regen_gear_equipped = 1632
-local fastCastValue = 0.02 -- 2% from gear
+local fastCastValue = 0.00 -- 2% from gear
 
 -- Replace these with '' if you do not have them
-local temple_gaiters = 'Temple Gaiters'
-local temple_gloves = 'Temple Gloves'
-local temple_cyclas = 'Tpl. Cyclas +1'
-local temple_crown = 'Tpl. Crown +1'
+local temple_gaiters = ''
+local temple_gloves = ''
+local temple_cyclas = ''
+local temple_crown = ''
 
-local melee_gaiters = 'Melee Gaiters'
-local melee_gloves = 'Mel. Gloves +1'
+local melee_gaiters = ''
+local melee_gloves = ''
 
 local muscle_belt = ''
 local garden_bangles = ''
 local presidential_hairpin = false
-local dream_ribbon = true
+local dream_ribbon = false
 
 local kampfer_ring = false
 local kampfer_ring_slot = 'Ring2'
@@ -24,18 +24,19 @@ local kampfer_earring_slot = 'Ear2'
 
 local sets = {
     Idle = {
-        Ammo = 'Happy Egg',
+        Main = 'Boreas Cesti',
+		Ammo = 'Happy Egg',
         Head = 'Emperor Hairpin',
         Neck = 'Peacock Amulet',
         Ear1 = 'Optical Earring',
         Ear2 = 'Cassie Earring',
-        Body = 'Custom Vest',
-        Hands = 'Custom F Gloves',
+        Body = 'Jujitsu Gi',
+        Hands = 'Ochiudo\'s Kote',
         Ring1 = 'Woodsman Ring',
         Ring2 = 'Rajas Ring',
-        Back = 'Resentment Cape',
-        Waist = 'Tilt Belt',
-        Legs = 'Jujitsu Sitibaki',
+        Back = 'Nomad\'s Mantle +1',
+        Waist = 'Brown Belt',
+        Legs = 'Cmb.Cst. Slacks',
         Feet = 'Sarutobi Kyahan',
     },
     IdleALT = {
@@ -50,11 +51,20 @@ local sets = {
         Feet = 'Dst. Leggings +1',
     },
     Town = {
-        Head = 'Tpl. Crown +1',
-        Body = 'Kirin\'s Osode',
-        Hands = 'Mel. Gloves +1',
-        Legs = 'Byakko\'s Haidate',
-        Feet = 'Melee Gaiters',
+        Main = 'Boreas Cesti',
+		Ammo = 'Mille. Sachet',
+        Head = 'Emperor Hairpin',
+        Neck = 'Peacock Amulet',
+        Ear1 = 'Optical Earring',
+        Ear2 = 'Cassie Earring',
+        Body = 'Jujitsu Gi',
+        Hands = 'Ochiudo\'s Kote',
+        Ring1 = 'Woodsman Ring',
+        Ring2 = 'Rajas Ring',
+        Back = 'Nomad\'s Mantle +1',
+        Waist = 'Brown Belt',
+        Legs = 'Cmb.Cst. Slacks',
+        Feet = 'Sarutobi Kyahan',
     },
     Movement = {
         --Feet = 'Herald\'s Gaiters',
@@ -136,13 +146,13 @@ local sets = {
         Neck = 'Peacock Amulet',
         Ear1 = 'Optical Earring',
         Ear2 = 'Cassie Earring',
-        Body = 'Custom Vest',
-        Hands = 'Custom F Gloves',
+        Body = 'Jujitsu Gi',
+        Hands = 'Ochiudo\'s Kote',
         Ring1 = 'Woodsman Ring',
         Ring2 = 'Rajas Ring',
-        Back = 'Resentment Cape',
-        Waist = 'Tilt Belt',
-        Legs = 'Jujitsu Sitibaki',
+        Back = 'Nomad\'s Mantle +1',
+        Waist = 'Brown Belt',
+        Legs = 'Cmb.Cst. Slacks',
         Feet = 'Sarutobi Kyahan',
     },
     TP_HighAcc = {
@@ -151,44 +161,48 @@ local sets = {
         Neck = 'Peacock Amulet',
         Ear1 = 'Optical Earring',
         Ear2 = 'Cassie Earring',
-        Body = 'Custom Vest',
-        Hands = 'Custom F Gloves',
+        Body = 'Jujitsu Gi',
+        Hands = 'Ochiudo\'s Kote',
         Ring1 = 'Woodsman Ring',
-        Ring2 = 'Rajas Ring',
-        Back = 'Resentment Cape',
-        Waist = 'Tilt Belt',
-        Legs = 'Jujitsu Sitibaki',
+        Ring2 = 'Woodsman Ring',
+        Back = 'Nomad\'s Mantle +1',
+        Waist = 'Brown Belt',
+        Legs = 'Cmb.Cst. Slacks',
         Feet = 'Sarutobi Kyahan',
     },
     TP_Mjollnir_Haste = {},
 
     TP_Focus = {
-        Ring1 = 'Flame Ring',
-        Ring2 = 'Triumph Ring',
+        --Ring1 = 'Flame Ring',
+        --Ring2 = 'Triumph Ring',
     },
 
     SJ_DRG = {
-        Ear2 = 'Wyvern Earring',
-        Feet = 'Dune Boots',
+        --Ear2 = 'Wyvern Earring',
+        --Feet = 'Dune Boots',
     },
     SJ_THF = {
-        Ear2 = 'Pilferer\'s Earring',
+        --Ear2 = 'Pilferer\'s Earring',
     },
 
     WS = {
-        Head = 'Shr.Znr.Kabuto',
-        Hands = 'Custom F Gloves',
+        Ammo = 'Mille. Sachet',
+        Head = 'Emperor Hairpin',
         Neck = 'Spike Necklace',
-        --Ear1 = 'Beetle Earring',
-        --Ear2 = 'Beetle Earring',
-        Ring1 = 'Flame Ring',
-        Ring2 = 'Triumph Ring',
-        Legs = 'Shura Haidate',
-        Feet = 'Shura Sune-Ate',
+        Ear1 = 'Optical Earring',
+        Ear2 = 'Cassie Earring',
+        Body = 'Jujitsu Gi',
+        Hands = 'Ochiudo\'s Kote',
+        Ring1 = 'Puissance Ring',
+        Ring2 = 'Rajas Ring',
+        Back = 'Nomad\'s Mantle +1',
+        Waist = 'Brown Belt',
+        Legs = 'Cmb.Cst. Slacks',
+        Feet = 'Fed. Kyahan',
     },
     WS_HighAcc = {
-        Ring1 = 'Begrudging Ring',
-        Ring2 = 'Toreador\'s Ring',
+        --Ring1 = 'Begrudging Ring',
+        --Ring2 = 'Toreador\'s Ring',
     },
 
     WS_AsuranFists = {
@@ -215,17 +229,17 @@ local sets = {
     },
     Chakra = {
         Ammo = 'Happy Egg',
-        Head = 'Genbu\'s Kabuto',
-        Neck = 'Fortitude Torque',
-        Ear1 = 'Robust Earring',
-        Ear2 = 'Robust Earring',
-        Body = 'Tpl. Cyclas +1',
-        Ring1 = 'Robust Ring',
-        Ring2 = 'Sattva Ring',
-        Back = 'Melee Cape',
-        Waist = 'Warwolf Belt',
-        Legs = 'Mst. Sitabaki +1',
-        Feet = 'Power sandals',
+        --Head = 'Genbu\'s Kabuto',
+        --Neck = 'Fortitude Torque',
+        --Ear1 = 'Robust Earring',
+        Ear2 = 'Cassie Earring',
+        Body = 'Custom Vest',
+        --Ring1 = 'Robust Ring',
+        --Ring2 = 'Sattva Ring',
+        --Back = 'Melee Cape',
+        --Waist = 'Warwolf Belt',
+        Legs = 'Jujitsu Sitabaki',
+        Feet = 'Power Sandals',
     },
 
     ChiBlast = {
@@ -233,7 +247,7 @@ local sets = {
         Neck = 'Faith Torque',
         Ear1 = 'Cmn. Earring',
         Ear2 = 'Cmn. Earring',
-        Hands = 'Dvt. Mitts +1',
+        Hands = 'Devotee\'s Mitts',
         Ring1 = 'Aqua Ring',
         Ring2 = 'Communion Ring',
         Back = 'Melee Cape',

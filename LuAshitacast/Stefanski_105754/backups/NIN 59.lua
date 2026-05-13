@@ -53,13 +53,13 @@ local anrin_obi = false
 
 local sets = {
     Idle = {
-		Range = 'Rogetsurin',
-		Ammo = '',
+		--Range = 'Rogetsurin',
+		--Ammo = '',
         Head = 'Emperor Hairpin',
         Neck = 'Peacock Amulet',
         Ear1 = 'Drone Earring',
         Ear2 = 'Cassie Earring',
-        Body = 'Scp. Harness +1',
+        Body = 'Ninja Chainmail',
         Hands = 'Ochiudo\'s Kote',
         Ring1 = 'Toreador\'s Ring',
         Ring2 = 'Rajas Ring',
@@ -144,7 +144,6 @@ local sets = {
 		--Ear2 = 'Cassie Earring',
 		--Head = 'Ninja Hatsubari',
 		--Body = 'Custom Vest',
-		--Ring1 = 'Bomb Queen Ring',
 		Waist = 'Swift Belt',
 		Feet = 'Sarutobi Kyahan',
 	},
@@ -239,7 +238,7 @@ local sets = {
         Neck = 'Peacock Amulet',
         Ear1 = 'Intruder Earring',
         Ear2 = 'Cassie Earring',
-        Body = 'Scp. Harness +1',
+        Body = 'Haubergeon',
         Hands = 'Ochiudo\'s Kote',
         Ring1 = 'Victory Ring',
         Ring2 = 'Rajas Ring',
@@ -417,10 +416,7 @@ profile.HandleDefault = function()
 
     gcmelee.DoDefaultOverride()
 	if (gcdisplay.IdleSet == 'Evasion' or player.Status == 'Idle') then
-        -- Add the Monsoon Kyahan check for Water weather (Rain/Squall)
-        if (environment.WeatherElement == 'Water') then
-            gFunc.Equip('Feet', 'Monsoon Kyahan')
-        end
+
 
         if (fenrirs_stone and (environment.Time < 6 or environment.Time >= 18)) then
             gFunc.Equip('Ammo', 'Fenrir\'s Stone')

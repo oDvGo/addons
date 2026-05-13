@@ -4,12 +4,12 @@
 
 local profile = {}
 
-local fastCastValue = 0.02 -- 0% from gear
+local fastCastValue = 0.00 -- 0% from gear
 
 local shinobi_ring = true
 local shinobi_ring_slot = 'Ring2'
 
-local koga_tekko = true
+local koga_tekko = false
 local koga_tekko_plus_one = false
 
 local uggalepih_pendant = true
@@ -50,15 +50,15 @@ local sets = {
 		Ammo = 'Fenrir\'s Stone',
         Head = 'Optical Hat',
         Neck = 'Evasion Torque',
-        Ear1 = 'Novia Earring',
+        Ear1 = 'Drone Earring',
         Ear2 = 'Cassie Earring',
-        Body = 'Kirin\'s Osode',
+        Body = 'Scp. Harness +1',
         Hands = 'Dst. Mittens +1',
         Ring1 = 'Jelly Ring',
         Ring2 = 'Merman\'s Ring',
         Back = 'Boxer\'s Mantle',
         Waist = 'Scouter\'s Rope',
-        Legs = 'Byakko\'s Haidate',
+        Legs = 'Dst. Subligar +1',
         Feet = 'Dance Shoes',
     },
     IdleALT = {
@@ -70,7 +70,7 @@ local sets = {
         Neck = 'Evasion Torque',
         Ear1 = 'Drone Earring',
         Ear2 = 'Drone Earring',
-        Body = 'Kirin\'s Osode',
+        Body = 'Scp. Harness +1',
         Hands = 'Dst. Mittens +1',
         Ring1 = 'Jelly Ring',
         Ring2 = 'Bomb Queen Ring',
@@ -82,18 +82,18 @@ local sets = {
     IdleDT = {
         Range = '',
 		Ammo = 'Fenrir\'s Stone',
-        Head = 'Genbu\'s Kabuto',
+        Head = 'Optical Hat',
         Neck = 'Evasion Torque',
         Ear1 = 'Intruder Earring',
         Ear2 = 'Cassie Earring',
-        Body = 'Kirin\'s Osode',
+        Body = 'Scp. Harness +1',
         Hands = 'Ochiudo\'s Kote',
         Ring1 = 'Toreador\'s Ring',
         Ring2 = 'Rajas Ring',
         Back = 'Boxer\'s Mantle',
         Waist = 'Scouter\'s Rope',
         Legs = 'Dst. Subligar +1',
-        Feet = 'Suzaku\'s Sune-Ate',
+        Feet = 'Dst. Leggings +1',
     },
     IdleALTDT = {},
     Resting = {
@@ -103,20 +103,20 @@ local sets = {
 	},
     Town = {
 		Main = 'Fudo',
-		Sub = 'Fudo',
+		Sub = 'Kororito +1',
 		Range = 'Ungur Boomerang',
 		Ammo = '',
         Head = 'Panther Mask +1',
         Neck = 'Ninjutsu Torque',
 		Ear1 = 'Stealth Earring',
         Ear2 = 'Moldavite Earring',
-        Body = 'Kirin\'s Osode',
+        Body = 'Scp. Harness +1',
         Hands = 'Ochiudo\'s Kote',
         Ring1 = 'Jelly Ring',
         Ring2 = 'Shinobi Ring',
         Back = 'Astute Cape',
         Waist = 'Scouter\'s Rope',
-        Legs = 'Byakko\'s Haidate',
+        Legs = 'Shura Haidate',
         Feet = 'Sarutobi Kyahan',
 	},
     Movement = {
@@ -126,11 +126,11 @@ local sets = {
 
     DT = {
 		Ammo = 'Happy Egg',
-		Head = 'Genbu\'s Kabuto',
+		Head = 'Darksteel Cap +1',
 		Neck = 'Fortitude Torque',
 		Ear1 = 'Knight\'s Earring',
 		Ear2 = 'Cassie Earring',
-		Body = 'Kirin\'s Osode',
+		Body = 'Dst. Harness +1',
 		Hands = 'Dst. Mittens +1',
 		Ring1 = 'Jelly Ring',
 		Ring2 = 'Merman\'s Ring',
@@ -143,7 +143,6 @@ local sets = {
 		Ammo = 'Phtm. Tathlum',
         Ear1 = 'Merman\'s Earring', -- 2
         Ear2 = 'Cassie Earring',
-		Body = 'Kirin\'s Osode',
 		Ring1 = 'Merman\'s Ring',
 		Ring2 = 'Merman\'s Ring',
 		Back = 'Resentment Cape',
@@ -159,10 +158,10 @@ local sets = {
 		Ammo = 'Fenrir\'s Stone',
         Head = 'Optical Hat',
         Neck = 'Evasion Torque',
-        Ear1 = 'Novia Earring',
+        Ear1 = 'Drone Earring',
         Ear2 = 'Cassie Earring',
         Body = 'Scp. Harness +1',
-        Hands = 'Seiryu\'s Kote',
+        Hands = 'Dst. Mittens +1',
         Ring1 = 'Toreador\'s Ring',
         Ring2 = 'Toreador\'s Ring',
         Back = 'Boxer\'s Mantle',
@@ -171,15 +170,13 @@ local sets = {
         Feet = 'Dance Shoes',
 	},
 
-    Precast = {
-		Ear2 = 'Loquac. Earring',
-	},
+    Precast = {},
     SIRD = {
 		Head = 'Optical Hat',
 		Neck = 'Evasion Torque',
-		Ear1 = 'Novia Earring',
+		Ear1 = 'Knight\'s Earring',
 		Ear2 = 'Magnetic Earring',
-		Body = 'Kirin\'s Osode',
+		Body = 'Dst. Harness +1',
 		Hands = 'Dst. Mittens +1',
 		Ring1 = 'Jelly Ring',
 		Ring2 = 'Merman\'s Ring',
@@ -190,12 +187,10 @@ local sets = {
     },
     Haste = { -- Used for Utsusemi cooldown
 		Ear1 = 'Shinobi Earring',
-		Ear2 = 'Loquac. Earring',
 		Head = 'Panther Mask +1',
 		--Body = 'Custom Vest',
 		Hands = 'Dusk Gloves',
 		Waist = 'Koga Sarashi',
-		Legs = 'Byakko\'s Haidate',
 		Feet = 'Sarutobi Kyahan',
 	},
 
@@ -214,13 +209,13 @@ local sets = {
 		Ear2 = 'Stealth Earring',
 		Head = 'Ninja Hatsuburi',
 		Neck = 'Ninjutsu Torque',
-		Body = 'Kirin\'s Osode',
-		Hands = 'Koga Tekko',
+		Body = 'Black Cotehardie',
+		Hands = 'Sennight Bangles',
 		Legs = 'Yasha Hakama',
 		Back = 'Astute Cape',
 		Waist = 'Koga Sarashi',
         Ring1 = 'Mermaid Ring',
-		Ring2 = 'Snow Ring',
+		Ring2 = 'Genius Ring',
 		Feet = 'Koga Kyahan',
 	},
     NinElemental = {
@@ -229,13 +224,13 @@ local sets = {
 		Ear2 = 'Moldavite Earring',
 		Head = 'Koga Hatsuburi',
 		Neck = 'Ninjutsu Torque',
-		Body = 'Kirin\'s Osode',
-		Hands = 'Koga Tekko',
+		Body = 'Black Cotehardie',
+		Hands = 'Sennight Bangles',
 		Legs = 'Yasha Hakama',
 		Back = 'Astute Cape',
 		Waist = 'Koga Sarashi',
-        Ring1 = 'Snow Ring',
-		Ring2 = 'Snow Ring',
+        Ring1 = 'Genius Ring',
+		Ring2 = 'Genius Ring',
 		Feet = 'Koga Kyahan',
 	},
     NinElemental_Accuracy = {
@@ -244,13 +239,13 @@ local sets = {
 		Ear2 = 'Stealth Earring',
 		Head = 'Ninja Hatsuburi',
 		Neck = 'Ninjutsu Torque',
-		Body = 'Kirin\'s Osode',
-		Hands = 'Koga Tekko',
+		Body = 'Black Cotehardie',
+		Hands = 'Sennight Bangles',
 		Legs = 'Yasha Hakama',
 		Back = 'Astute Cape',
 		Waist = 'Koga Sarashi',
-        Ring1 = 'Snow Ring',
-		Ring2 = 'Snow Ring',
+        Ring1 = 'Genius Ring',
+		Ring2 = 'Genius Ring',
 		Feet = 'Koga Kyahan',
 	},
     DrkDarkMagic = {
@@ -262,7 +257,6 @@ local sets = {
 	},
     Cure = {
 		Neck = 'Healing Torque',
-		Feet = 'Suzaku\'s Sune-Ate',
 	},
 
     LockSet1 = {},
@@ -274,7 +268,7 @@ local sets = {
 		Ammo = 'Bomb Core',
         Head = 'Panther Mask +1',
         Neck = 'Peacock Amulet',
-        Ear1 = 'Brutal Earring',
+        Ear1 = 'Merman\'s Earring',
         Ear2 = 'Stealth Earring',
         Body = 'Ninja Chainmail',
         Hands = 'Dusk Gloves',
@@ -292,7 +286,7 @@ local sets = {
         Neck = 'Peacock Amulet',
         Ear1 = 'Optical Earring',
         Ear2 = 'Stealth Earring',
-        Body = 'Koga Chainmail',
+        Body = 'Scp. Harness +1',
         Hands = 'Dusk Gloves',
         Ring1 = 'Toreador\'s Ring',
         Ring2 = 'Toreador\'s Ring',
@@ -307,15 +301,15 @@ local sets = {
 		Ammo = 'Bomb Core',
         Head = 'Emperor Hairpin',
         Neck = 'Spike Necklace',
-        Ear1 = 'Brutal Earring',
+        Ear1 = 'Merman\'s Earring',
         Ear2 = 'Cassie Earring',
-        Body = 'Kirin\'s Osode',
+        Body = 'Haubergeon',
         Hands = 'Ochiudo\'s Kote',
-        Ring1 = 'Flame Ring',
+        Ring1 = 'Victory Ring',
         Ring2 = 'Rajas Ring',
         Back = 'Forager\'s Mantle',
         Waist = 'Warwolf Belt',
-        Legs = 'Byakko\'s Haidate',
+        Legs = 'Shura Haidate',
         Feet = 'Bounding Boots',
 	},
     WS_HighAcc = {},
@@ -334,7 +328,7 @@ local sets = {
         Ear1 = 'Drone Earring',
         Ear2 = 'Drone Earring',
         Body = 'War Shinobi Gi',
-        Hands = 'Seiryu\'s Kote',
+        Hands = 'Ninja Tekko',
         Ring1 = 'Merman\'s Ring',
         Ring2 = 'Merman\'s Ring',
         Back = 'Amemet Mantle +1',
@@ -345,10 +339,10 @@ local sets = {
 	
 	Charm = {
 		Head = 'Panther Mask +1',
-		Body = 'Kirin\'s Osode',
+		Body = 'Custom Vest',
 		Legs = 'Custom Pants',
-		--Waist = 'Ryl.Kgt. Belt',
-		--Back = 'Gramary Cape',
+		Waist = 'Ryl.Kgt. Belt',
+		Back = 'Gramary Cape',
 	},
 }
 profile.Sets = sets

@@ -449,7 +449,7 @@ profile.HandleDefault = function()
     end
 	
     gFunc.EquipSet(gcinclude.BuildLockableSet(gData.GetEquipment()))
-	if ((player.SubJob == 'WHM' or player.SubJob == 'RDM' or player.SubJob == 'BLM') and player.Status ~= 'Resting' and player.MPP < 80) then
+	if ((player.SubJob == 'WHM' or player.SubJob == 'RDM' or player.SubJob == 'BLM') and player.Status ~= 'Resting' and player.MPP < 70) then
         gFunc.EquipSet(sets.Vermi)
     elseif ((player.Status == 'Idle' or player.Status == 'Resting') and conquest:GetOutsideControl() and player.HPP < 100) then
 		gFunc.Equip('Head', 'President. Hairpin')

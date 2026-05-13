@@ -72,7 +72,7 @@ local sets = {
     LockSet3 = {},
 
     TP_LowAcc = {
-		Head = 'Panther Mask',
+		Head = 'Panther Mask +1',
 		Neck = 'Fortitude Torque',
 		Ear1 = 'Merman\'s Earring',
 		Ear2 = 'Brutal Earring',
@@ -101,7 +101,7 @@ local sets = {
 	},
 
     TP_Aggressor = {
-		Head = 'Panther Mask',
+		Head = 'Panther Mask +1',
 		Neck = 'Fortitude Torque',
 		Ear1 = 'Merman\'s Earring',
 		Ear2 = 'Brutal Earring',

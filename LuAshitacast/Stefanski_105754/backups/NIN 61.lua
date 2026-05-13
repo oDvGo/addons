@@ -18,27 +18,19 @@ local warlocks_mantle = true -- Don't add 2% to fastCastValue to this as it is S
 local fenrirs_stone = false -- Used for Evasion at night
 
 -- Fill this out for which evasion pants to use at night / dusk to dawn
-local night_time_eva_pants = ''
+local night_time_eva_pants = 'Ninja Hakama'
 local dusk_to_dawn_eva_pants = ''
 
 -- Leave as '' if you do not have the staff.
---local fire_staff = 'Vulcan\'s Staff'
---local earth_staff = 'Terra\'s Staff'
---local water_staff = 'Neptune\'s Staff'
---local wind_staff = 'Auster\'s Staff'
---local ice_staff = 'Aquilo\'s Staff'
---local thunder_staff = 'Jupiter\'s Staff'
---local light_staff = 'Apollo\'s Staff'
---local dark_staff = 'Pluto\'s Staff'
+local fire_staff = 'Vulcan\'s Staff'
+local earth_staff = 'Terra\'s Staff'
+local water_staff = 'Neptune\'s Staff'
+local wind_staff = 'Auster\'s Staff'
+local ice_staff = 'Aquilo\'s Staff'
+local thunder_staff = 'Jupiter\'s Staff'
+local light_staff = 'Apollo\'s Staff'
+local dark_staff = 'Pluto\'s Staff'
 
-local fire_staff = ''
-local earth_staff = ''
-local water_staff = ''
-local wind_staff = ''
-local ice_staff = ''
-local thunder_staff = ''
-local light_staff = ''
-local dark_staff = ''
 
 -- Set to true if you have the obi
 local karin_obi = false
@@ -61,22 +53,39 @@ local anrin_obi = false
 
 local sets = {
     Idle = {
-        Range = 'Rogetsurin',
-		Ammo = '',
+		--Range = 'Rogetsurin',
+		--Ammo = '',
         Head = 'Emperor Hairpin',
         Neck = 'Peacock Amulet',
-        Ear1 = 'Intruder Earring',
+        Ear1 = 'Drone Earring',
         Ear2 = 'Cassie Earring',
-        Body = 'Nokizaru Gi',
+        Body = 'Ninja Chainmail',
         Hands = 'Ochiudo\'s Kote',
-        Ring1 = 'Woodsman Ring',
+        Ring1 = 'Toreador\'s Ring',
         Ring2 = 'Rajas Ring',
-        Back = 'Resentment Cape',
+        Back = 'Amemet Mantle +1',
         Waist = 'Swift Belt',
         Legs = 'Luisant Brayettes',
         Feet = 'Sarutobi Kyahan',
     },
-    IdleALT = {},
+    IdleALT = {
+		Main = 'Auster\'s Staff',
+		Sub = '',
+		Range = '',
+		Ammo = 'Mille. Sachet',
+        Head = 'Emperor Hairpin',
+        Neck = 'Peacock Amulet',
+        Ear1 = 'Drone Earring',
+        Ear2 = 'Drone Earring',
+        Body = 'Scp. Harness +1',
+        Hands = 'Custom F Gloves',
+        Ring1 = 'Mermaid Ring',
+        Ring2 = 'Genius Ring',
+        Back = 'Resentment Cape',
+        Waist = 'Swift Belt',
+        Legs = 'Luisant Brayettes',
+        Feet = 'Bounding Boots',
+	},
     IdleDT = {
         Range = 'Rogetsurin',
 		Ammo = '',
@@ -84,34 +93,38 @@ local sets = {
         Neck = 'Peacock Amulet',
         Ear1 = 'Intruder Earring',
         Ear2 = 'Cassie Earring',
-        Body = 'Nokizaru Gi',
+        Body = 'Scp. Harness +1',
         Hands = 'Ochiudo\'s Kote',
-        Ring1 = 'Woodsman Ring',
+        Ring1 = 'Toreador\'s Ring',
         Ring2 = 'Rajas Ring',
         Back = 'Resentment Cape',
-        Waist = 'Swift Belt',
+        Waist = 'Life Belt',
         Legs = 'Luisant Brayettes',
         Feet = 'Sarutobi Kyahan',
     },
     IdleALTDT = {},
     Resting = {},
     Town = {
-		Range = 'Rogetsurin',
-		Ammo = '',
+		--Main = 'Auster\'s Staff',
+		--Sub = '',
+		--Range = '',
+		--Ammo = 'Mille. Sachet',
         Head = 'Emperor Hairpin',
         Neck = 'Peacock Amulet',
 		Ear1 = 'Ninjutsu Earring',
-        Ear2 = 'Cassie Earring',
-        Body = 'Nokizaru Gi',
+        Ear2 = 'Moldavite Earring',
+        Body = 'Scp. Harness +1',
         Hands = 'Ochiudo\'s Kote',
         Ring1 = 'Shinobi Ring',
-        Ring2 = 'Rajas Ring',
-        Back = 'Resentment Cape',
+        Ring2 = 'Genius Ring',
+        Back = 'Amemet Mantle +1',
         Waist = 'Swordbelt +1',
-        Legs = 'Luisant Brayettes',
+        Legs = 'Nokizaru Hakama',
         Feet = 'Sarutobi Kyahan',
 	},
-    Movement = {},
+    Movement = {
+		Feet = 'Ninja Kyahan',
+	},
 
     DT = {},
     MDT = { -- Shell IV provides 23% MDT
@@ -128,6 +141,9 @@ local sets = {
     SIRD = {
     },
     Haste = { -- Used for Utsusemi cooldown
+		--Ear2 = 'Cassie Earring',
+		--Head = 'Ninja Hatsubari',
+		--Body = 'Custom Vest',
 		Waist = 'Swift Belt',
 		Feet = 'Sarutobi Kyahan',
 	},
@@ -142,37 +158,37 @@ local sets = {
     },
     NinDebuff = {
 		Ear1 = 'Ninjutsu Earring',
-		Head = 'Pumpkin Head II',
+		Head = 'Ninja Hatsuburi',
 		Body = 'Nokizaru Gi',
 		Legs = 'Nokizaru Hakama',
 		Back = 'Resentment Cape',
 		Waist = 'Astral Rope',
         Ring1 = 'Mermaid Ring',
-		Ring2 = 'Wisdom Ring',
+		Ring2 = 'Genius Ring',
 		Feet = 'Custom F Boots',
 	},
     NinElemental = {
 		Ear1 = 'Ninjutsu Earring',
 		Ear2 = 'Moldavite Earring',
-		Head = 'Pumpkin Head II',
+		Head = 'Ninja Hatsuburi',
 		Body = 'Nokizaru Gi',
 		Legs = 'Nokizaru Hakama',
 		Back = 'Gramary Cape',
 		Waist = 'Ryl.Kgt. Belt',
-        Ring1 = 'Wisdom Ring',
-		Ring2 = 'Wisdom Ring',
+        Ring1 = 'Genius Ring',
+		Ring2 = 'Genius Ring',
 		Feet = 'Custom F Boots',
 	},
     NinElemental_Accuracy = {
 		Ear1 = 'Ninjutsu Earring',
 		Ear2 = 'Moldavite Earring',
-		Head = 'Pumpkin Head II',
+		Head = 'Ninja Hatsuburi',
 		Body = 'Nokizaru Gi',
 		Legs = 'Nokizaru Hakama',
 		Back = 'Gramary Cape',
 		Waist = 'Ryl.Kgt. Belt',
-        Ring1 = 'Wisdom Ring',
-		Ring2 = 'Wisdom Ring',
+        Ring1 = 'Genius Ring',
+		Ring2 = 'Genius Ring',
 		Feet = 'Custom F Boots',
 	},
     DrkDarkMagic = {},
@@ -190,16 +206,30 @@ local sets = {
         Neck = 'Peacock Amulet',
         Ear1 = 'Optical Earring',
         Ear2 = 'Cassie Earring',
-        Body = 'Jujitsu Gi',
+        Body = 'Scp. Harness +1',
         Hands = 'Ochiudo\'s Kote',
-        Ring1 = 'Woodsman Ring',
+        Ring1 = 'Toreador\'s Ring',
         Ring2 = 'Rajas Ring',
-        Back = 'Agile Mantle',
+        Back = 'Amemet Mantle +1',
         Waist = 'Swift Belt',
         Legs = 'Luisant Brayettes',
         Feet = 'Sarutobi Kyahan',
     },
-    TP_HighAcc = {},
+    TP_HighAcc = {
+		--Ammo = 'Mille. Sachet',
+        Head = 'Emperor Hairpin',
+        Neck = 'Peacock Amulet',
+        Ear1 = 'Optical Earring',
+        Ear2 = 'Cassie Earring',
+        Body = 'Scp. Harness +1',
+        Hands = 'Ochiudo\'s Kote',
+        Ring1 = 'Toreador\'s Ring',
+        Ring2 = 'Toreador\'s Ring',
+        Back = 'Amemet Mantle +1',
+        Waist = 'Swift Belt',
+        Legs = 'Luisant Brayettes',
+        Feet = 'Sarutobi Kyahan',
+	},
     TP_Mjollnir_Haste = {},
 
     WS = {
@@ -208,13 +238,13 @@ local sets = {
         Neck = 'Peacock Amulet',
         Ear1 = 'Intruder Earring',
         Ear2 = 'Cassie Earring',
-        Body = 'Jujitsu Gi',
+        Body = 'Haubergeon',
         Hands = 'Ochiudo\'s Kote',
-        Ring1 = 'Woodsman Ring',
+        Ring1 = 'Victory Ring',
         Ring2 = 'Rajas Ring',
-        Back = 'Agile Mantle',
+        Back = 'Amemet Mantle +1',
         Waist = 'Swordbelt +1',
-        Legs = 'Luisant Brayettes',
+        Legs = 'Ryl.Kgt. Breeches',
         Feet = 'Bounding Boots',
 	},
     WS_HighAcc = {},
@@ -229,12 +259,12 @@ local sets = {
         Ear1 = 'Drone Earring',
         Ear2 = 'Drone Earring',
         Body = 'Nokizaru Gi',
-        Hands = 'Ochiudo\'s Kote',
+        Hands = 'Ninja Tekko',
         Ring1 = 'Woodsman Ring',
         Ring2 = 'Rajas Ring',
-        Back = 'Agile Mantle',
-        Waist = 'Swift Belt',
-        Legs = 'Jujitsu Sitabaki',
+        Back = 'Amemet Mantle +1',
+        Waist = 'Life Belt',
+        Legs = 'Ninja Hakama',
         Feet = 'Custom F Boots',
 	}, -- This won't work for automatically swapping shurikens, only other equipment
 }
@@ -368,7 +398,11 @@ end
 
 profile.HandleDefault = function()
     gcmelee.DoDefault()
-
+	
+	if (gData.GetBuffCount('Minuet') > 0 and gData.GetPlayer().Status ~= 'Idle') then
+		gFunc.Equip('Ear1', 'Minuet Earring');
+    end
+	
     local player = gData.GetPlayer()
     local environment = gData.GetEnvironment()
 
@@ -385,11 +419,14 @@ profile.HandleDefault = function()
     end
 
     gcmelee.DoDefaultOverride()
+	if (gcdisplay.IdleSet == 'Evasion' or player.Status == 'Idle') then
 
-    if (gcdisplay.IdleSet == 'Evasion') then
+
         if (fenrirs_stone and (environment.Time < 6 or environment.Time >= 18)) then
             gFunc.Equip('Ammo', 'Fenrir\'s Stone')
         end
+    end
+    if (gcdisplay.IdleSet == 'Evasion' or player.Status == 'Idle') then
         if (night_time_eva_pants ~= '' and (environment.Time < 6 or environment.Time >= 18)) then
             gFunc.Equip('Legs', night_time_eva_pants)
         end
