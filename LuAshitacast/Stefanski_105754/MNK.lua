@@ -251,7 +251,7 @@ local sets = {
         Ring1 = 'Aqua Ring',
         Ring2 = 'Communion Ring',
         Back = 'Melee Cape',
-        Legs = 'Tpl. Hose +1',
+        Legs = 'Custom Pants',
         Waist = 'Reverend Sash',
         Feet = 'Suzaku\'s Sune-Ate',
     },

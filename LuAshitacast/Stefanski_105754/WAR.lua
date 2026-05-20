@@ -4,6 +4,7 @@ local fastCastValue = 0.02 -- 0% from gear
 
 local sets = {
     Idle = {
+		Ammo = 'Fenrir\'s Stone',
 		Head = 'Genbu\'s Kabuto',
 		Neck = 'Fortitude Torque',
 		Ear1 = 'Merman\'s Earring',
@@ -28,10 +29,17 @@ local sets = {
 	},
 
     DT = {
-		Head = 'Darksteel Cap +1',
+		Ammo = 'Happy Egg',
+		Head = 'Koenig Schaller',
+		Neck = 'Fortitude Torque',
+		Ear1 = 'Knight\'s Earring',
+		Ear2 = 'Cassie Earring',
 		Body = 'Kirin\'s Osode',
-		Hands = 'Dst. Mittens +1',
+		Hands = 'Kng. Handschuhs',
 		Ring1 = 'Jelly Ring',
+		Ring2 = 'Merman\'s Earring',
+		Back = 'Boxer\'s Mantle',
+		Waist = 'Warwolf Belt',
 		Legs = 'Dst. Subligar +1',
 		Feet = 'Dst. Leggings +1',
 	},
@@ -72,6 +80,7 @@ local sets = {
     LockSet3 = {},
 
     TP_LowAcc = {
+		Ammo = 'Bomb Core',
 		Head = 'Panther Mask +1',
 		Neck = 'Fortitude Torque',
 		Ear1 = 'Merman\'s Earring',
@@ -86,6 +95,7 @@ local sets = {
 		Feet = 'Dusk Ledelsens',
 	},
     TP_HighAcc = {
+		Ammo = 'Tiphia Sting',
 		Head = 'Optical Hat',
 		Neck = 'Peacock Amulet',
 		Ear1 = 'Merman\'s Earring',
@@ -101,6 +111,7 @@ local sets = {
 	},
 
     TP_Aggressor = {
+		Ammo = 'Bomb Core',
 		Head = 'Panther Mask +1',
 		Neck = 'Fortitude Torque',
 		Ear1 = 'Merman\'s Earring',
