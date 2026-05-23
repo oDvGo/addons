@@ -9,5 +9,5 @@ settings["order"][1] = "Default";
 settings["order"][2] = "Legacy Galkabouncer";
 settings["order"][3] = "Legacy Lewinsky";
 settings["order"][4] = "Legacy Stefanski";
-settings["version"] = "1.7.4";
+settings["version"] = "1.8.0";
 return settings;
