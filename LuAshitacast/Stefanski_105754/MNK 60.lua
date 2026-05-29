@@ -55,13 +55,13 @@ local sets = {
 		Ammo = 'Tiphia Sting',
         Head = 'Emperor Hairpin',
         Neck = 'Peacock Amulet',
-        Ear1 = 'Minuet Earring',
+        Ear1 = 'Optical Earring',
         Ear2 = 'Cassie Earring',
         Body = 'Scp. Harness +1',
         Hands = 'Ochiudo\'s Kote',
         Ring1 = 'Toreador\'s Ring',
         Ring2 = 'Rajas Ring',
-        Back = 'Amemet Mantle +1',
+        Back = 'Nomad\'s Mantle +1',
         Waist = 'Brown Belt',
         Legs = 'Temple Hose',
         Feet = 'Sarutobi Kyahan',
@@ -150,7 +150,7 @@ local sets = {
         Hands = 'Ochiudo\'s Kote',
         Ring1 = 'Toreador\'s Ring',
         Ring2 = 'Rajas Ring',
-        Back = 'Amemet Mantle +1',
+        Back = 'Ryl. Army Mantle',
         Waist = 'Brown Belt',
         Legs = 'Temple Hose',
         Feet = 'Sarutobi Kyahan',
@@ -165,7 +165,7 @@ local sets = {
         Hands = 'Ochiudo\'s Kote',
         Ring1 = 'Toreador\'s Ring',
         Ring2 = 'Toreador\'s Ring',
-        Back = 'Amemet Mantle +1',
+        Back = 'Ryl. Army Mantle',
         Waist = 'Brown Belt',
         Legs = 'Temple Hose',
         Feet = 'Sarutobi Kyahan',
@@ -195,7 +195,7 @@ local sets = {
         Hands = 'Ochiudo\'s Kote',
         Ring1 = 'Victory Ring',
         Ring2 = 'Rajas Ring',
-        Back = 'Amemet Mantle +1',
+        Back = 'Ryl. Army Mantle',
         Waist = 'Brown Belt',
         Legs = 'Cmb.Cst. Slacks',
         Feet = 'Fed. Kyahan',
@@ -368,9 +368,7 @@ end
 
 profile.HandleDefault = function()
     gcmelee.DoDefault()
-	if (gData.GetBuffCount('Minuet') > 0 and gData.GetPlayer().Status ~= 'Idle') then
-		gFunc.Equip('Ear1', 'Minuet Earring');
-    end
+
     local player = gData.GetPlayer()
     local focus = gData.GetBuffCount('Focus')
     local hundredFists = gData.GetBuffCount('Hundred Fists')

@@ -5,9 +5,9 @@ local fastCastValue = 0.00 -- 2% from gear
 
 -- Replace these with '' if you do not have them
 local temple_gaiters = 'Temple Gaiters'
-local temple_gloves = 'Temple Gloves'
-local temple_cyclas = 'Temple Cyclas'
-local temple_crown = 'Temple Crown'
+local temple_gloves = ''
+local temple_cyclas = ''
+local temple_crown = ''
 
 local melee_gaiters = ''
 local melee_gloves = ''
@@ -30,9 +30,9 @@ local sets = {
         Neck = 'Peacock Amulet',
         Ear1 = 'Optical Earring',
         Ear2 = 'Cassie Earring',
-        Body = 'Scp. Harness +1',
+        Body = 'Aikido Gi',
         Hands = 'Ochiudo\'s Kote',
-        Ring1 = 'Toreador\'s Ring',
+        Ring1 = 'Woodsman Ring',
         Ring2 = 'Rajas Ring',
         Back = 'Nomad\'s Mantle +1',
         Waist = 'Brown Belt',
@@ -43,7 +43,7 @@ local sets = {
 	
     },
     Resting = {
-        Neck = 'Checkered Scarf',
+        Neck = 'Paisley Scarf',
         Ear2 = 'Sanative Earring',
         Body = 'Aikido Gi',
         Hands = 'Dst. Mittens +1',
@@ -52,18 +52,18 @@ local sets = {
     },
     Town = {
         Main = 'Cross-Counters',
-		Ammo = 'Tiphia Sting',
+		Ammo = 'Mille. Sachet',
         Head = 'Emperor Hairpin',
         Neck = 'Peacock Amulet',
-        Ear1 = 'Minuet Earring',
+        Ear1 = 'Optical Earring',
         Ear2 = 'Cassie Earring',
-        Body = 'Scp. Harness +1',
+        Body = 'Jujitsu Gi',
         Hands = 'Ochiudo\'s Kote',
-        Ring1 = 'Toreador\'s Ring',
+        Ring1 = 'Woodsman Ring',
         Ring2 = 'Rajas Ring',
-        Back = 'Amemet Mantle +1',
+        Back = 'Nomad\'s Mantle +1',
         Waist = 'Brown Belt',
-        Legs = 'Temple Hose',
+        Legs = 'Cmb.Cst. Slacks',
         Feet = 'Sarutobi Kyahan',
     },
     Movement = {
@@ -73,7 +73,7 @@ local sets = {
     DT = {
         -- Main = 'Cross-Counters', -- 5
         -- Head = 'Arh. Jinpachi +1',
-        Neck = 'Peacock Amulet',
+        Neck = 'Evasion Torque',
         -- Neck = 'Peacock Amulet',
         -- Ear1 = 'Avenger\'s Earring', -- 1
         -- Ear2 = 'Avenger\'s Earring', -- 1
@@ -82,7 +82,7 @@ local sets = {
         -- Hands = 'Noritsune Kote',
         Ring2 = 'Sattva Ring',
         Back = 'Shadow Mantle',
-        Legs = 'Temple Hose', -- 3
+        Legs = 'Tpl. Hose +1', -- 3
         Feet = 'Melee Gaiters',
         -- Feet = 'Rasetsu Sune-Ate +1', -- 1
     },
@@ -120,13 +120,13 @@ local sets = {
         Neck = 'Willpower Torque', -- 5
         Ear1 = 'Merman\'s Earring',
         Ear2 = 'Magnetic Earring', -- 8
-        Body = 'Scp. Harness +1',
-        Hands = 'Merman\'s Bangles',
+        Body = 'Aikido Gi',
+        Hands = 'Dst. Mittens +1',
         Ring1 = 'Jelly Ring',
-        Ring2 = 'Kampfer Ring',
-        Back = 'Nomad\'s Mantle +1',
+        Ring2 = 'Sattva Ring',
+        Back = 'Shadow Mantle',
         Waist = 'Silver Obi +1', -- 8
-        Legs = 'Temple Hose',
+        Legs = 'Dst. Subligar +1',
         Feet = 'Mountain Gaiters', -- 5
     },
     Haste = { -- Used for Utsusemi cooldown
@@ -141,33 +141,33 @@ local sets = {
     LockSet3 = {},
 
     TP_LowAcc = {
-        Ammo = 'Tiphia Sting',
-        Head = 'Temple Crown',
-        Neck = 'Peacock Amulet',
-        Ear1 = 'Optical Earring',
-        Ear2 = 'Cassie Earring',
-        Body = 'Scp. Harness +1',
-        Hands = 'Ochiudo\'s Kote',
-        Ring1 = 'Toreador\'s Ring',
-        Ring2 = 'Rajas Ring',
-        Back = 'Amemet Mantle +1',
-        Waist = 'Brown Belt',
-        Legs = 'Temple Hose',
-        Feet = 'Sarutobi Kyahan',
-    },
-    TP_HighAcc = {
-        Ammo = 'Tiphia Sting',
+        Ammo = 'Mille. Sachet',
         Head = 'Emperor Hairpin',
         Neck = 'Peacock Amulet',
         Ear1 = 'Optical Earring',
         Ear2 = 'Cassie Earring',
-        Body = 'Scp. Harness +1',
+        Body = 'Jujitsu Gi',
         Hands = 'Ochiudo\'s Kote',
-        Ring1 = 'Toreador\'s Ring',
-        Ring2 = 'Toreador\'s Ring',
-        Back = 'Amemet Mantle +1',
+        Ring1 = 'Woodsman Ring',
+        Ring2 = 'Rajas Ring',
+        Back = 'Nomad\'s Mantle +1',
         Waist = 'Brown Belt',
-        Legs = 'Temple Hose',
+        Legs = 'Cmb.Cst. Slacks',
+        Feet = 'Sarutobi Kyahan',
+    },
+    TP_HighAcc = {
+        Ammo = 'Mille. Sachet',
+        Head = 'Emperor Hairpin',
+        Neck = 'Peacock Amulet',
+        Ear1 = 'Optical Earring',
+        Ear2 = 'Cassie Earring',
+        Body = 'Jujitsu Gi',
+        Hands = 'Ochiudo\'s Kote',
+        Ring1 = 'Woodsman Ring',
+        Ring2 = 'Woodsman Ring',
+        Back = 'Nomad\'s Mantle +1',
+        Waist = 'Brown Belt',
+        Legs = 'Cmb.Cst. Slacks',
         Feet = 'Sarutobi Kyahan',
     },
     TP_Mjollnir_Haste = {},
@@ -186,16 +186,16 @@ local sets = {
     },
 
     WS = {
-        Ammo = 'Tiphia Sting',
-        Head = 'Temple Crown',
+        Ammo = 'Mille. Sachet',
+        Head = 'Emperor Hairpin',
         Neck = 'Spike Necklace',
         Ear1 = 'Optical Earring',
         Ear2 = 'Cassie Earring',
-        Body = 'Scp. Harness +1',
+        Body = 'Jujitsu Gi',
         Hands = 'Ochiudo\'s Kote',
-        Ring1 = 'Victory Ring',
+        Ring1 = 'Puissance Ring',
         Ring2 = 'Rajas Ring',
-        Back = 'Amemet Mantle +1',
+        Back = 'Nomad\'s Mantle +1',
         Waist = 'Brown Belt',
         Legs = 'Cmb.Cst. Slacks',
         Feet = 'Fed. Kyahan',
@@ -243,8 +243,8 @@ local sets = {
     },
 
     ChiBlast = {
-        Head = 'Temple Crown',
-        Neck = 'Holy Phial',
+        Head = 'Tpl. Crown +1',
+        Neck = 'Faith Torque',
         Ear1 = 'Cmn. Earring',
         Ear2 = 'Cmn. Earring',
         Hands = 'Devotee\'s Mitts',
@@ -368,9 +368,7 @@ end
 
 profile.HandleDefault = function()
     gcmelee.DoDefault()
-	if (gData.GetBuffCount('Minuet') > 0 and gData.GetPlayer().Status ~= 'Idle') then
-		gFunc.Equip('Ear1', 'Minuet Earring');
-    end
+
     local player = gData.GetPlayer()
     local focus = gData.GetBuffCount('Focus')
     local hundredFists = gData.GetBuffCount('Hundred Fists')
